@@ -1,0 +1,68 @@
+{
+  "source": {
+    "include": ["app"],
+    "includePattern": "\\.(jsx|js|ts|tsx)$",
+    "excludePattern": "(node_modules/|docs/|.next/)"
+  },
+  "plugins": ["node_modules/tsd-jsdoc/dist/plugin", "node_modules/better-docs/typescript", "plugins/markdown"],
+  "opts": {
+    "recurse": true,
+    "destination": "./docs",
+    "template": "node_modules/docdash",
+    "readme": "README.md"
+  },
+  "tags": {
+    "allowUnknownTags": ["component", "optional"]
+  },
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "search": true,
+    "better-docs": {
+      "name": "Matěj Hrabák Website Documentation",
+      "title": "Matěj Hrabák Website Documentation",
+      "navLinks": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/username/matej-hrabak-website"
+        },
+        {
+          "label": "Website",
+          "href": "https://matejhrabak.cz"
+        }
+      ]
+    }
+  },
+  "docdash": {
+    "static": true,
+    "sort": true,
+    "sectionOrder": ["Classes", "Modules", "Externals", "Events", "Namespaces", "Mixins", "Tutorials", "Interfaces"],
+    "meta": {
+      "title": "Matěj Hrabák Website Documentation",
+      "description": "Documentation for Matěj Hrabák's personal website components and utilities",
+      "keyword": "documentation, jsdoc, website, components"
+    },
+    "search": true,
+    "collapse": true,
+    "wrap": true,
+    "typedefs": true,
+    "navLevel": 3,
+    "private": false,
+    "removeQuotes": "none",
+    "scripts": [],
+    "menu": {
+      "Components": {
+        "Navbar": "app/components/navbar",
+        "Footer": "app/components/footer",
+        "BackgroundBeams": "app/components/background-beams",
+        "AnimatedBackground": "app/components/animated-background",
+        "ServiceCarousel": "app/components/service-carousel",
+        "Clock": "app/components/clock"
+      },
+      "Layouts": {
+        "BlogLayout": "app/blog/layout"
+      }
+    },
+    "stylesheet": "assets/custom.css"
+  }
+}
