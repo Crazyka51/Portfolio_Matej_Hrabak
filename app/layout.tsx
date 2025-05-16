@@ -27,6 +27,7 @@ export default function RootLayout({
           <GridBackground />
           {children}
         </ToastProvider>
+         <SpeedInsights />
       </body>
     </html>
   )
