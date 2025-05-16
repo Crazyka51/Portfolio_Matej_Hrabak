@@ -25,12 +25,12 @@ export default function Footer() {
   return (
     <footer className="container mx-auto px-4 py-8 mt-24 border-t border-gray-800">
       <div className="flex flex-col sm:flex-row justify-between items-center">
-        <p className="text-sm text-gray-400 mb-4 sm:mb-0">© 2025 / Matěj Hrabák / Build by UI</p>
+        <p className="text-sm text-gray-400 mb-4 sm:mb-0">© 2025 / Matěj Hrabák </p>
         <div className="flex space-x-4">
-          <a href="https://github.com" className="text-gray-400 hover:text-white transition-colors">
+          <a href="https://github.com/Crazyka51" className="text-gray-400 hover:text-white transition-colors">
             <Github size={20} />
           </a>
-          <a href="mailto:info@example.com" className="text-gray-400 hover:text-white transition-colors">
+          <a href="mailto:matejhrabak@gmail.com" className="text-gray-400 hover:text-white transition-colors">
             <Mail size={20} />
           </a>
         </div>
