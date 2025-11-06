@@ -373,19 +373,19 @@ export default function PavelFiserProjectPage() {
                   <h3 className="font-bold text-lg mb-2">Doba realizace</h3>
                   <p>
                     Vývoj zahájen: <strong>17. 3. 2025</strong> (s přestávkami). Projekt byl vyvíjen průběžně a
-                    aktuální stav je aktualizován k <strong>06. 11. 2025</strong>.
+                    byl dokončen k 1. listopadu 2025.
                   </p>
                  
                 </div>
 
                 <div>
                   <h3 className="font-bold text-lg mb-2">Rok dokončení</h3>
-                  <p>2025 (průběžně, viz datum aktualizace)</p>
+                  <p>2025 </p>
                 </div>
 
                 <div>
                   <h3 className="font-bold text-lg mb-2">Status</h3>
-                  <p className="text-green-400">Production Ready</p>
+                  <p className="text-green-400">Nasazeno produkční prostředí</p>
                 </div>
               </div>
             </motion.div>
