@@ -26,24 +26,24 @@ export default function PortfolioProjectPage() {
   // Gallery images
   const galleryImages = [
     {
-      src: "/images/matejhrabak-project.png",
+      src: "/images/pojistovaciporadce.jpeg",
       alt: "Matěj Hrabák Portfolio Homepage",
       caption: "Úvodní stránka s prezentací služeb a portfolia",
     },
     {
-      src: "/images/projekty-portfolio.jpeg?height=600&width=800&text=Portfolio+Projects",
-      alt: "Portfolio Projects Page",
-      caption: "Sekce projektů s interaktivními kartami a galeriemi",
+      src: "/images/sluzby_p.jpeg?height=600&width=800&text=Portfolio+Projects",
+      alt: "Nabídka služeb",
+      caption: "Sekce s nabídkou služeb",
     },
     {
-      src: "/images/blog-portfolio.jpeg?height=600&width=800&text=Portfolio+Blog",
+      src: "/images/blog.jpeg?height=600&width=800&text=Portfolio+Blog",
       alt: "Portfolio Blog Section",
       caption: "Blogová sekce s články o financích a pojištění",
     },
     {
-      src: "/images/mobile-portfolio.jpeg?height=800&width=400&text=Portfolio+Mobile+View",
-      alt: "Portfolio Mobile View",
-      caption: "Responzivní zobrazení webu na mobilních zařízeních",
+      src: "/images/omne_p.jpeg?height=800&width=400&text=Portfolio+Mobile+View",
+      alt: "Informace o mně",
+      caption: "Strukturovaný přehled mé cesty životem",
     },
   ]
 
@@ -101,7 +101,7 @@ export default function PortfolioProjectPage() {
                 <ExternalLink className="ml-2 h-4 w-4" />
               </a>
               <a
-                href="https://github.com/Crazyka51/finalweb"
+                href="https://github.com/Crazyka51/final"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-lg transition-colors"
@@ -312,10 +312,7 @@ export default function PortfolioProjectPage() {
                       <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
                       Automatické meta tagy
                     </li>
-                    <li className="flex items-center">
-                      <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
-                      RSS Feed
-                    </li>
+                    
                   </ul>
                 </div>
 
@@ -362,19 +359,19 @@ export default function PortfolioProjectPage() {
                 <div>
                   <h3 className="font-bold text-lg mb-2">Doba realizace</h3>
                   <p>
-                    Vývoj zahájen: <strong>15. 9. 2025</strong>. Projekt byl vyvíjen průběžně a
+                    Vývoj zahájen: <strong>15. 12. 2024</strong>. Projekt byl vyvíjen průběžně a
                     aktuální stav je aktualizován k <strong>6. 11. 2025</strong>.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="font-bold text-lg mb-2">Rok dokončení</h3>
-                  <p>2025 (průběžně, viz datum aktualizace)</p>
+                  <p>2025 </p>
                 </div>
 
                 <div>
                   <h3 className="font-bold text-lg mb-2">Status</h3>
-                  <p className="text-green-400">Production Ready</p>
+                  <p className="text-green-400">Nasazeno produkční prostředí</p>
                 </div>
               </div>
             </motion.div>

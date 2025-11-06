@@ -1,45 +1,15 @@
 "use client"
 
-import type React from "react"
-
-import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Github, ExternalLink, Search } from 'lucide-react'
+import { Github, ExternalLink } from "lucide-react"
 import WebDevNavbar from "@/app/components/webdev-navbar"
 import WebDevFooter from "@/app/components/webdev-footer"
-import LoadingSpinner from "@/app/components/loading-spinner"
 import PageTransition from "@/app/components/page-transition"
 
+
 export default function ProjectsPage() {
-  const [filter, setFilter] = useState("all")
-  const [searchQuery, setSearchQuery] = useState("")
-  const [filteredProjects, setFilteredProjects] = useState(allProjects)
-  const [isLoading, setIsLoading] = useState(false)
-
-  useEffect(() => {
-    // Simulace asynchronního filtrování
-    setIsLoading(true)
-
-    const timer = setTimeout(() => {
-      const filtered = allProjects.filter((project) => {
-        const matchesFilter = filter === "all" || project.category.toLowerCase() === filter
-        const matchesSearch =
-          project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          project.technologies.some((tech) => tech.toLowerCase().includes(searchQuery.toLowerCase()))
-
-        return matchesFilter && matchesSearch
-      })
-
-      setFilteredProjects(filtered)
-      setIsLoading(false)
-    }, 500) // Simulace 500ms zpoždění pro zobrazení loadingu
-
-    return () => clearTimeout(timer)
-  }, [filter, searchQuery])
-
   return (
     <PageTransition>
       <div className="min-h-screen bg-[#010714] text-white">
@@ -54,57 +24,17 @@ export default function ProjectsPage() {
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Moje projekty</h1>
             <p className="text-xl text-gray-300">
-              Přehled webových projektů, které jsem vytvořil pro klienty a přátele během své 14leté praxe.
-              Od jednoduchých prezentačních webů až po komplexnější řešení s vlastním redakčním systémem.
+              Přehled webových projektů, které jsem vytvořil pro klienty a přátele během své 14leté praxe. Od
+              jednoduchých prezentačních webů až po komplexnější řešení s vlastním redakčním systémem.
             </p>
           </motion.div>
 
-          {/* Filters and Search */}
-          <div className="mb-12 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex flex-wrap gap-3">
-              <FilterButton active={filter === "all"} onClick={() => setFilter("all")}>
-                Všechny
-              </FilterButton>
-              <FilterButton active={filter === "firemni"} onClick={() => setFilter("firemni")}>
-                Firemní weby
-              </FilterButton>
-              <FilterButton active={filter === "osobni"} onClick={() => setFilter("osobni")}>
-                Osobní weby
-              </FilterButton>
-              <FilterButton active={filter === "cms"} onClick={() => setFilter("cms")}>
-                Vlastní CMS
-              </FilterButton>
-            </div>
-
-            <div className="relative w-full md:w-64">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-              <input
-                type="text"
-                placeholder="Hledat projekty..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
+          {/* Projects Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {allProjects.map((project, index) => (
+              <ProjectCard key={index} project={project} index={index} />
+            ))}
           </div>
-
-          {/* Loading Indicator */}
-          {isLoading ? (
-            <div className="flex justify-center my-12">
-              <LoadingSpinner color="text-blue-500" size={50} />
-            </div>
-          ) : (
-            /* Projects Grid */
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredProjects.length > 0 ? (
-                filteredProjects.map((project, index) => <ProjectCard key={index} project={project} index={index} />)
-              ) : (
-                <div className="col-span-full text-center py-12">
-                  <p className="text-gray-400 text-lg">Žádné projekty neodpovídají vašemu filtru.</p>
-                </div>
-              )}
-            </div>
-          )}
         </main>
 
         <WebDevFooter />
@@ -184,7 +114,6 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-white transition-colors"
                     title="GitHub repozitář"
-                    onClick={(e) => e.stopPropagation()}
                   >
                     <Github size={18} />
                   </a>
@@ -196,7 +125,6 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-white transition-colors"
                     title="Navštívit web"
-                    onClick={(e) => e.stopPropagation()}
                   >
                     <ExternalLink size={18} />
                   </a>
@@ -206,59 +134,15 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
           </div>
         </Link>
       ) : (
-        <>
-          <div className="relative h-48">
-            <Image
-              src={project.image || "/placeholder.svg"}
-              alt={project.title}
-              fill
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
-          </div>
-          <div className="p-6">
-            <div className="flex items-center text-sm text-gray-400 mb-3">
-              <span className="bg-blue-900/50 text-blue-300 px-2 py-1 rounded text-xs">{project.category}</span>
-              <span className="mx-2">•</span>
-              <span>{project.year}</span>
-            </div>
-            <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-400 transition-colors">{project.title}</h3>
-            <p className="text-gray-400 mb-4">{project.description}</p>
-            <div className="flex justify-between items-center">
-              <div className="flex flex-wrap gap-2">
-                {project.technologies.map((tech: string, i: number) => (
-                  <span key={i} className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <div className="flex space-x-3">
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-white transition-colors"
-                    title="GitHub repozitář"
-                  >
-                    <Github size={18} />
-                  </a>
-                )}
-                {project.live && (
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-white transition-colors"
-                    title="Navštívit web"
-                  >
-                    <ExternalLink size={18} />
-                  </a>
-                )}
-              </div>
-            </div>
-          </div>
-        </>
+        <div className="relative h-48">
+          <Image
+            src={project.image || "/placeholder.svg"}
+            alt={project.title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+        </div>
       )}
     </motion.div>
   )
@@ -301,7 +185,7 @@ const allProjects = [
   {
     title: "Matěj Hrabák",
     description: "Osobní web s dvojím zaměřením - pojišťovací poradce a webový vývojář s vlastním redakčním systémem.",
-    image: "/images/matejhrabak-project.png",
+    image: "/images/matejhrabak_portfolio.jpeg",
     category: "Osobní",
     year: "2025",
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],

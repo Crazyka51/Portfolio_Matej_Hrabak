@@ -280,55 +280,59 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
       transition={{ duration: 0.6, delay: index * 0.1 }}
       className="bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800 hover:border-blue-500/30 transition-all group"
     >
-      <div className="relative h-48">
-        <Image
-          src={project.image || "/placeholder.svg"}
-          alt={project.title}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
-      </div>
-      <div className="p-6">
-        <div className="flex items-center text-sm text-gray-400 mb-3">
-          <span className="bg-blue-900/50 text-blue-300 px-2 py-1 rounded text-xs">{project.category}</span>
-          <span className="mx-2">•</span>
-          <span>{project.year}</span>
+      <Link href={project.detailUrl || "#"} className="block">
+        <div className="relative h-48">
+          <Image
+            src={project.image || "/placeholder.svg"}
+            alt={project.title}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
         </div>
-        <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-400 transition-colors">{project.title}</h3>
-        <p className="text-gray-400 mb-4">{project.description}</p>
-        <div className="flex justify-between items-center">
-          <div className="flex space-x-2">
-            {project.technologies.map((tech: string, i: number) => (
-              <span key={i} className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">
-                {tech}
-              </span>
-            ))}
+        <div className="p-6">
+          <div className="flex items-center text-sm text-gray-400 mb-3">
+            <span className="bg-blue-900/50 text-blue-300 px-2 py-1 rounded text-xs">{project.category}</span>
+            <span className="mx-2">•</span>
+            <span>{project.year}</span>
           </div>
-          <div className="flex space-x-3">
-            {project.github && (
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                <Github size={18} />
-              </a>
-            )}
-            {project.live && (
+          <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-400 transition-colors">{project.title}</h3>
+          <p className="text-gray-400 mb-4">{project.description}</p>
+          <div className="flex justify-between items-center">
+            <div className="flex space-x-2">
+              {project.technologies.map((tech: string, i: number) => (
+                <span key={i} className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">
+                  {tech}
+                </span>
+              ))}
+            </div>
+            <div className="flex space-x-3">
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                  onClick={(e) => e.stopPropagation()}
+                  title="View project on GitHub"
+                >
+                  <Github size={18} />
+                </a>
+              )}
               <a
                 href={project.live}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
+                onClick={(e) => e.stopPropagation()}
+                title="View live project"
               >
                 <ExternalLink size={18} />
               </a>
-            )}
+            </div>
           </div>
         </div>
-      </div>
+      </Link>
     </motion.div>
   )
 }
@@ -344,16 +348,18 @@ const projects = [
     technologies: ["PHP", "HTML", "CSS"],
     github: "",
     live: "https://salon-zuza.cz",
+    detailUrl: "/webovy-vyvojar/projekty/salon-zuza",
   },
   {
     title: "Pavel Fišer",
     description: "Osobní webové stránky pro zastupitele MČ Praha 4 s prezentací aktivit a kontaktními informacemi.",
     image: "/images/fiserpavel-project.png",
     category: "Profesionální portfolio",
-    year: "2023",
+    year: "2025",
     technologies: ["NextJS", "Node", "CSS" , "TypeScript" , "Tailwind CSS"],
     github: "",
     live: "https://fiserpavel.cz",
+    detailUrl: "/webovy-vyvojar/projekty/pavel-fiser",
   },
   {
     title: "Straw Stav",
@@ -364,6 +370,7 @@ const projects = [
     technologies: ["NextJS", "Node", "CSS" , "TypeScript" , "Tailwind CSS"],
     github: "",
     live: "https://strawstav.cz",
+    detailUrl: "/webovy-vyvojar/projekty/straw-stav",
   },
   {
     title: "Matěj Hrabák",
@@ -374,6 +381,7 @@ const projects = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     github: "",
     live: "https://matejhrabak.cz",
+    detailUrl: "/webovy-vyvojar/projekty/moje-portfolio",
   },
 ]
 
@@ -420,7 +428,7 @@ const technologies = [
   },
   {
     name: "TypeScript",
-    level: 85,
+    level: 95,
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -441,7 +449,7 @@ const technologies = [
   },
   {
     name: "Node.js",
-    level: 80,
+    level: 95,
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -481,7 +489,7 @@ const technologies = [
   },
   {
     name: "WordPress",
-    level: 85,
+    level: 95,
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -525,7 +533,7 @@ const technologies = [
   },
   {
     name: "PostgreSQL",
-    level: 80,
+    level: 85,
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
