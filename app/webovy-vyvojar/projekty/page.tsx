@@ -303,10 +303,11 @@ const allProjects = [
     description: "Osobní web s dvojím zaměřením - pojišťovací poradce a webový vývojář s vlastním redakčním systémem.",
     image: "/images/matejhrabak-project.png",
     category: "Osobní",
-    year: "2024/2025",
+    year: "2025",
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-    github: "https://github.com/Crazyka51",
+    github: "https://github.com/Crazyka51/finalweb",
     live: "https://matejhrabak.cz",
+    detailUrl: "/webovy-vyvojar/projekty/moje-portfolio",
   },
   
 ]
