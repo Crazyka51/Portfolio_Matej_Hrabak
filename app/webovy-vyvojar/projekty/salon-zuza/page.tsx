@@ -321,7 +321,7 @@ export default function SalonZuzaProjectPage() {
           >
             <h2 className="text-2xl font-bold mb-6">Další projekty</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Link href="/webovy-vyvojar/projekty/fiserpavel" className="group">
+              <Link href="/webovy-vyvojar/projekty/pavel-fiser" className="group">
                 <div className="bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800 hover:border-blue-500/30 transition-all h-full">
                   <div className="relative h-40">
                     <Image

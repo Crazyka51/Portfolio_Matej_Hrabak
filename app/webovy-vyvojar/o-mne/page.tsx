@@ -25,7 +25,7 @@ export default function AboutPage() {
               <div className="sticky top-24">
                 <div className="relative w-48 h-48 mx-auto md:mx-0 rounded-xl overflow-hidden mb-6 border-2 border-blue-500/30">
                   <Image
-                    src="/placeholder.svg?height=192&width=192&text=MH"
+                    src="/images/avatar_fullHD.png?height=192&width=192&text=MH"
                     alt="Matěj Hrabák"
                     fill
                     className="object-cover"
@@ -42,7 +42,7 @@ export default function AboutPage() {
 
                 <div className="flex space-x-3 mb-6">
                   <a
-                    href="https://github.com"
+                    href="https://github.com/crazyka51"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-gray-800 hover:bg-gray-700 p-2 rounded-full transition-colors"
@@ -66,7 +66,7 @@ export default function AboutPage() {
                     <Twitter size={18} />
                   </a>
                   <a
-                    href="mailto:matej.hrabak@generaliceska.cz"
+                    href="mailto:matejhrabak@gmail.com"
                     className="bg-gray-800 hover:bg-gray-700 p-2 rounded-full transition-colors"
                   >
                     <Mail size={18} />

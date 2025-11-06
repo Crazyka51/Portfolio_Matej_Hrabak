@@ -40,6 +40,8 @@
     "@radix-ui/react-tooltip": "1.1.6",
     "@vercel/speed-insights": "^1.2.0",
     "autoprefixer": "^10.4.20",
+    "once-ui-cli" : "^3.1.2",
+    "sass": "1.93.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "1.0.4",
