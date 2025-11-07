@@ -406,7 +406,7 @@ Tento projekt je licencován pod MIT licencí - viz soubor [LICENSE](LICENSE) pr
 
 Pro jakékoli dotazy nebo návrhy kontaktujte autora:
 
-- Email: [matej.hrabak@example.com](mailto:matej.hrabak@example.com)
+- Email: [matejhrabak@gmail.com](mailto:matejhrabak@gmail.com)
 - GitHub: [github.com/username](https://github.com/Crazyka51/username)
 
 

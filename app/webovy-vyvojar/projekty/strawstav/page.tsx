@@ -6,45 +6,31 @@ import Link from "next/link"
 import {
   ArrowLeft,
   ExternalLink,
-  Calendar,
-  Paintbrush,
+  Hammer,
+  Building2,
   Code,
   Rocket,
   Smartphone,
   Layout,
   ImageIcon,
+  Leaf,
   Users,
-  Settings,
-  Database,
+  CheckCircle2,
 } from "lucide-react"
 import WebDevNavbar from "@/app/components/webdev-navbar"
 import WebDevFooter from "@/app/components/webdev-footer"
 import PageTransition from "@/app/components/page-transition"
 import ProjectGallery from "@/app/components/project-gallery"
 
-export default function PavelFiserProjectPage() {
+export default function StrawstavProjectPage() {
   // Gallery images
   const galleryImages = [
     {
-      src: "/images/fiserpavel-project.webp",
-      alt: "Pavel Fišer Homepage",
-      caption: "Úvodní stránka s prezentací zastupitele a jeho priorit",
+      src: "/images/strawstav-project.webp",
+      alt: "Strawstav Homepage",
+      caption: "Úvodní stránka s prezentací stavební firmy a hlavních služeb",
     },
-    {
-      src: "/images/projekty.webp",
-      alt: "Pavel Fišer Projects Page",
-      caption: "Sekce projektů a iniciativ s interaktivními kartami",
-    },
-    {
-      src: "/images/dashboard.webp",
-      alt: "Pavel Fišer CMS Administration",
-      caption: "Administrační rozhraní CMS pro správu článků a obsahu",
-    },
-    {
-      src: "/images/editortextovehoobsahu.webp",
-      alt: "Pavel Fišer Mobile View",
-      caption: "Responzivní zobrazení webu na mobilních zařízeních",
-    },
+   
   ]
 
   return (
@@ -70,7 +56,7 @@ export default function PavelFiserProjectPage() {
               transition={{ duration: 0.6 }}
               className="text-4xl md:text-5xl font-bold mb-4"
             >
-              Pavel Fišer - Zastupitel Praha 4
+              STRAWSTAV S.R.O.
             </motion.h1>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -79,34 +65,25 @@ export default function PavelFiserProjectPage() {
               className="flex flex-wrap gap-3 mb-6"
             >
               <span className="bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full text-sm">Next.js 14</span>
-              <span className="bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full text-sm">TypeScript</span>
+              <span className="bg-purple-900/50 text-purple-300 px-3 py-1 rounded-full text-sm">React</span>
               <span className="bg-green-900/50 text-green-300 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
-              <span className="bg-amber-900/50 text-amber-300 px-3 py-1 rounded-full text-sm">CMS System</span>
-              <span className="bg-red-900/50 text-red-300 px-3 py-1 rounded-full text-sm">JWT Auth</span>
-              <span className="bg-indigo-900/50 text-indigo-300 px-3 py-1 rounded-full text-sm">Resend API</span>
+              <span className="bg-amber-900/50 text-amber-300 px-3 py-1 rounded-full text-sm">TypeScript</span>
+              <span className="bg-red-900/50 text-red-300 px-3 py-1 rounded-full text-sm">Framer Motion</span>
+              <span className="bg-indigo-900/50 text-indigo-300 px-3 py-1 rounded-full text-sm">Responsive Design</span>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex items-center space-x-4"
+              className="flex items-center"
             >
               <a
-                href="https://fiserpavel.cz"
+                href="https://strawstav.cz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors"
               >
                 <span>Navštívit web</span>
-                <ExternalLink className="ml-2 h-4 w-4" />
-              </a>
-              <a
-                href="https://github.com/Crazyka51/pavelfweb"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center bg-gray-700 hover:bg-gray-600 text-white py-2 px-4 rounded-lg transition-colors"
-              >
-                <span>GitHub</span>
                 <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </motion.div>
@@ -141,31 +118,34 @@ export default function PavelFiserProjectPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className="bg-gray-900/50 p-6 rounded-lg border border-gray-800">
                 <div className="bg-blue-900/30 p-3 rounded-lg inline-block mb-4">
-                  <Settings className="h-6 w-6 text-blue-400" />
+                  <Building2 className="h-6 w-6 text-blue-400" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Vlastní CMS systém</h3>
+                <h3 className="text-xl font-semibold mb-2">Prezentace služeb</h3>
                 <p className="text-gray-400">
-                  Kompletní content management systém s WYSIWYG editorem, správou článků, kategorií a uživatelů s JWT autentizací.
+                  Přehledná prezentace pěti hlavních služeb - stavební činnost, úklid bytových domů, správa nemovitostí, 
+                  údržba zeleně a zemní práce.
                 </p>
               </div>
 
               <div className="bg-gray-900/50 p-6 rounded-lg border border-gray-800">
                 <div className="bg-green-900/30 p-3 rounded-lg inline-block mb-4">
-                  <Smartphone className="h-6 w-6 text-green-400" />
+                  <ImageIcon className="h-6 w-6 text-green-400" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Responzivní design</h3>
+                <h3 className="text-xl font-semibold mb-2">Galerie projektů</h3>
                 <p className="text-gray-400">
-                  Plně responzivní design optimalizovaný pro všechna zařízení s moderním UI/UX přístupem a tmavým designem.
+                  Interaktivní galerie realizovaných projektů s filtrováním podle kategorií - fasády, odvětrání, 
+                  rekonstrukce, zemní práce.
                 </p>
               </div>
 
               <div className="bg-gray-900/50 p-6 rounded-lg border border-gray-800">
                 <div className="bg-purple-900/30 p-3 rounded-lg inline-block mb-4">
-                  <Users className="h-6 w-6 text-purple-400" />
+                  <Smartphone className="h-6 w-6 text-purple-400" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Facebook integrace</h3>
+                <h3 className="text-xl font-semibold mb-2">Responzivní design</h3>
                 <p className="text-gray-400">
-                  Automatické načítání příspěvků z Facebooku, cookie consent, GDPR compliance a newsletter systém.
+                  Plně responzivní design optimalizovaný pro všechna zařízení s moderním UI/UX přístupem a 
+                  profesionálním vzhledem.
                 </p>
               </div>
             </div>
@@ -182,9 +162,9 @@ export default function PavelFiserProjectPage() {
               <h2 className="text-2xl font-bold mb-6 border-b border-gray-800 pb-3">Popis projektu</h2>
               <div className="prose prose-lg prose-invert max-w-none">
                 <p>
-                  Projekt webových stránek pro Bc. Pavla Fišera, zastupitele MČ Praha 4, představuje komplexní řešení 
-                  kombinující moderní webové technologie s pokročilým content management systémem. Cílem bylo vytvořit 
-                  profesionální platformu pro komunikaci s občany a prezentaci politických aktivit.
+                  Webové stránky pro stavební společnost STRAWSTAV S.R.O. představují komplexní prezentaci firmy 
+                  poskytující širokou škálu stavebních a správních služeb. Projekt byl navržen s důrazem na 
+                  profesionální vzhled, přehlednost a snadnou orientaci pro potenciální klienty.
                 </p>
 
                 <h3 className="text-xl font-bold mt-8 mb-4">Moje role a příspěvek</h3>
@@ -192,13 +172,14 @@ export default function PavelFiserProjectPage() {
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <div className="bg-blue-900/30 p-3 rounded-lg mr-4 mt-1">
-                      <Paintbrush className="h-6 w-6 text-blue-400" />
+                      <Layout className="h-6 w-6 text-blue-400" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg text-blue-400">UI/UX Design a architektura</h4>
+                      <h4 className="font-bold text-lg text-blue-400">UI/UX Design</h4>
                       <p>
-                        Navržen moderní, profesionální design s důrazem na přístupnost a uživatelskou přívětivost. 
-                        Použitý color scheme v modré barvě reflektuje politickou identitu a vytváří důvěryhodný dojem.
+                        Navržen moderní, profesionální design s důrazem na prezentaci stavebních služeb. Color scheme 
+                        kombinující červenou, modrou a bílou vytváří důvěryhodný a energický dojem odpovídající 
+                        stavebnímu oboru.
                       </p>
                     </div>
                   </div>
@@ -208,23 +189,25 @@ export default function PavelFiserProjectPage() {
                       <Code className="h-6 w-6 text-purple-400" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg text-purple-400">Full-stack vývoj</h4>
+                      <h4 className="font-bold text-lg text-purple-400">Frontend implementace</h4>
                       <p>
-                        Kompletní implementace pomocí Next.js 14 s App Router, TypeScript pro typovou bezpečnost, 
-                        Tailwind CSS pro styling a vlastní API endpointy pro backend funkcionalitu.
+                        Kompletní implementace pomocí Next.js 14 s App Router, React pro interaktivní komponenty, 
+                        TypeScript pro typovou bezpečnost a Tailwind CSS pro moderní styling. Důraz na performance 
+                        a SEO optimalizaci.
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-start">
                     <div className="bg-green-900/30 p-3 rounded-lg mr-4 mt-1">
-                      <Database className="h-6 w-6 text-green-400" />
+                      <ImageIcon className="h-6 w-6 text-green-400" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg text-green-400">Vlastní CMS řešení</h4>
+                      <h4 className="font-bold text-lg text-green-400">Galerie a projekty</h4>
                       <p>
-                        Vytvořen kompletní content management systém s WYSIWYG editorem, správou článků, kategorií, 
-                        JWT autentizací a multi-admin podporou. Systém umožňuje jednoduchou správu obsahu bez technických znalostí.
+                        Vytvořena interaktivní galerie realizovaných projektů s filtrováním podle kategorií 
+                        (fasády, odvětrání, rekonstrukce, zemní práce). Implementováno porovnání "před a po" 
+                        s interactive sliderem pro lepší prezentaci výsledků práce.
                       </p>
                     </div>
                   </div>
@@ -234,29 +217,76 @@ export default function PavelFiserProjectPage() {
                       <Rocket className="h-6 w-6 text-amber-400" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg text-amber-400">Integrace a nasazení</h4>
+                      <h4 className="font-bold text-lg text-amber-400">Funkce a integrace</h4>
                       <p>
-                        Implementována Facebook API integrace, newsletterový systém s Resend API, GDPR compliance, 
-                        Google Analytics 4 a automatické nasazení na Vercel s vlastní doménou fiserpavel.cz.
+                        Implementován kontaktní formulář, integrace s OpenStreetMap pro zobrazení sídla firmy, 
+                        newsletter systém, sekce s referencemi klientů, FAQ sekce a blog s odbornými články. 
+                        Vše s důrazem na konverzi návštěvníků.
                       </p>
                     </div>
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold mt-8 mb-4">Technické výzvy a řešení</h3>
-                <p>
-                  Projekt zahrnoval několik technických výzev, včetně vytvoření bezpečného autentizačního systému 
-                  s refresh tokeny, optimalizace výkonu pro rychlé načítání, implementace GDPR compliance a 
-                  vytvoření intuitivního CMS rozhraní. Všechny tyto výzvy byly úspěšně vyřešeny s důrazem na 
-                  bezpečnost a uživatelský zážitek.
-                </p>
+                <h3 className="text-xl font-bold mt-8 mb-4">Klíčové sekce webu</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <CheckCircle2 className="h-5 w-5 text-green-400 mr-2 mt-1 flex-shrink-0" />
+                    <div>
+                      <strong>Úvodní sekce</strong> - Hero sekce s představením firmy a hlavními statistikami 
+                      (5+ dokončených projektů, 5 let zkušeností, kvalifikovaní pracovníci)
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle2 className="h-5 w-5 text-green-400 mr-2 mt-1 flex-shrink-0" />
+                    <div>
+                      <strong>Služby</strong> - Detailní přehled pěti hlavních služeb s popisem a vizualizací
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle2 className="h-5 w-5 text-green-400 mr-2 mt-1 flex-shrink-0" />
+                    <div>
+                      <strong>Proces spolupráce</strong> - Krok za krokem průvodce spoluprací (Návrh → Projekt → Realizace → Předání)
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle2 className="h-5 w-5 text-green-400 mr-2 mt-1 flex-shrink-0" />
+                    <div>
+                      <strong>Portfolio projektů</strong> - Galerie realizací s filtrováním a detaily jednotlivých projektů
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle2 className="h-5 w-5 text-green-400 mr-2 mt-1 flex-shrink-0" />
+                    <div>
+                      <strong>Reference</strong> - Hodnocení spokojených klientů s jejich fotografiemi a projekty
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle2 className="h-5 w-5 text-green-400 mr-2 mt-1 flex-shrink-0" />
+                    <div>
+                      <strong>Blog</strong> - Odborné články o trendech ve stavebnictví a praktické rady
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle2 className="h-5 w-5 text-green-400 mr-2 mt-1 flex-shrink-0" />
+                    <div>
+                      <strong>FAQ</strong> - Často kladené otázky s odpověďmi na nejčastější dotazy klientů
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle2 className="h-5 w-5 text-green-400 mr-2 mt-1 flex-shrink-0" />
+                    <div>
+                      <strong>Kontakt</strong> - Kontaktní formulář, telefon, email a mapa sídla firmy
+                    </div>
+                  </li>
+                </ul>
 
                 <h3 className="text-xl font-bold mt-8 mb-4">Výsledek</h3>
                 <p>
-                  Výsledkem je moderní, plně funkční webová platforma, která slouží jako efektivní nástroj pro 
-                  komunikaci s občany. Web je optimalizován pro SEO, splňuje GDPR požadavky a poskytuje administrátorovi 
-                  intuitivní rozhraní pro správu obsahu. Projekt demonstruje komplexní znalosti moderních webových 
-                  technologií a schopnost dodat enterprise-level řešení.
+                  Výsledkem je moderní, profesionální webová prezentace stavební společnosti, která efektivně 
+                  komunikuje nabízené služby a buduje důvěru u potenciálních klientů. Web je optimalizován pro 
+                  vyhledávače, plně responzivní a poskytuje vynikající uživatelský zážitek na všech zařízeních. 
+                  Projekt demonstruje schopnost vytvořit komplexní firemní web s pokročilými funkcemi a moderním 
+                  designem.
                 </p>
               </div>
             </motion.div>
@@ -270,11 +300,15 @@ export default function PavelFiserProjectPage() {
 
               <div className="space-y-6">
                 <div>
-                  <h3 className="font-bold text-lg mb-2">Frontend technologie</h3>
+                  <h3 className="font-bold text-lg mb-2">Použité technologie</h3>
                   <ul className="space-y-2">
                     <li className="flex items-center">
                       <span className="w-3 h-3 bg-blue-500 rounded-full mr-2"></span>
-                      Next.js 14 (App Router)
+                      Next.js 14
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-3 h-3 bg-blue-500 rounded-full mr-2"></span>
+                      React 18
                     </li>
                     <li className="flex items-center">
                       <span className="w-3 h-3 bg-blue-500 rounded-full mr-2"></span>
@@ -290,102 +324,96 @@ export default function PavelFiserProjectPage() {
                     </li>
                     <li className="flex items-center">
                       <span className="w-3 h-3 bg-blue-500 rounded-full mr-2"></span>
-                      React Context API
+                      Lucide Icons
                     </li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-lg mb-2">Backend a API</h3>
+                  <h3 className="font-bold text-lg mb-2">Klíčové funkce</h3>
                   <ul className="space-y-2">
                     <li className="flex items-center">
                       <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
-                      Next.js API Routes
+                      Responzivní design
                     </li>
                     <li className="flex items-center">
                       <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
-                      JWT Authentication
+                      Interaktivní galerie projektů
                     </li>
                     <li className="flex items-center">
                       <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
-                      JSON File Storage
+                      Filtrovatelné portfolio
                     </li>
                     <li className="flex items-center">
                       <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
-                      Resend Email API
+                      Před/Po slider
                     </li>
                     <li className="flex items-center">
                       <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
-                      Facebook Graph API
+                      Kontaktní formulář
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
+                      Newsletter systém
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
+                      Blog sekce
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
+                      FAQ akordeon
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
+                      OpenStreetMap integrace
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
+                      SEO optimalizace
                     </li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 className="font-bold text-lg mb-2">CMS funkce</h3>
+                  <h3 className="font-bold text-lg mb-2">Služby prezentované na webu</h3>
                   <ul className="space-y-2">
                     <li className="flex items-center">
-                      <span className="w-3 h-3 bg-purple-500 rounded-full mr-2"></span>
-                      WYSIWYG Editor (Tiptap)
+                      <Hammer className="w-4 h-4 text-amber-500 mr-2" />
+                      Stavební činnost
                     </li>
                     <li className="flex items-center">
-                      <span className="w-3 h-3 bg-purple-500 rounded-full mr-2"></span>
-                      Správa článků a kategorií
+                      <Building2 className="w-4 h-4 text-blue-500 mr-2" />
+                      Úklid bytových domů
                     </li>
                     <li className="flex items-center">
-                      <span className="w-3 h-3 bg-purple-500 rounded-full mr-2"></span>
-                      Multi-admin přístup
+                      <Users className="w-4 h-4 text-purple-500 mr-2" />
+                      Správa nemovitostí
                     </li>
                     <li className="flex items-center">
-                      <span className="w-3 h-3 bg-purple-500 rounded-full mr-2"></span>
-                      Newsletter management
+                      <Leaf className="w-4 h-4 text-green-500 mr-2" />
+                      Údržba zeleně
                     </li>
                     <li className="flex items-center">
-                      <span className="w-3 h-3 bg-purple-500 rounded-full mr-2"></span>
-                      Analytics dashboard
-                    </li>
-                  </ul>
-                </div>
-
-                <div>
-                  <h3 className="font-bold text-lg mb-2">Deployment</h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-center">
-                      <span className="w-3 h-3 bg-amber-500 rounded-full mr-2"></span>
-                      Vercel hosting
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-3 h-3 bg-amber-500 rounded-full mr-2"></span>
-                      Vlastní doména
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-3 h-3 bg-amber-500 rounded-full mr-2"></span>
-                      SSL certifikát
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-3 h-3 bg-amber-500 rounded-full mr-2"></span>
-                      CI/CD pipeline
+                      <Hammer className="w-4 h-4 text-red-500 mr-2" />
+                      Zemní práce
                     </li>
                   </ul>
                 </div>
 
                 <div>
                   <h3 className="font-bold text-lg mb-2">Doba realizace</h3>
-                  <p>
-                    Vývoj zahájen: <strong>17. 3. 2025</strong> (s přestávkami). Projekt byl vyvíjen průběžně a
-                    byl dokončen k 1. listopadu 2025.
-                  </p>
-                 
+                  <p>8 týdnů</p>
                 </div>
 
                 <div>
                   <h3 className="font-bold text-lg mb-2">Rok dokončení</h3>
-                  <p>2025 </p>
+                  <p>2025</p>
                 </div>
 
                 <div>
                   <h3 className="font-bold text-lg mb-2">Status</h3>
-                  <p className="text-green-400">Nasazeno produkční prostředí</p>
+                  <p className="text-green-400">Aktivní produkční web</p>
                 </div>
               </div>
             </motion.div>
@@ -400,6 +428,24 @@ export default function PavelFiserProjectPage() {
           >
             <h2 className="text-2xl font-bold mb-6">Další projekty</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Link href="/webovy-vyvojar/projekty/pavel-fiser" className="group">
+                <div className="bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800 hover:border-blue-500/30 transition-all h-full">
+                  <div className="relative h-40">
+                    <Image
+                      src="/images/fiserpavel-project.webp"
+                      alt="Pavel Fišer Website"
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-semibold group-hover:text-blue-400 transition-colors">Pavel Fišer</h3>
+                    <p className="text-sm text-gray-400">Zastupitel Praha 4</p>
+                  </div>
+                </div>
+              </Link>
+
               <Link href="/webovy-vyvojar/projekty/salon-zuza" className="group">
                 <div className="bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800 hover:border-blue-500/30 transition-all h-full">
                   <div className="relative h-40">
@@ -418,38 +464,20 @@ export default function PavelFiserProjectPage() {
                 </div>
               </Link>
 
-              <Link href="/webovy-vyvojar/projekty/strawstav" className="group">
-                <div className="bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800 hover:border-blue-500/30 transition-all h-full">
-                  <div className="relative h-40">
-                    <Image
-                      src="/images/strawstav-project.webp"
-                      alt="Straw Stav Website"
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-semibold group-hover:text-blue-400 transition-colors">Straw Stav</h3>
-                    <p className="text-sm text-gray-400">Firemní web</p>
-                  </div>
-                </div>
-              </Link>
-
-              <Link href="/webovy-vyvojar/projekty/matejhrabak" className="group">
+              <Link href="/webovy-vyvojar/projekty/moje-portfolio" className="group">
                 <div className="bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800 hover:border-blue-500/30 transition-all h-full">
                   <div className="relative h-40">
                     <Image
                       src="/images/matejhrabak_portfolio.webp"
-                      alt="Matěj Hrabák Website"
+                      alt="Matěj Hrabák Portfolio"
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
                   </div>
                   <div className="p-4">
-                    <h3 className="font-semibold group-hover:text-blue-400 transition-colors">Matěj Hrabák</h3>
-                    <p className="text-sm text-gray-400">Osobní portfolio</p>
+                    <h3 className="font-semibold group-hover:text-blue-400 transition-colors">Moje Portfolio</h3>
+                    <p className="text-sm text-gray-400">Osobní webové stránky</p>
                   </div>
                 </div>
               </Link>
