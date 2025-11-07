@@ -4,8 +4,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { motion } from "framer-motion"
-import { Shield, Code } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
+import { Shield, Code, Zap, ZapOff } from "lucide-react"
 import InteractiveParticles from "./components/interactive-particles"
 import AnimatedText from "./components/animated-text"
 import AnimatedSvg from "./components/animated-svg"
@@ -16,24 +16,163 @@ import { usePathname } from "next/navigation"
 export default function HomePage() {
   const pathname = usePathname()
   const [isClient, setIsClient] = useState(false)
-
-  useEffect(() => {
-    setIsClient(true)
-  }, [])
-
+  const [showPerformanceChoice, setShowPerformanceChoice] = useState(false)
+  const [performanceMode, setPerformanceMode] = useState<"high" | "low" | null>(null)
   const [scrollY, setScrollY] = useState(0)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY)
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
+    setIsClient(true)
+    // Kontrola, zda už uživatel vybral preferenci
+    const savedMode = localStorage.getItem("performanceMode") as "high" | "low" | null
+    if (savedMode) {
+      setPerformanceMode(savedMode)
+    } else {
+      setShowPerformanceChoice(true)
     }
   }, [])
 
+  useEffect(() => {
+    if (performanceMode === "high") {
+      const handleScroll = () => {
+        setScrollY(window.scrollY)
+      }
+      window.addEventListener("scroll", handleScroll)
+      return () => {
+        window.removeEventListener("scroll", handleScroll)
+      }
+    }
+  }, [performanceMode])
+
+  const handlePerformanceChoice = (mode: "high" | "low") => {
+    setPerformanceMode(mode)
+    localStorage.setItem("performanceMode", mode)
+    setShowPerformanceChoice(false)
+  }
+
+  // Obrazovka výběru výkonu
+  if (showPerformanceChoice) {
+    return (
+      <div className="min-h-screen bg-[#050A14] text-white flex items-center justify-center p-4">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="max-w-2xl w-full"
+        >
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-indigo-500">
+              Vítejte
+            </h1>
+            <p className="text-gray-300 text-lg">Vyberte si preferovaný režim zobrazení</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* S efekty */}
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => handlePerformanceChoice("high")}
+              className="relative group p-8 rounded-lg border border-gray-700 bg-gradient-to-br from-indigo-900/20 to-purple-900/20 hover:border-indigo-500/50 transition-all"
+            >
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg opacity-0 group-hover:opacity-30 blur transition duration-500" />
+              <div className="relative">
+                <Zap className="w-12 h-12 mx-auto mb-4 text-indigo-400" />
+                <h3 className="text-xl font-semibold mb-2">S efekty</h3>
+                <p className="text-gray-400 text-sm">
+                  Plné animace a vizuální efekty pro lepší zážitek. Doporučeno pro výkonnější zařízení.
+                </p>
+              </div>
+            </motion.button>
+
+            {/* Bez efektů */}
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => handlePerformanceChoice("low")}
+              className="relative group p-8 rounded-lg border border-gray-700 bg-gradient-to-br from-gray-800/20 to-gray-900/20 hover:border-green-500/50 transition-all"
+            >
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg opacity-0 group-hover:opacity-30 blur transition duration-500" />
+              <div className="relative">
+                <ZapOff className="w-12 h-12 mx-auto mb-4 text-green-400" />
+                <h3 className="text-xl font-semibold mb-2">Bez efektů</h3>
+                <p className="text-gray-400 text-sm">
+                  Optimalizovaná verze pro rychlejší načítání. Doporučeno pro slabší zařízení.
+                </p>
+              </div>
+            </motion.button>
+          </div>
+
+          <p className="text-gray-500 text-sm text-center mt-8">
+            Tuto volbu můžete kdykoli změnit vymazáním cookies prohlížeče.
+          </p>
+        </motion.div>
+      </div>
+    )
+  }
+
+  // Verze BEZ efektů (optimalizovaná)
+  if (performanceMode === "low") {
+    return (
+      <div className="min-h-screen bg-[#050A14] text-white relative">
+        <main className="container mx-auto px-4 py-12">
+          {/* Profile Section - jednoduchá verze */}
+          <div className="flex flex-col items-center mb-16">
+            <div className="relative w-36 h-36 rounded-full border-2 border-gray-700 overflow-hidden mb-8">
+              <Image src="/avatar.png" alt="Profile" width={144} height={144} className="object-cover" priority />
+            </div>
+
+            <h1 className="text-5xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-indigo-500">
+              Matěj Hrabák
+            </h1>
+
+            <h2 className="text-xl text-gray-300 mb-8">Vyberte si profesní zaměření</h2>
+          </div>
+
+          {/* Service Cards - jednoduchá verze */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {/* Insurance Advisor Card */}
+            <Link
+              href="/pojistovaci-poradce"
+              className="border border-gray-800 rounded-lg p-10 flex flex-col items-center text-center bg-[#111827]/50 hover:border-red-500/30 transition-colors"
+            >
+              <Shield size={48} className="mb-6 text-red-500" />
+              <h2 className="text-2xl font-semibold mb-4">Pojišťovací poradce</h2>
+              <p className="text-gray-400">
+                Zkušený poradce specializující se na transparentní a na míru šitá pojišťovací řešení. Osobní přístup,
+                profesionální jednání a důraz na ochranu klientova majetku
+              </p>
+            </Link>
+
+            {/* Web Developer Card */}
+            <Link
+              href="/webovy-vyvojar"
+              className="border border-gray-800 rounded-lg p-10 flex flex-col items-center text-center bg-[#111827]/50 hover:border-indigo-500/30 transition-colors"
+            >
+              <Code size={48} className="mb-6 text-indigo-500" />
+              <h2 className="text-2xl font-semibold mb-4">Webový vývojář</h2>
+              <p className="text-gray-400">
+                Tvůrce moderních a responzivních webových stránek s důrazem na uživatelský zážitek. Specializace na
+                vývoj profesionálních webů a aplikací pro jednotlivce i firmy.
+              </p>
+            </Link>
+          </div>
+
+          {/* Info sekce */}
+          <section className="mt-24 text-center max-w-3xl mx-auto">
+            <h2 className="text-2xl font-semibold mb-4 text-gray-200">Profesionální služby na míru</h2>
+            <p className="text-gray-400 mb-8">
+              Ať už hledáte spolehlivé pojištění nebo moderní webové stránky, nabízím řešení přizpůsobená vašim
+              potřebám. Vyberte si profesní zaměření a objevte, jak vám mohu pomoci.
+            </p>
+          </section>
+        </main>
+      </div>
+    )
+  }
+
+  // Verze S EFEKTY (původní)
+
+  // Verze S EFEKTY (původní)
   return (
     <div className="min-h-screen bg-[#050A14] text-white relative">
       {/* BackgroundBeams pouze na hlavní stránce */}
@@ -140,7 +279,7 @@ export default function HomePage() {
 
             <Link
               href="/pojistovaci-poradce"
-              className="relative z-10 border border-gray-800 rounded-lg p-10 flex flex-col items-center text-center bg-[#111827]/50 backdrop-blur-sm hover:border-red-500/30 transition-all shadow-lg hover:shadow-red-600/10 group-hover:bg-[#111827]/70 transform transition-all duration-300"
+              className="relative z-10 border border-gray-800 rounded-lg p-10 flex flex-col items-center text-center bg-[#111827]/50 backdrop-blur-sm hover:border-red-500/30 shadow-lg hover:shadow-red-600/10 group-hover:bg-[#111827]/70 transform transition-all duration-300"
             >
               <motion.div
                 className="mb-6 text-red-500"
@@ -195,7 +334,7 @@ export default function HomePage() {
 
             <Link
               href="/webovy-vyvojar"
-              className="relative z-10 border border-gray-800 rounded-lg p-10 flex flex-col items-center text-center bg-[#111827]/50 backdrop-blur-sm hover:border-indigo-500/30 transition-all shadow-lg hover:shadow-indigo-600/10 group-hover:bg-[#111827]/70 transform transition-all duration-300"
+              className="relative z-10 border border-gray-800 rounded-lg p-10 flex flex-col items-center text-center bg-[#111827]/50 backdrop-blur-sm hover:border-indigo-500/30 shadow-lg hover:shadow-indigo-600/10 group-hover:bg-[#111827]/70 transform transition-all duration-300"
             >
               <motion.div
                 className="mb-6 text-indigo-500"
