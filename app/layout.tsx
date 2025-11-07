@@ -5,12 +5,11 @@ import { Inter } from "next/font/google"
 import { ToastProvider } from "./context/toast-context"
 import GridBackground from "./components/grid-background"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { baseMetadata } from "./metadata"
+
 const inter = Inter({ subsets: ["latin", "latin-ext"] })
 
-export const metadata: Metadata = {
-  title: "Matěj Hrabák | Personal Website",
-  description: "Personal website showcasing professional services",
-}
+export const metadata: Metadata = baseMetadata
 
 export default function RootLayout({
   children,

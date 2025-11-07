@@ -25,7 +25,7 @@ export default function AboutPage() {
               <div className="sticky top-24">
                 <div className="relative w-48 h-48 mx-auto md:mx-0 rounded-xl overflow-hidden mb-6 border-2 border-blue-500/30">
                   <Image
-                    src="/images/avatar_fullHD.png?height=192&width=192&text=MH"
+                    src="/images/avatar_fullHD.png"
                     alt="Matěj Hrabák"
                     fill
                     className="object-cover"

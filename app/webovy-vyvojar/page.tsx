@@ -41,7 +41,7 @@ export default function WebDeveloperPage() {
           <div
             className="absolute inset-0 z-0 opacity-20"
             style={{
-              backgroundImage: `url('/images/web-developer-hero.jpg?height=1080&width=1920&text=Code+Background')`,
+              backgroundImage: `url('/images/web-developer-hero.jpg')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               transform: `translateY(${parallaxOffset}px)`,
@@ -612,7 +612,7 @@ const services = [
   },
   {
     title: "Konzultace a školení",
-    description: "Odborné konzultace a školení v oblasti moderních webových technologií a best practices.",
+    description: "Odborné konzultace a školení v oblasti moderních webových technologií a používání umělé inteligence.",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

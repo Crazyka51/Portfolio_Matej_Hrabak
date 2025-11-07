@@ -93,6 +93,7 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
           <button
             key={index}
             onClick={() => setCurrentIndex(index)}
+            title={`View image ${index + 1}`}
             className={`relative aspect-video rounded-md overflow-hidden border-2 transition-all ${
               index === currentIndex
                 ? "border-blue-500 scale-[1.02]"

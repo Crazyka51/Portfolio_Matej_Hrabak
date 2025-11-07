@@ -91,7 +91,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
                 <Image
-                  src="/avatar.png?height=192&width=192&text=MH"
+                  src="/avatar.png"
                   alt="Matěj Hrabák"
                   fill
                   className="object-cover"

@@ -31,17 +31,17 @@ export default function PortfolioProjectPage() {
       caption: "Úvodní stránka s prezentací služeb a portfolia",
     },
     {
-      src: "/images/sluzby_p.jpeg?height=600&width=800&text=Portfolio+Projects",
+      src: "/images/sluzby_p.jpeg",
       alt: "Nabídka služeb",
       caption: "Sekce s nabídkou služeb",
     },
     {
-      src: "/images/blog.jpeg?height=600&width=800&text=Portfolio+Blog",
+      src: "/images/blog.jpeg",
       alt: "Portfolio Blog Section",
       caption: "Blogová sekce s články o financích a pojištění",
     },
     {
-      src: "/images/omne_p.jpeg?height=800&width=400&text=Portfolio+Mobile+View",
+      src: "/images/omne_p.jpeg",
       alt: "Informace o mně",
       caption: "Strukturovaný přehled mé cesty životem",
     },

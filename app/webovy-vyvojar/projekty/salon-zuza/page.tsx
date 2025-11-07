@@ -28,20 +28,16 @@ export default function SalonZuzaProjectPage() {
       caption: "Úvodní stránka s prezentací salonu a klíčovými službami",
     },
     {
-      src: "/placeholder.svg?height=600&width=800&text=Salon+Zuza+Services",
+      src: "/images/sluzbycenik_salonzuza.jpeg",
       alt: "Salon Zuza Services Page",
       caption: "Stránka s detailním přehledem nabízených služeb a ceníkem",
     },
     {
-      src: "/placeholder.svg?height=600&width=800&text=Salon+Zuza+Booking+System",
+      src: "/images/booking_salonzuza.jpeg",
       alt: "Salon Zuza Booking System",
       caption: "Rezervační systém umožňující klientům objednat se online",
     },
-    {
-      src: "/placeholder.svg?height=800&width=400&text=Salon+Zuza+Mobile+View",
-      alt: "Salon Zuza Mobile View",
-      caption: "Responzivní zobrazení webu na mobilních zařízeních",
-    },
+    
   ]
 
   return (
@@ -306,7 +302,7 @@ export default function SalonZuzaProjectPage() {
 
                 <div>
                   <h3 className="font-bold text-lg mb-2">Rok dokončení</h3>
-                  <p>2023</p>
+                  <p>2024</p>
                 </div>
               </div>
             </motion.div>
@@ -361,7 +357,7 @@ export default function SalonZuzaProjectPage() {
                 <div className="bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800 hover:border-blue-500/30 transition-all h-full">
                   <div className="relative h-40">
                     <Image
-                      src="/images/matejhrabak-project.png"
+                      src="/images/matejhrabak_portfolio.jpeg"
                       alt="Matěj Hrabák Website"
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"

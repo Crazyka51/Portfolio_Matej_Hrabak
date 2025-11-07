@@ -31,17 +31,17 @@ export default function PavelFiserProjectPage() {
       caption: "Úvodní stránka s prezentací zastupitele a jeho priorit",
     },
     {
-      src: "/images/projekty.jpeg?height=600&width=800&text=Pavel+Fišer+Projects",
+      src: "/images/projekty.jpeg",
       alt: "Pavel Fišer Projects Page",
       caption: "Sekce projektů a iniciativ s interaktivními kartami",
     },
     {
-      src: "/images/dashboard.jpeg?height=600&width=800&text=Pavel+Fišer+CMS+Admin",
+      src: "/images/dashboard.jpeg",
       alt: "Pavel Fišer CMS Administration",
       caption: "Administrační rozhraní CMS pro správu článků a obsahu",
     },
     {
-      src: "/images/editortextovehoobsahu.jpeg?height=800&width=400&text=Pavel+Fišer+Mobile+View",
+      src: "/images/editortextovehoobsahu.jpeg",
       alt: "Pavel Fišer Mobile View",
       caption: "Responzivní zobrazení webu na mobilních zařízeních",
     },

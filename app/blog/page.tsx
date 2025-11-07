@@ -66,7 +66,7 @@ export default function BlogPage() {
       title: "Jak správně nastavit životní pojištění",
       excerpt:
         "Průvodce nastavením životního pojištění, které skutečně chrání vás i vaši rodinu v případě neočekávaných událostí.",
-      image: "/images/liability-insurance.jpg?height=200&width=400&text=Životní+pojištění",
+      image: "/images/liability-insurance.jpg",
       date: "15. 4. 2025",
       readTime: 8,
       category: "Životní pojištění",
@@ -76,7 +76,7 @@ export default function BlogPage() {
       title: "Investice vs. spoření: Co je výhodnější?",
       excerpt:
         "Porovnání různých investičních a spořících produktů a jejich výhod a nevýhod pro různé životní situace.",
-      image: "/images/portfolio-allocation.jpg?height=200&width=400&text=Investice",
+      image: "/images/portfolio-allocation.jpg",
       date: "2. 4. 2025",
       readTime: 10,
       category: "Investice",
@@ -86,7 +86,7 @@ export default function BlogPage() {
       title: "Pojištění majetku: Na co si dát pozor",
       excerpt:
         "Nejčastější chyby při sjednávání pojištění majetku a jak se jim vyhnout, abyste byli skutečně chráněni.",
-      image: "/images/home_insurance_watchout.jpg?height=200&width=400&text=Pojištění+majetku",
+      image: "/images/home_insurance_watchout.jpg",
       date: "20. 3. 2025",
       readTime: 7,
       category: "Pojištění majetku",
@@ -95,7 +95,7 @@ export default function BlogPage() {
     {
       title: "Penzijní připojištění: Jak začít",
       excerpt: "Kompletní průvodce penzijním připojištěním - od výběru fondu až po daňové výhody a státní příspěvky.",
-      image: "/images/penzijko.jpg?height=200&width=400&text=Penzijní+připojištění",
+      image: "/images/penzijko.jpg",
       date: "5. 3. 2025",
       readTime: 9,
       category: "Penzijní připojištění",
@@ -104,7 +104,7 @@ export default function BlogPage() {
     {
       title: "Chytré cestovní pojištění: Cestujte bez obav po celý rok",
       excerpt: "S celoročním cestovkem s opakovanými výjezdy.",
-      image: "/images/travel-insurance.jpg?height=200&width=400&text=Cestovní+pojištění",
+      image: "/images/travel-insurance.jpg",
       date: "18. 2. 2025",
       readTime: 6,
       category: "Cestovní pojištění",
@@ -114,7 +114,7 @@ export default function BlogPage() {
       title: "Pojištění odpovědnosti: Ochrana před finančními dopady nehod",
       excerpt:
         "Jak vás může pojištění odpovědnosti ochránit před vysokými finančními nároky v případě způsobení škody.",
-      image: "/images/pojistka_na_blbost.png?height=200&width=400&text=Pojištění+odpovědnosti",
+      image: "/images/pojistka_na_blbost.png",
       date: "3. 2. 2025",
       readTime: 8,
       category: "Pojištění odpovědnosti",
