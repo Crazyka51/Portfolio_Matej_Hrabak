@@ -181,6 +181,7 @@ const allProjects = [
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     github: null,
     live: "https://strawstav.cz",
+    detailUrl: "/webovy-vyvojar/projekty/strawstav",
   },
   {
     title: "Matěj Hrabák",
