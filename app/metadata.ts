@@ -31,7 +31,7 @@ export const baseMetadata: Metadata = {
     siteName: "Matěj Hrabák",
     images: [
       {
-        url: "/avatar.png",
+        url: "/avatar.webp",
         width: 800,
         height: 800,
         alt: "Matěj Hrabák",
@@ -42,7 +42,7 @@ export const baseMetadata: Metadata = {
     card: "summary_large_image",
     title: "Matěj Hrabák | Osobní webové stránky",
     description: "Osobní webové stránky Matěje Hrabáka - pojišťovací poradce a webový vývojář",
-    images: ["/avatar.png"],
+    images: ["/avatar.webp"],
   },
   robots: {
     index: true,

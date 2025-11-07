@@ -68,7 +68,7 @@ export default function InvesticniStrategiePage() {
           </div>
 
           <div className="relative w-full h-[400px] mb-8 rounded-lg overflow-hidden">
-            <Image src="/images/investment-strategy.jpg" alt="Investiční strategie" fill className="object-cover" />
+            <Image src="/images/investment-strategy.webp" alt="Investiční strategie" fill className="object-cover" />
           </div>
 
           <div className="prose prose-lg prose-invert max-w-none">
@@ -126,7 +126,7 @@ export default function InvesticniStrategiePage() {
             </p>
 
             <div className="relative w-full h-[300px] my-8 rounded-lg overflow-hidden">
-              <Image src="/images/compound-interest.jpg" alt="Složené úročení" fill className="object-cover" />
+              <Image src="/images/compound-interest.webp" alt="Složené úročení" fill className="object-cover" />
             </div>
 
             <h2 className="text-3xl font-semibold mt-8 mb-4">Typy investic pro začátečníky</h2>
@@ -187,7 +187,7 @@ export default function InvesticniStrategiePage() {
             </p>
 
             <div className="relative w-full h-[300px] my-8 rounded-lg overflow-hidden">
-              <Image src="/images/investment-types.jpg" alt="Typy investic" fill className="object-cover" />
+              <Image src="/images/investment-types.webp" alt="Typy investic" fill className="object-cover" />
             </div>
 
             <h2 className="text-3xl font-semibold mt-8 mb-4">Jak začít investovat: Praktický průvodce</h2>
@@ -270,7 +270,7 @@ export default function InvesticniStrategiePage() {
             </p>
 
             <div className="relative w-full h-[300px] my-8 rounded-lg overflow-hidden">
-              <Image src="/images/portfolio-allocation.jpg" alt="Alokace portfolia" fill className="object-cover" />
+              <Image src="/images/portfolio-allocation.webp" alt="Alokace portfolia" fill className="object-cover" />
             </div>
 
             <h2 className="text-3xl font-semibold mt-8 mb-4">Časté chyby začínajících investorů</h2>
@@ -337,7 +337,7 @@ export default function InvesticniStrategiePage() {
               <Link href="/blog/penzijni-pripojisteni-a-sporeni-na-duchod" className="block group">
                 <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
                   <Image
-                    src="/images/penzijko.jpg"
+                    src="/images/penzijko.webp"
                     alt="Penzijní připojištění"
                     fill
                     className="object-cover transition-transform group-hover:scale-105"
@@ -353,7 +353,7 @@ export default function InvesticniStrategiePage() {
               <Link href="/blog/jak-spravne-nastavit-zivotni-pojisteni" className="block group">
                 <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
                   <Image
-                    src="/images/life-insurance.jpg"
+                    src="/images/life-insurance.webp"
                     alt="Životní pojištění"
                     fill
                     className="object-cover transition-transform group-hover:scale-105"

@@ -185,7 +185,7 @@ export default function TravelInsurancePage() {
                 <path d="M9 18c-4.51 2-5-2-7-2" />
               </svg>
             </a>
-            <a href="mailto:info@example.com" className="text-gray-400 hover:text-white transition-colors">
+            <a href="mailto:matej.hrabak@generaliceska.cz" className="text-gray-400 hover:text-white transition-colors">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"

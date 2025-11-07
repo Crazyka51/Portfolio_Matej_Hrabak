@@ -4,14 +4,32 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
+import dynamic from "next/dynamic"
 import { motion, AnimatePresence } from "framer-motion"
 import { Shield, Code, Zap, ZapOff } from "lucide-react"
-import InteractiveParticles from "./components/interactive-particles"
-import AnimatedText from "./components/animated-text"
-import AnimatedSvg from "./components/animated-svg"
-import Clock from "./components/clock"
-import { BackgroundBeams } from "@/components/ui/background-beams"
 import { usePathname } from "next/navigation"
+
+// Lazy load těžkých komponent pouze když jsou potřeba
+const InteractiveParticles = dynamic(() => import("./components/interactive-particles"), { 
+  ssr: false,
+  loading: () => null 
+})
+const AnimatedText = dynamic(() => import("./components/animated-text"), { 
+  ssr: false,
+  loading: () => null 
+})
+const AnimatedSvg = dynamic(() => import("./components/animated-svg"), { 
+  ssr: false,
+  loading: () => null 
+})
+const Clock = dynamic(() => import("./components/clock"), { 
+  ssr: false,
+  loading: () => null 
+})
+const BackgroundBeams = dynamic(() => import("@/components/ui/background-beams").then(mod => ({ default: mod.BackgroundBeams })), { 
+  ssr: false,
+  loading: () => null 
+})
 
 export default function HomePage() {
   const pathname = usePathname()
@@ -27,7 +45,10 @@ export default function HomePage() {
     if (savedMode) {
       setPerformanceMode(savedMode)
     } else {
-      setShowPerformanceChoice(true)
+      // Defaultně nastavíme low mode pro rychlejší LCP
+      setPerformanceMode("low")
+      // Zobrazíme výběr až po načtení stránky
+      setTimeout(() => setShowPerformanceChoice(true), 100)
     }
   }, [])
 
@@ -113,31 +134,58 @@ export default function HomePage() {
   // Verze BEZ efektů (optimalizovaná)
   if (performanceMode === "low") {
     return (
-      <div className="min-h-screen bg-[#050A14] text-white relative">
-        <main className="container mx-auto px-4 py-12">
+      <div className="min-h-screen h-screen bg-[#050A14] text-white relative overflow-hidden flex flex-col">
+        <main className="container mx-auto px-2 sm:px-4 flex-1 flex flex-col justify-center overflow-y-auto py-4">
           {/* Profile Section - jednoduchá verze */}
-          <div className="flex flex-col items-center mb-16">
-            <div className="relative w-36 h-36 rounded-full border-2 border-gray-700 overflow-hidden mb-8">
-              <Image src="/avatar.png" alt="Profile" width={144} height={144} className="object-cover" priority />
+          <div className="flex flex-col items-center mb-2 sm:mb-3 md:mb-4">
+            {/* Avatar nahoře */}
+            <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full border-2 border-gray-700 overflow-hidden mb-2 sm:mb-3">
+              <Image 
+                src="/avatar.webp" 
+                alt="Profile" 
+                width={96} 
+                height={96} 
+                className="object-cover" 
+                priority 
+                fetchPriority="high"
+                sizes="(max-width: 640px) 64px, (max-width: 768px) 80px, 96px"
+              />
             </div>
 
-            <h1 className="text-5xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-indigo-500">
+            {/* Text */}
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-0.5 sm:mb-1 text-white text-center">
               Matěj Hrabák
             </h1>
 
-            <h2 className="text-xl text-gray-300 mb-8">Vyberte si profesní zaměření</h2>
+            <h2 className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-300 mb-2 sm:mb-3 text-center px-2">Vyberte si profesní zaměření</h2>
           </div>
 
-          {/* Service Cards - jednoduchá verze */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          {/* Info sekce - hned pod profilem */}
+          <section className="text-center max-w-3xl mx-auto px-2 mb-2 sm:mb-3 md:mb-4">
+            <h2 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold mb-1 sm:mb-2 text-gray-200">Profesionální služby na míru</h2>
+            <p className="text-xs sm:text-sm md:text-base text-gray-400 mb-2 sm:mb-3">
+              Ať už hledáte spolehlivé pojištění nebo moderní webové stránky, nabízím řešení přizpůsobená vašim
+              potřebám. Vyberte si profesní zaměření a objevte, jak vám mohu pomoci.
+            </p>
+            
+            {/* Animované tečky */}
+            <div className="flex justify-center space-x-2 mb-2 sm:mb-3">
+              <div className="w-2 h-2 rounded-full bg-red-500"></div>
+              <div className="w-2 h-2 rounded-full bg-indigo-500"></div>
+              <div className="w-2 h-2 rounded-full bg-green-500"></div>
+            </div>
+          </section>
+
+          {/* Service Cards - zmenšené */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 sm:gap-3 md:gap-4 max-w-5xl mx-auto w-full px-2">
             {/* Insurance Advisor Card */}
             <Link
               href="/pojistovaci-poradce"
-              className="border border-gray-800 rounded-lg p-10 flex flex-col items-center text-center bg-[#111827]/50 hover:border-red-500/30 transition-colors"
+              className="border border-gray-800 rounded-lg p-2 sm:p-3 md:p-4 lg:p-6 flex flex-col items-center text-center bg-[#111827]/50 hover:border-red-500/30 transition-colors"
             >
-              <Shield size={48} className="mb-6 text-red-500" />
-              <h2 className="text-2xl font-semibold mb-4">Pojišťovací poradce</h2>
-              <p className="text-gray-400">
+              <Shield size={24} className="sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 mb-1 sm:mb-2 md:mb-3 text-red-500" />
+              <h2 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold mb-1 sm:mb-1.5 md:mb-2">Pojišťovací poradce</h2>
+              <p className="text-xs sm:text-sm text-gray-400 line-clamp-2 md:line-clamp-3">
                 Zkušený poradce specializující se na transparentní a na míru šitá pojišťovací řešení. Osobní přístup,
                 profesionální jednání a důraz na ochranu klientova majetku
               </p>
@@ -146,25 +194,16 @@ export default function HomePage() {
             {/* Web Developer Card */}
             <Link
               href="/webovy-vyvojar"
-              className="border border-gray-800 rounded-lg p-10 flex flex-col items-center text-center bg-[#111827]/50 hover:border-indigo-500/30 transition-colors"
+              className="border border-gray-800 rounded-lg p-2 sm:p-3 md:p-4 lg:p-6 flex flex-col items-center text-center bg-[#111827]/50 hover:border-indigo-500/30 transition-colors"
             >
-              <Code size={48} className="mb-6 text-indigo-500" />
-              <h2 className="text-2xl font-semibold mb-4">Webový vývojář</h2>
-              <p className="text-gray-400">
+              <Code size={24} className="sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-10 lg:h-10 mb-1 sm:mb-2 md:mb-3 text-indigo-500" />
+              <h2 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold mb-1 sm:mb-1.5 md:mb-2">Webový vývojář</h2>
+              <p className="text-xs sm:text-sm text-gray-400 line-clamp-2 md:line-clamp-3">
                 Tvůrce moderních a responzivních webových stránek s důrazem na uživatelský zážitek. Specializace na
                 vývoj profesionálních webů a aplikací pro jednotlivce i firmy.
               </p>
             </Link>
           </div>
-
-          {/* Info sekce */}
-          <section className="mt-24 text-center max-w-3xl mx-auto">
-            <h2 className="text-2xl font-semibold mb-4 text-gray-200">Profesionální služby na míru</h2>
-            <p className="text-gray-400 mb-8">
-              Ať už hledáte spolehlivé pojištění nebo moderní webové stránky, nabízím řešení přizpůsobená vašim
-              potřebám. Vyberte si profesní zaměření a objevte, jak vám mohu pomoci.
-            </p>
-          </section>
         </main>
       </div>
     )
@@ -211,7 +250,7 @@ export default function HomePage() {
               transform: `translateY(${scrollY * -0.05}px)`, // Opačný směr než sekce pro zvýraznění paralaxu
             }}
           >
-            <Image src="/avatar.png" alt="Profile" width={144} height={144} className="object-cover" priority />
+            <Image src="/avatar.webp" alt="Profile" width={144} height={144} className="object-cover" priority />
             <motion.div
               className="absolute inset-0 bg-gradient-to-tr from-red-500/20 to-indigo-500/20"
               animate={{
@@ -242,13 +281,42 @@ export default function HomePage() {
           >
             Vyberte si profesní zaměření
           </motion.h2>
-
-          {/* Animované SVG ilustrace */}
-          <div className="flex justify-center space-x-12 mb-8 relative z-10">
-            <AnimatedSvg color="#ff4d4d" width={60} height={60} />
-            <AnimatedSvg color="#4d79ff" width={60} height={60} />
-          </div>
+        
         </motion.div>
+
+        {/* Přidaná sekce s animovaným přechodem - NAD kartami */}
+        <motion.section
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+          className="mb-8 sm:mb-10 md:mb-12 text-center max-w-3xl mx-auto px-2"
+          style={{ transform: `translateY(${scrollY * 0.02}px)` }} // Jemný paralaxový efekt
+        >
+          <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2 sm:mb-3 md:mb-4 text-gray-200">Profesionální služby na míru</h2>
+          <p className="text-xs sm:text-sm md:text-base text-gray-400 mb-4 sm:mb-6">
+            Ať už hledáte spolehlivé pojištění nebo moderní webové stránky, nabízím řešení přizpůsobená vašim potřebám.
+            Vyberte si profesní zaměření a objevte, jak vám mohu pomoci.
+          </p>
+
+          <div className="flex justify-center space-x-4">
+            <motion.div
+              className="w-3 h-3 rounded-full bg-red-500"
+              animate={{ scale: [1, 1.5, 1] }}
+              transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
+            />
+            <motion.div
+              className="w-3 h-3 rounded-full bg-indigo-500"
+              animate={{ scale: [1.5, 1, 1.5] }}
+              transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
+            />
+            <motion.div
+              className="w-3 h-3 rounded-full bg-green-500"
+              animate={{ scale: [1, 1.5, 1] }}
+              transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, delay: 0.5 }}
+            />
+          </div>
+        </motion.section>
 
         {/* Service Cards s animovanými přechody */}
         <motion.div
@@ -369,40 +437,6 @@ export default function HomePage() {
             </Link>
           </motion.div>
         </motion.div>
-
-        {/* Přidaná sekce s animovaným přechodem */}
-        <motion.section
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          className="mt-24 text-center max-w-3xl mx-auto"
-          style={{ transform: `translateY(${scrollY * 0.02}px)` }} // Jemný paralaxový efekt
-        >
-          <h2 className="text-2xl font-semibold mb-4 text-gray-200">Profesionální služby na míru</h2>
-          <p className="text-gray-400 mb-8">
-            Ať už hledáte spolehlivé pojištění nebo moderní webové stránky, nabízím řešení přizpůsobená vašim potřebám.
-            Vyberte si profesní zaměření a objevte, jak vám mohu pomoci.
-          </p>
-
-          <div className="flex justify-center space-x-4">
-            <motion.div
-              className="w-3 h-3 rounded-full bg-red-500"
-              animate={{ scale: [1, 1.5, 1] }}
-              transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-            />
-            <motion.div
-              className="w-3 h-3 rounded-full bg-indigo-500"
-              animate={{ scale: [1.5, 1, 1.5] }}
-              transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-            />
-            <motion.div
-              className="w-3 h-3 rounded-full bg-green-500"
-              animate={{ scale: [1, 1.5, 1] }}
-              transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY, delay: 0.5 }}
-            />
-          </div>
-        </motion.section>
       </main>
     </div>
   )

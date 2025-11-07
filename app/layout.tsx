@@ -7,7 +7,13 @@ import GridBackground from "./components/grid-background"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { baseMetadata } from "./metadata"
 
-const inter = Inter({ subsets: ["latin", "latin-ext"] })
+const inter = Inter({ 
+  subsets: ["latin", "latin-ext"],
+  display: 'swap',
+  preload: true,
+  adjustFontFallback: true,
+  fallback: ['system-ui', 'arial']
+})
 
 export const metadata: Metadata = baseMetadata
 
@@ -19,11 +25,12 @@ export default function RootLayout({
   return (
     <html lang="cs">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <meta name="google-site-verification" content="QHt8eRqoy-6khWzFHKzfLryKMfpCWBD5K5nOwjKGzxM" />
       </head>
       <body className={inter.className}>
         <ToastProvider>
-          <GridBackground />
           {children}
         </ToastProvider>
          <SpeedInsights />

@@ -6,6 +6,7 @@ import { motion } from "framer-motion"
 import { Home, User, FolderKanban, FileText, ImageIcon, ArrowRight, Calendar, MapPin, Github, Mail } from "lucide-react"
 import Clock from "@/app/components/clock"
 
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-[#050A14] text-white overflow-hidden">
@@ -91,7 +92,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
                 <Image
-                  src="/avatar.png"
+                  src="/avatar.webp"
                   alt="Matěj Hrabák"
                   fill
                   className="object-cover"
@@ -127,7 +128,7 @@ export default function AboutPage() {
                 <motion.a
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   whileTap={{ scale: 0.95 }}
-                  href="mailto:info@example.com"
+                  href="mailto:matej.hrabak@generaliceska.cz"
                   className="bg-gray-800 hover:bg-gray-700 p-2 rounded-full transition-colors"
                 >
                   <Mail size={18} />
@@ -222,25 +223,13 @@ export default function AboutPage() {
               <h1 className="text-5xl font-bold mb-2">Matěj Hrabák</h1>
               <h2 className="text-2xl text-gray-400 mb-6">Pojišťovací poradce a expert</h2>
 
-              <div className="flex flex-wrap gap-4 mb-6">
-                <div className="flex items-center text-sm">
-                  <MapPin className="mr-1 h-4 w-4 text-red-400" />
-                  <span>Europe/Prague</span>
-                </div>
-
-                <div className="flex gap-2">
-                  <button className="bg-[#111827] px-3 py-1 rounded-md text-sm">Čeština</button>
-                  <button className="bg-[#111827]/50 px-3 py-1 rounded-md text-sm text-gray-400 hover:bg-[#111827] transition-colors">
-                    English
-                  </button>
-                </div>
-              </div>
+             
 
               <div className="flex gap-4 mb-8">
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  href="https://github.com"
+                  href="https://github.com/crazyka51"
                   className="flex items-center gap-2 bg-[#111827] hover:bg-[#1d2739] px-3 py-2 rounded-md transition-colors"
                 >
                   <Github className="h-4 w-4" />
@@ -249,7 +238,7 @@ export default function AboutPage() {
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  href="mailto:info@example.com"
+                  href="mailto:matej.hrabak@generaliceska.cz"
                   className="flex items-center gap-2 bg-[#111827] hover:bg-[#1d2739] px-3 py-2 rounded-md transition-colors"
                 >
                   <Mail className="h-4 w-4" />
@@ -408,18 +397,18 @@ export default function AboutPage() {
 
       <footer className="container mx-auto px-4 py-8 mt-24 border-t border-gray-800 relative z-10">
         <div className="flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-sm text-gray-400 mb-4 sm:mb-0">© 2025 / Matěj Hrabák / Build by UI</p>
+          <p className="text-sm text-gray-400 mb-4 sm:mb-0">© 2025 / Matěj Hrabák / Powered by Next.js</p>
           <div className="flex space-x-4">
             <motion.a
               whileHover={{ scale: 1.2, rotate: 5 }}
-              href="https://github.com"
+              href="https://github.com/crazyka51"
               className="text-gray-400 hover:text-white transition-colors"
             >
               <Github size={20} />
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.2, rotate: 5 }}
-              href="mailto:info@example.com"
+              href="mailto:matejhraba@gmail.com"
               className="text-gray-400 hover:text-white transition-colors"
             >
               <Mail size={20} />

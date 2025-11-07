@@ -54,7 +54,7 @@ export default function PojisteniMajetkuPage() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="relative w-full h-[400px] mb-8 rounded-lg overflow-hidden"
         >
-          <Image src="/images/home-insurance.jpg" alt="Pojištění majetku a domácnosti" fill className="object-cover" />
+          <Image src="/images/home-insurance.webp" alt="Pojištění majetku a domácnosti" fill className="object-cover" />
         </motion.div>
 
         <article className="prose prose-lg prose-invert max-w-none">
@@ -83,7 +83,7 @@ export default function PojisteniMajetkuPage() {
           </section>
 
           <div className="relative w-full h-[300px] my-8 rounded-lg overflow-hidden">
-            <Image src="/images/home-damage.jpg" alt="Škoda na majetku" fill className="object-cover" />
+            <Image src="/images/home-damage.webp" alt="Škoda na majetku" fill className="object-cover" />
           </div>
 
           <section>
@@ -130,7 +130,7 @@ export default function PojisteniMajetkuPage() {
           </section>
 
           <div className="relative w-full h-[300px] my-8 rounded-lg overflow-hidden">
-            <Image src="/images/insurance-contract.jpg" alt="Pojistná smlouva" fill className="object-cover" />
+            <Image src="/images/insurance-contract.webp" alt="Pojistná smlouva" fill className="object-cover" />
           </div>
 
           <section>
@@ -214,7 +214,7 @@ export default function PojisteniMajetkuPage() {
               <Link href="/blog/jak-spravne-nastavit-zivotni-pojisteni" className="block group">
                 <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
                   <Image
-                    src="/images/life-insurance.jpg"
+                    src="/images/life-insurance.webp"
                     alt="Životní pojištění"
                     fill
                     className="object-cover transition-transform group-hover:scale-105"
@@ -230,7 +230,7 @@ export default function PojisteniMajetkuPage() {
               <Link href="/blog/penzijni-pripojisteni-a-sporeni-na-duchod" className="block group">
                 <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
                   <Image
-                    src="/images/retirement-savings.jpg"
+                    src="/images/retirement-savings.webp"
                     alt="Penzijní připojištění"
                     fill
                     className="object-cover transition-transform group-hover:scale-105"

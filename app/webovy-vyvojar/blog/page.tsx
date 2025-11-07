@@ -161,6 +161,7 @@ function BlogPostCard({ post, index }: { post: any; index: number }) {
           alt={post.title}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
       </div>
@@ -198,126 +199,51 @@ function BlogPostCard({ post, index }: { post: any; index: number }) {
 // Sample Data for blog posts
 const blogPosts = [
   {
-    title: "Optimalizace Výkonu: Od Pomalé k Bleskurychlé Aplikaci",
-    slug: "optimalizace-vykonu",
-    excerpt:
-      "Komplexní průvodce optimalizací výkonu webových aplikací. Core Web Vitals, caching strategie, bundle optimization a další klíčové techniky pro maximální rychlost.",
-    image: "/images/jakoptimalizovatreact.png",
-    date: "10. 11. 2025",
-    readTime: 24,
-    tags: ["Performance", "Optimization", "Speed"],
-  },
-  {
-    title: "E-commerce Řešení: Jak Postavit Úspěšný Online Obchod",
+    title: "Jak vytvářím e-shopy: Můj přístup k úspěšnému online obchodu",
     slug: "ecommerce-reseni",
     excerpt:
-      "Všechno, co potřebujete vědět pro vytvoření profesionálního e-commerce řešení. Od výběru platformy přes platební brány až po správu zásob a SEO optimalizaci.",
+      "Desítky vytvořených e-shopů mě naučily, co funguje a co ne. Sdílím svou filozofii tvorby e-shopů: od konzultace přes výběr technologie až po automatizaci a bezpečnost.",
     image: "/placeholder.svg",
     date: "9. 11. 2025",
-    readTime: 20,
-    tags: ["E-commerce", "Payments", "Business"],
+    readTime: 15,
+    tags: ["E-commerce", "Byznys", "Konverze"],
   },
   {
-    title: "React & Next.js: Kompletní Průvodce Pro Rok 2025",
+    title: "Rychlý web = více zákazníků: Proč rychlost rozhoduje o úspěchu",
+    slug: "optimalizace-vykonu",
+    excerpt:
+      "Každá sekunda zpoždění znamená ztrátu zákazníků. Ukazuji reálná čísla a vysvětluji, proč rychlost webu není technický detail, ale byznysová nutnost.",
+    image: "/images/jakoptimalizovatreact.webp",
+    date: "10. 11. 2025",
+    readTime: 12,
+    tags: ["Rychlost", "UX", "Konverze"],
+  },
+  {
+    title: "Moderní web, který s vámi poroste: Proč technologie rozhoduje o budoucnosti",
     slug: "react-nextjs",
     excerpt:
-      "Moderní React a Next.js od základů po pokročilé techniky. Server Components, App Router, data fetching patterns, state management a performance optimization.",
-    image: "/placeholder.svg",
+      "Staré technologie vás omezují. Moderní řešení rostou s vaším byznysem. Vysvětluji, jak volím technologie podle potřeb projektu a proč to není jen technický detail.",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=300&fit=crop",
     date: "8. 11. 2025",
-    readTime: 22,
-    tags: ["React", "Next.js", "SSR"],
-  },
-  {
-    title: "Backend Development: Od Základů k Microservices",
-    slug: "backend-development",
-    excerpt:
-      "Kompletní průvodce moderním backend vývojem. Node.js, databáze, API design, autentizace, bezpečnost, caching a škálování aplikací.",
-    image: "/placeholder.svg",
-    date: "7. 11. 2025",
-    readTime: 18,
-    tags: ["Backend", "Architecture", "APIs"],
-  },
-  {
-    title: "Moderní Frontend Development: Kompletní Průvodce 2025",
-    slug: "frontend-development",
-    excerpt:
-      "Objevte nejnovější frontend technologie a best practices. HTML5, CSS3, JavaScript/TypeScript, React, Vue, Svelte, build tools, styling solutions a moderní vývojové nástroje.",
-    image: "/placeholder.svg",
-    date: "6. 11. 2025",
-    readTime: 16,
-    tags: ["Frontend", "JavaScript", "CSS"],
-  },
-  {
-    title: "Jak optimalizovat výkon React aplikací",
-    slug: "jak-optimalizovat-vykon-react-aplikaci",
-    excerpt:
-      "Praktické tipy a triky pro zlepšení výkonu vašich React aplikací, od memoizace až po lazy loading komponent.",
-    image: "/images/reactaplikace.png",
-    date: "15. 4. 2025",
-    readTime: 8,
-    tags: ["React", "Performance", "Frontend"],
-  },
-  {
-    title: "Next.js 15: Co je nového a proč byste měli upgradovat",
-    slug: "nextjs-15-co-je-noveho",
-    excerpt: "Přehled nových funkcí a vylepšení v Next.js 15 a jak je můžete využít ve svých projektech.",
-    image: "/images/next15.png",
-    date: "2. 4. 2025",
-    readTime: 6,
-    tags: ["Next.js", "Frontend", "JavaScript"],
-  },
-  {
-    title: "TypeScript: Tipy pro efektivnější typování",
-    slug: "typescript-tipy-pro-efektivnejsi-typovani",
-    excerpt: "Pokročilé techniky typování v TypeScriptu, které vám pomohou psát bezpečnější a čitelnější kód.",
-    image: "/placeholder.svg",
-    date: "20. 3. 2025",
     readTime: 10,
-    tags: ["TypeScript", "JavaScript", "Development"],
+    tags: ["Moderní technologie", "Škálovatelnost", "Budoucnost"],
   },
   {
-    title: "Tailwind CSS: Od skeptika k fanouškovi",
-    slug: "tailwind-css-od-skeptika-k-fanouskovi",
-    excerpt: "Moje cesta s Tailwind CSS a proč jsem změnil názor na utility-first přístup k CSS.",
-    image: "/placeholder.svg",
-    date: "5. 3. 2025",
-    readTime: 7,
-    tags: ["CSS", "Tailwind", "Frontend"],
-  },
-  {
-    title: "Jak jsem implementoval GraphQL do existující aplikace",
-    slug: "jak-jsem-implementoval-graphql",
-    excerpt: "Praktický průvodce implementací GraphQL do existující REST API aplikace a výhody, které to přineslo.",
-    image: "/placeholder.svg",
-    date: "18. 2. 2025",
-    readTime: 12,
-    tags: ["GraphQL", "API", "Backend"],
-  },
-  {
-    title: "Serverless funkce: Kdy je použít a kdy ne",
-    slug: "serverless-funkce-kdy-pouzit",
-    excerpt: "Výhody a nevýhody serverless architektury a kdy je vhodné ji použít ve vašich projektech.",
-    image: "/placeholder.svg",
-    date: "3. 2. 2025",
-    readTime: 9,
-    tags: ["Serverless", "Architecture", "Cloud"],
-  },
-  {
-    title: "Přístupnost webu: Proč je důležitá a jak ji zlepšit",
+    title: "Web pro všechny = více zákazníků: Proč přístupnost není jen morálka",
     slug: "pristupnost-webu-proc-je-dulezita",
-    excerpt: "Praktický průvodce implementací přístupnosti do vašich webových projektů a proč by měla být prioritou.",
-    image: "/placeholder.svg",
+    excerpt: "15% populace má nějaké omezení. Ignorovat je = házet peníze oknem. Ukazuji, proč přístupnost není morální povinnost, ale chytrý byznys.",
+    image: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=400&h=300&fit=crop",
     date: "15. 1. 2025",
     readTime: 8,
-    tags: ["Accessibility", "Frontend", "UX"],
+    tags: ["Přístupnost", "UX", "Byznys"],
   },
   {
-    title: "Docker pro frontend vývojáře",
-    slug: "docker-pro-frontend-vyvojare",
-    excerpt: "Jak využít Docker pro konzistentní vývojové prostředí a zjednodušení nasazení frontend aplikací.",
-    image: "/placeholder.svg",
-    date: "2. 1. 2025",
+    title: "Design webu, který prodává: Proč vzhled rozhoduje o penězích",
+    slug: "frontend-development",
+    excerpt: "První dojem rozhoduje za 0,05 sekundy. Design není o tom, jak to vypadá - je o tom, jak to funguje a kolik to přinese zákazníků.",
+    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop",
+    date: "6. 11. 2025",
     readTime: 11,
-    tags: ["Docker", "DevOps", "Frontend"],
+    tags: ["Design", "UX/UI", "Konverze"],
   },
 ]

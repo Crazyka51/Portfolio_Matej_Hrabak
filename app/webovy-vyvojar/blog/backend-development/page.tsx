@@ -447,10 +447,6 @@ const decoded = jwt.verify(token, process.env.JWT_SECRET)`}</code>
                 <Share2 className="h-4 w-4" />
                 Twitter
               </button>
-              <button className="flex items-center gap-2 bg-blue-800 hover:bg-blue-900 px-4 py-2 rounded-lg transition-colors">
-                <Share2 className="h-4 w-4" />
-                LinkedIn
-              </button>
             </div>
           </div>
 

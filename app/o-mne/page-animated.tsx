@@ -201,7 +201,7 @@ export default function AboutPage() {
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  href="https://github.com"
+                  href="https://github.com/crazyka51"
                   className="flex items-center gap-2 bg-[#111827] hover:bg-[#1d2739] px-3 py-2 rounded-md transition-colors"
                 >
                   <Github className="h-4 w-4" />
@@ -210,7 +210,7 @@ export default function AboutPage() {
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  href="mailto:info@example.com"
+                  href="mailto:matej.hrabak@generaliceska.cz"
                   className="flex items-center gap-2 bg-[#111827] hover:bg-[#1d2739] px-3 py-2 rounded-md transition-colors"
                 >
                   <Mail className="h-4 w-4" />
@@ -333,18 +333,18 @@ export default function AboutPage() {
 
       <footer className="container mx-auto px-4 py-8 mt-24 border-t border-gray-800 relative z-10">
         <div className="flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-sm text-gray-400 mb-4 sm:mb-0">© 2025 / Matěj Hrabák / Build by UI</p>
+          <p className="text-sm text-gray-400 mb-4 sm:mb-0">© 2025 / Matěj Hrabák / Powered by Next.js</p>
           <div className="flex space-x-4">
             <motion.a
               whileHover={{ scale: 1.2, rotate: 5 }}
-              href="https://github.com"
+              href="https://github.com/crazyka51"
               className="text-gray-400 hover:text-white transition-colors"
             >
               <Github size={20} />
             </motion.a>
             <motion.a
               whileHover={{ scale: 1.2, rotate: 5 }}
-              href="mailto:info@example.com"
+              href="mailto:matejhraba@gmail.com"
               className="text-gray-400 hover:text-white transition-colors"
             >
               <Mail size={20} />

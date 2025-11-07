@@ -1,25 +1,26 @@
 "use client"
 
 import Link from "next/link"
-import { Home, User, FolderKanban, FileText, Mail } from "lucide-react"
+import { Home, FolderKanban, PhoneCall, Newspaper, BotMessageSquare } from "lucide-react"
 import { usePathname } from "next/navigation"
 import { motion } from "framer-motion"
 import Clock from "./clock"
+import { Icon } from "@iconify/react"
+
 
 export default function WebDevNavbar() {
   const pathname = usePathname()
 
-  const isActive = (path: string) => {
-    return pathname === path
-  }
+  const isActive = (path: string) => pathname === path
 
-  const navItems = [
-    { path: "/webovy-vyvojar", icon: <Home size={18} />, label: "Domů - Vývojář" },
-    { path: "/webovy-vyvojar/o-mne", icon: <User size={18} />, label: "O mně" },
-    { path: "/webovy-vyvojar/projekty", icon: <FolderKanban size={18} />, label: "Projekty" },
-    { path: "/webovy-vyvojar/kontakt", icon: <Mail size={18} />, label: "Kontakt" },
-    { path: "/pojistovaci-poradce", icon: <User size={18} />, label: " Pojištovací poradce" },
-  ]
+const navItems = [
+  { path: "/", icon: <Home size={18} />, label: "Úvodní stránka" },
+  { path: "/webovy-vyvojar", icon: <BotMessageSquare size={18} />, label: "Domů - Vývojář" },
+  { path: "/webovy-vyvojar/o-mne", icon: <Icon icon="lucide-lab:face-alien" width={18} height={18} />, label: "O mně" },
+  { path: "/webovy-vyvojar/projekty", icon: <FolderKanban size={18} />, label: "Projekty" },
+  { path: "/webovy-vyvojar/kontakt", icon: <PhoneCall size={18} />, label: "Kontakt" },
+  { path: "/webovy-vyvojar/blog", icon: <Newspaper size={18} />, label: "Blog" },
+]
 
   return (
     <header className="container mx-auto px-4 py-4">

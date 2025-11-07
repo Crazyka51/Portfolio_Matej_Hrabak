@@ -76,7 +76,7 @@ export default function PojisteniOdpovednostiochranaPage() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="relative w-full h-[400px] mb-8 rounded-lg overflow-hidden"
           >
-            <Image src="/images/liability-insurance.jpg" alt="Pojištění odpovědnosti" fill className="object-cover" />
+            <Image src="/images/liability-insurance.webp" alt="Pojištění odpovědnosti" fill className="object-cover" />
           </motion.div>
 
           <article className="prose prose-lg prose-invert max-w-none">
@@ -140,7 +140,7 @@ export default function PojisteniOdpovednostiochranaPage() {
               <Github size={20} />
             </motion.a>
             <motion.a
-              href="mailto:info@example.com"
+              href="mailto:matej.hrabak@generaliceska.cz"
               className="text-gray-400 hover:text-white transition-colors"
               whileHover={{ scale: 1.2, rotate: 5 }}
             >

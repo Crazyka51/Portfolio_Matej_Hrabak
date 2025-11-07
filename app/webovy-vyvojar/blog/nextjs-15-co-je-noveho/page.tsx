@@ -60,7 +60,7 @@ export default function NextJS15WhatsNew() {
           className="relative h-[400px] mb-12 rounded-xl overflow-hidden"
         >
           <Image
-            src="/images/next15.png"
+            src="/images/next15.webp"
             alt="Next.js 15 novinky"
             fill
             className="object-cover"

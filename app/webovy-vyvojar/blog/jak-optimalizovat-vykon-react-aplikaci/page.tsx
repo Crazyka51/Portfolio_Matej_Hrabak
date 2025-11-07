@@ -60,7 +60,7 @@ export default function ReactPerformanceOptimization() {
           className="relative h-[400px] mb-12 rounded-xl overflow-hidden"
         >
           <Image
-            src="/images/reactaplikace.png"
+            src="/images/reactaplikace.webp"
             alt="React Performance Optimization"
             fill
             className="object-cover"

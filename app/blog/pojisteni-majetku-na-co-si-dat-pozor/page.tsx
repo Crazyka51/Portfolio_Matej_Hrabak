@@ -6,7 +6,7 @@ export default function PojisteniMajetkuNaCoSiDatPozorPage() {
     <BlogPostLayout
       title="Pojištění majetku: Na co si dát pozor"
       date="15. května 2025"
-      imageSrc="/images/home-insurance.jpg"
+      imageSrc="/images/home-insurance.webp"
       imageAlt="Pojištění majetku"
     >
       <p className="lead">

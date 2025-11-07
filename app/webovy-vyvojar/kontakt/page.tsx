@@ -199,7 +199,7 @@ export default function ContactPage() {
               <h3 className="font-medium mb-4">Najdete mě také na:</h3>
               <div className="flex space-x-4">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/crazyka51"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gray-800 hover:bg-gray-700 p-3 rounded-lg transition-colors flex items-center"
@@ -207,25 +207,8 @@ export default function ContactPage() {
                   <Github className="mr-2 h-5 w-5" />
                   <span>GitHub</span>
                 </a>
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-gray-800 hover:bg-gray-700 p-3 rounded-lg transition-colors flex items-center"
-                >
-                  <Linkedin className="mr-2 h-5 w-5" />
-                  <span>LinkedIn</span>
-                </a>
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-gray-800 hover:bg-gray-700 p-3 rounded-lg transition-colors flex items-center"
-                >
-                  <Twitter className="mr-2 h-5 w-5" />
-                  <span>Twitter</span>
-                </a>
-              </div>
+                </div>
+                
 
               <div className="mt-12 p-4 bg-blue-900/20 border border-blue-500/30 rounded-lg">
                 <h3 className="font-medium mb-2">Rychlá odpověď</h3>

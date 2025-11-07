@@ -52,7 +52,7 @@ export default function PenzijniPripojisteniPage() {
 
           <div className="relative w-full h-[400px] mb-8 rounded-lg overflow-hidden">
             <Image
-              src="/images/pension-planningv2.jpg"
+              src="/images/pension-planningv2.webp"
               alt="Penzijní připojištění a spoření na důchod"
               fill
               className="object-cover"
@@ -94,7 +94,7 @@ export default function PenzijniPripojisteniPage() {
             </p>
 
             <div className="relative w-full h-[300px] my-8 rounded-lg overflow-hidden">
-              <Image src="/images/pension-planning.jpg" alt="Plánování důchodu" fill className="object-cover" />
+              <Image src="/images/pension-planning.webp" alt="Plánování důchodu" fill className="object-cover" />
             </div>
 
             <h2 className="text-3xl font-semibold mt-8 mb-4">Doplňkové penzijní spoření (třetí pilíř)</h2>
@@ -166,7 +166,7 @@ export default function PenzijniPripojisteniPage() {
             </p>
 
             <div className="relative w-full h-[300px] my-8 rounded-lg overflow-hidden">
-              <Image src="/images/investment-strategy.jpg" alt="Investiční strategie" fill className="object-cover" />
+              <Image src="/images/investment-strategy.webp" alt="Investiční strategie" fill className="object-cover" />
             </div>
 
             <h2 className="text-3xl font-semibold mt-8 mb-4">Alternativní způsoby spoření na důchod</h2>

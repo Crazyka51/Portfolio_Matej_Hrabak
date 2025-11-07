@@ -23,17 +23,17 @@ export default function SalonZuzaProjectPage() {
   // Gallery images
   const galleryImages = [
     {
-      src: "/images/salonzuza-project.png",
+      src: "/images/salonzuza-project.webp",
       alt: "Salon Zuza Homepage",
       caption: "Úvodní stránka s prezentací salonu a klíčovými službami",
     },
     {
-      src: "/images/sluzbycenik_salonzuza.jpeg",
+      src: "/images/sluzbycenik_salonzuza.webp",
       alt: "Salon Zuza Services Page",
       caption: "Stránka s detailním přehledem nabízených služeb a ceníkem",
     },
     {
-      src: "/images/booking_salonzuza.jpeg",
+      src: "/images/booking_salonzuza.webp",
       alt: "Salon Zuza Booking System",
       caption: "Rezervační systém umožňující klientům objednat se online",
     },
@@ -321,7 +321,7 @@ export default function SalonZuzaProjectPage() {
                 <div className="bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800 hover:border-blue-500/30 transition-all h-full">
                   <div className="relative h-40">
                     <Image
-                      src="/images/fiserpavel-project.png"
+                      src="/images/fiserpavel-project.webp"
                       alt="Pavel Fišer Website"
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -339,7 +339,7 @@ export default function SalonZuzaProjectPage() {
                 <div className="bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800 hover:border-blue-500/30 transition-all h-full">
                   <div className="relative h-40">
                     <Image
-                      src="/images/strawstav-project.png"
+                      src="/images/strawstav-project.webp"
                       alt="Straw Stav Website"
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -357,7 +357,7 @@ export default function SalonZuzaProjectPage() {
                 <div className="bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800 hover:border-blue-500/30 transition-all h-full">
                   <div className="relative h-40">
                     <Image
-                      src="/images/matejhrabak_portfolio.jpeg"
+                      src="/images/matejhrabak_portfolio.webp"
                       alt="Matěj Hrabák Website"
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"

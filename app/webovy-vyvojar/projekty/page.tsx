@@ -153,7 +153,7 @@ const allProjects = [
   {
     title: "Salon Zuza",
     description: "Webové stránky pro kadeřnický salon s online rezervačním systémem a galerií prací.",
-    image: "/images/salonzuza-project.png",
+    image: "/images/salonzuza-project.webp",
     category: "Firemní",
     year: "2024/2025",
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
@@ -164,7 +164,7 @@ const allProjects = [
   {
     title: "Pavel Fišer - zastupitel MČ Praha 4",
     description: "Osobní webové stránky pro zastupitele MČ Praha 4 s prezentací aktivit a kontaktními informacemi.",
-    image: "/images/fiserpavel-project.png",
+    image: "/images/fiserpavel-project.webp",
     category: "Osobní",
     year: "2025",
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
@@ -175,7 +175,7 @@ const allProjects = [
   {
     title: "Straw Stav s.r.o.",
     description: "Firemní prezentace pro stavební společnost specializující se na ekologické stavby ze slámy.",
-    image: "/images/strawstav-project.png",
+    image: "/images/strawstav-project.webp",
     category: "Firemní",
     year: "2025",
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
@@ -185,7 +185,7 @@ const allProjects = [
   {
     title: "Matěj Hrabák",
     description: "Osobní web s dvojím zaměřením - pojišťovací poradce a webový vývojář s vlastním redakčním systémem.",
-    image: "/images/matejhrabak_portfolio.jpeg",
+    image: "/images/matejhrabak_portfolio.webp",
     category: "Osobní",
     year: "2025",
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],

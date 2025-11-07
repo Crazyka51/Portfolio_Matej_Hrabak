@@ -86,7 +86,7 @@ export default function InsuranceAdvisorPage() {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-red-900/20 rounded-lg transform -rotate-3 scale-105" />
             <Image
-              src="/avatar.png"
+              src="/avatar.webp"
               alt="Matěj Hrabák"
               width={256}
               height={1000}

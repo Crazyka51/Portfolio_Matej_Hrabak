@@ -66,7 +66,7 @@ export default function CestovniPojisteniPage() {
           </div>
 
           <div className="relative w-full h-[400px] mb-8 rounded-lg overflow-hidden">
-            <Image src="/images/travel-insurance.jpg" alt="Cestovní pojištění" fill className="object-cover" />
+            <Image src="/images/travel-insurance.webp" alt="Cestovní pojištění" fill className="object-cover" />
           </div>
 
           <div className="prose prose-lg prose-invert max-w-none">
@@ -122,7 +122,7 @@ export default function CestovniPojisteniPage() {
 
             <div className="relative w-full h-[300px] my-8 rounded-lg overflow-hidden">
               <Image
-                src="/images/travel-medical-emergency.jpg"
+                src="/images/travel-medical-emergency.webp"
                 alt="Zdravotní pohotovost v zahraničí"
                 fill
                 className="object-cover"
@@ -190,7 +190,7 @@ export default function CestovniPojisteniPage() {
 
             <div className="relative w-full h-[300px] my-8 rounded-lg overflow-hidden">
               <Image
-                src="/images/travel-insurance-claim.jpg"
+                src="/images/travel-insurance-claim.webp"
                 alt="Pojistná událost na cestách"
                 fill
                 className="object-cover"
@@ -279,7 +279,7 @@ export default function CestovniPojisteniPage() {
               <Link href="/blog/jak-spravne-nastavit-zivotni-pojisteni" className="block group">
                 <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
                   <Image
-                    src="/images/life-insurance.jpg"
+                    src="/images/life-insurance.webp"
                     alt="Životní pojištění"
                     fill
                     className="object-cover transition-transform group-hover:scale-105"
@@ -295,7 +295,7 @@ export default function CestovniPojisteniPage() {
               <Link href="/blog/pojisteni-majetku-a-domacnosti" className="block group">
                 <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
                   <Image
-                    src="/images/home-insurance.jpg"
+                    src="/images/home-insurance.webp"
                     alt="Pojištění majetku a domácnosti"
                     fill
                     className="object-cover transition-transform group-hover:scale-105"

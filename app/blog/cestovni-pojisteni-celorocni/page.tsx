@@ -68,7 +68,7 @@ export default function BlogPost() {
           </div>
 
           <div className="relative w-full h-[400px] mb-8 rounded-lg overflow-hidden">
-            <Image src="/images/travel-insurance.jpg" alt="Chytré cestovní pojištění" fill className="object-cover" />
+            <Image src="/images/travel-insurance.webp" alt="Chytré cestovní pojištění" fill className="object-cover" />
           </div>
 
           <div className="prose prose-lg prose-invert max-w-none">

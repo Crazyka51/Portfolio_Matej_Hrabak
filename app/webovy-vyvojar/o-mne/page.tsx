@@ -25,7 +25,7 @@ export default function AboutPage() {
               <div className="sticky top-24">
                 <div className="relative w-48 h-48 mx-auto md:mx-0 rounded-xl overflow-hidden mb-6 border-2 border-blue-500/30">
                   <Image
-                    src="/images/avatar_fullHD.png"
+                    src="/images/avatar_fullHD.webp"
                     alt="Matěj Hrabák"
                     fill
                     className="object-cover"
@@ -49,22 +49,8 @@ export default function AboutPage() {
                   >
                     <Github size={18} />
                   </a>
-                  <a
-                    href="https://linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-gray-800 hover:bg-gray-700 p-2 rounded-full transition-colors"
-                  >
-                    <Linkedin size={18} />
-                  </a>
-                  <a
-                    href="https://twitter.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-gray-800 hover:bg-gray-700 p-2 rounded-full transition-colors"
-                  >
-                    <Twitter size={18} />
-                  </a>
+                  ;;
+                  
                   <a
                     href="mailto:matejhrabak@gmail.com"
                     className="bg-gray-800 hover:bg-gray-700 p-2 rounded-full transition-colors"
@@ -80,13 +66,7 @@ export default function AboutPage() {
                   Kontaktovat
                 </Link>
 
-                <a
-                  href="#"
-                  className="flex items-center justify-center w-full bg-gray-800 hover:bg-gray-700 py-2 px-4 rounded-lg transition-colors"
-                >
-                  <Download className="mr-2 h-4 w-4" />
-                  Stáhnout CV
-                </a>
+                
               </div>
             </motion.div>
 

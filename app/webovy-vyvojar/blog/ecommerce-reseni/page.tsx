@@ -35,7 +35,7 @@ export default function EcommerceArticle() {
             </div>
 
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              E-commerce Řešení: Jak Postavit Úspěšný Online Obchod
+              Jak vytvářím e-shopy: Můj přístup k úspěšnému online obchodu
             </h1>
 
             <div className="flex flex-wrap items-center gap-4 text-gray-400 mb-8">
@@ -45,7 +45,7 @@ export default function EcommerceArticle() {
               </div>
               <div className="flex items-center">
                 <Clock className="h-4 w-4 mr-2" />
-                <span>20 min čtení</span>
+                <span>15 min čtení</span>
               </div>
             </div>
 
@@ -61,596 +61,556 @@ export default function EcommerceArticle() {
 
           <div className="prose prose-invert prose-lg max-w-none">
             <p className="text-xl text-gray-300 leading-relaxed mb-8">
-              Vytvoření úspěšného e-commerce řešení vyžaduje mnohem víc než jen pěkný design. Musíte zvládnout
-              platební brány, správu zásob, bezpečnost, výkon a skvělou uživatelskou zkušenost. Pojďme si projít
-              všechny klíčové aspekty moderního online obchodu.
+             Navrhuji a realizuji plně funkční e-shopy – od kompaktních rodinných řešení po rozsáhlé projekty s komplexní strukturou. Každý projekt přinesl nové výzvy a zkušenosti, díky nimž jsem si osvojil osvědčené principy, které skutečně fungují. Pojďme se podívat, jak k tvorbě e-shopů přistupuji a na čem podle mě záleží nejvíc.
             </p>
 
-            <h2 className="text-3xl font-bold mt-12 mb-6 text-white">1. Výběr Platformy</h2>
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-white">1. Začínám vždy konzultací: Co vlastně potřebujete?</h2>
 
-            <h3 className="text-2xl font-semibold mt-8 mb-4 text-emerald-400">Hotová Řešení</h3>
+            <p className="text-gray-300 mb-6">
+              První schůzka je nejdůležitější. Neptám se "Chcete e-shop?", ale "Co chcete prodávat a komu?". 
+              Rozdíl je zásadní. E-shop na ručně vyráběné šperky potřebuje něco úplně jiného než velkoobchod 
+              s autodíly.
+            </p>
+
+            <div className="bg-blue-900/20 border border-blue-500/30 rounded-lg p-6 mb-6">
+              <h4 className="text-lg font-semibold mb-3">Otázky, které vždy položím:</h4>
+              <ul className="space-y-2 text-gray-300">
+                <li>📦 <strong>Kolik produktů?</strong> 50 nebo 5000? Mění to přístup k databázi a vyhledávání</li>
+                <li>👥 <strong>Jaká je cílová skupina?</strong> Mladí techies nebo starší generace? Design se musí přizpůsobit</li>
+                <li>💰 <strong>Jaký rozpočet?</strong> Někdy stačí hotové řešení, jindy musím stavět na míru</li>
+                <li>🚚 <strong>Jak expedujete?</strong> Česká pošta, Zásilkovna, vlastní rozvoz? Každé má jinou integraci</li>
+                <li>📊 <strong>Potřebujete propojení se skladem?</strong> Tohle ovlivní 50% architektury</li>
+              </ul>
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-white">2. Volba technologie: Nejsem dogmatik</h2>
+
+            <p className="text-gray-300 mb-6">
+              Nemám jednu "oblíbenou" platformu. Pro každý projekt vybírám to nejlepší řešení. 
+              Je to jako s nářadím - kladivem vrtačku nenahradíte.
+            </p>
+
+            <h3 className="text-2xl font-semibold mt-8 mb-4 text-emerald-400">Pro menší projekty (do 500 produktů)</h3>
             
             <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 my-6">
-              <h4 className="text-lg font-semibold mb-3 text-white">Shopify</h4>
+              <p className="text-gray-300 mb-4">
+                <strong>Když použiju hotové řešení:</strong>
+              </p>
+              <p className="text-gray-300 mb-3">
+                Pro začínající obchod, který potřebuje být online co nejrychleji a nemá speciální požadavky, 
+                doporučuji cloudovou platformu. Klient má e-shop za týden, platby fungují okamžitě, doprava taky.
+              </p>
+              <ul className="list-disc list-inside text-gray-300 space-y-2">
+                <li>✓ Spuštění do 2 týdnů</li>
+                <li>✓ Náklady: 30 000 - 80 000 Kč (design + nastavení)</li>
+                <li>✓ Provoz: 800-2000 Kč/měsíc</li>
+                <li>❌ Omezení: Závislost na platformě, design z šablon</li>
+              </ul>
+            </div>
+
+            <h3 className="text-2xl font-semibold mt-8 mb-4 text-emerald-400">Pro střední projekty (500-5000 produktů)</h3>
+            
+            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 my-6">
+              <p className="text-gray-300 mb-4">
+                <strong>Moje volba: Vlastní řešení s moderními technologiemi</strong>
+              </p>
+              <p className="text-gray-300 mb-3">
+                Tady stavím na míru. Používám Next.js, React a moderní databáze. Klient dostane přesně to, co potřebuje.
+              </p>
               <ul className="list-disc list-inside text-gray-300 space-y-2 mb-4">
-                <li>Nejjednodušší start - hotovo za několik hodin</li>
-                <li>Vše v jednom - hosting, platby, témata</li>
-                <li>Tisíce aplikací pro rozšíření</li>
-                <li>Ideální pro malé až střední obchody</li>
+                <li>✓ 100% kontrola nad designem i funkcemi</li>
+                <li>✓ Výkon optimalizovaný na váš obchod</li>
+                <li>✓ Snadné přidání speciálních funkcí (konfigurátor, B2B sekce...)</li>
+                <li>✓ Vlastníte kompletní kód a data</li>
+                <li>❌ Vyšší počáteční investice: 150 000 - 400 000 Kč</li>
+                <li>❌ Delší vývoj: 2-3 měsíce</li>
               </ul>
               
-              <h4 className="text-lg font-semibold mb-3 text-white mt-6">WooCommerce (WordPress)</h4>
-              <ul className="list-disc list-inside text-gray-300 space-y-2">
-                <li>Zdarma open-source řešení</li>
-                <li>Nekonečná flexibilita díky pluginům</li>
-                <li>Vyžaduje vlastní hosting</li>
-                <li>Dobrá volba pro WordPress uživatele</li>
-              </ul>
+              <p className="text-sm text-blue-400">
+                💡 Nejčastěji volba pro obchody, které chtějí růst a potřebují flexibilitu
+              </p>
             </div>
 
-            <h3 className="text-2xl font-semibold mt-8 mb-4 text-emerald-400">Custom Řešení</h3>
-            <p className="text-gray-300 mb-4">
-              Pro unikátní požadavky si můžete postavit vlastní řešení s Next.js, React nebo jiným moderním
-              frameworkem. Získáte maximální kontrolu, ale vyžaduje to více development času.
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-white">3. Produktový katalog: Základ je dobrá struktura</h2>
+
+            <p className="text-gray-300 mb-6">
+              Jednou jsem přebíral e-shop, který měl produkty chaoticky uložené. Výsledek? Zákazník hledal 
+              "modré tričko velikost L" a dostal i červené velikost S. Databáze je jako knihovna - když nemáte 
+              systém, najít co hledáte je loterie.
             </p>
 
-            <h2 className="text-3xl font-bold mt-12 mb-6 text-white">2. Produktový Katalog</h2>
-
-            <h3 className="text-2xl font-semibold mt-8 mb-4 text-blue-400">Database Schema</h3>
-            <p className="text-gray-300 mb-4">
-              Dobře navržená databázová struktura je základ e-commerce:
-            </p>
-
+            <h3 className="text-2xl font-semibold mt-8 mb-4 text-blue-400">Jak strukturuji produkty</h3>
+            
             <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 my-6">
-              <pre className="text-sm overflow-x-auto">
-                <code className="text-blue-400">{`// Prisma schema pro produkty
-model Product {
-  id          String   @id @default(cuid())
-  name        String
-  slug        String   @unique
-  description String
-  price       Decimal  @db.Decimal(10, 2)
-  salePrice   Decimal? @db.Decimal(10, 2)
-  sku         String   @unique
-  stock       Int      @default(0)
-  images      Image[]
-  category    Category @relation(fields: [categoryId], references: [id])
-  categoryId  String
-  variants    Variant[]
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-}
-
-model Variant {
-  id        String  @id @default(cuid())
-  product   Product @relation(fields: [productId], references: [id])
-  productId String
-  name      String  // např. "Velikost", "Barva"
-  value     String  // např. "L", "Červená"
-  price     Decimal @db.Decimal(10, 2)
-  stock     Int
-  sku       String  @unique
-}`}</code>
-              </pre>
-            </div>
-
-            <h3 className="text-2xl font-semibold mt-8 mb-4 text-blue-400">Správa Variant</h3>
-            <p className="text-gray-300 mb-4">
-              Produkty často mají varianty (velikost, barva). Musíte zvládnout kombinace a jejich dostupnost:
-            </p>
-
-            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 my-6">
-              <pre className="text-sm overflow-x-auto">
-                <code className="text-green-400">{`function VariantSelector({ product }: { product: Product }) {
-  const [selectedVariant, setSelectedVariant] = useState<Variant | null>(null)
-
-  const availableVariants = product.variants.filter(v => v.stock > 0)
-
-  return (
-    <div>
-      <div className="mb-4">
-        <label>Velikost:</label>
-        <div className="flex gap-2">
-          {availableVariants.map(variant => (
-            <button
-              key={variant.id}
-              onClick={() => setSelectedVariant(variant)}
-              className={\`
-                px-4 py-2 border rounded
-                \${selectedVariant?.id === variant.id ? 'border-blue-500' : ''}
-                \${variant.stock === 0 ? 'opacity-50 cursor-not-allowed' : ''}
-              \`}
-              disabled={variant.stock === 0}
-            >
-              {variant.value}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {selectedVariant && (
-        <p className="text-sm text-gray-400">
-          Skladem: {selectedVariant.stock} ks
-        </p>
-      )}
-    </div>
-  )
-}`}</code>
-              </pre>
-            </div>
-
-            <h2 className="text-3xl font-bold mt-12 mb-6 text-white">3. Nákupní Košík</h2>
-
-            <p className="text-gray-300 mb-4">
-              Košík musí být rychlý, spolehlivý a persistentní:
-            </p>
-
-            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 my-6">
-              <pre className="text-sm overflow-x-auto">
-                <code className="text-purple-400">{`// Zustand store pro košík
-import { create } from 'zustand'
-import { persist } from 'zustand/middleware'
-
-interface CartItem {
-  productId: string
-  variantId?: string
-  quantity: number
-  price: number
-}
-
-interface CartStore {
-  items: CartItem[]
-  addItem: (item: CartItem) => void
-  removeItem: (productId: string) => void
-  updateQuantity: (productId: string, quantity: number) => void
-  clearCart: () => void
-  total: () => number
-}
-
-export const useCart = create<CartStore>()(
-  persist(
-    (set, get) => ({
-      items: [],
-
-      addItem: (newItem) => set((state) => {
-        const existingItem = state.items.find(
-          item => item.productId === newItem.productId && 
-                  item.variantId === newItem.variantId
-        )
-
-        if (existingItem) {
-          return {
-            items: state.items.map(item =>
-              item.productId === newItem.productId
-                ? { ...item, quantity: item.quantity + newItem.quantity }
-                : item
-            )
-          }
-        }
-
-        return { items: [...state.items, newItem] }
-      }),
-
-      removeItem: (productId) => set((state) => ({
-        items: state.items.filter(item => item.productId !== productId)
-      })),
-
-      updateQuantity: (productId, quantity) => set((state) => ({
-        items: state.items.map(item =>
-          item.productId === productId
-            ? { ...item, quantity }
-            : item
-        )
-      })),
-
-      clearCart: () => set({ items: [] }),
-
-      total: () => {
-        const { items } = get()
-        return items.reduce((sum, item) => sum + (item.price * item.quantity), 0)
-      }
-    }),
-    {
-      name: 'cart-storage', // LocalStorage key
-    }
-  )
-)`}</code>
-              </pre>
-            </div>
-
-            <h2 className="text-3xl font-bold mt-12 mb-6 text-white">4. Platební Brány</h2>
-
-            <h3 className="text-2xl font-semibold mt-8 mb-4 text-violet-400">Stripe</h3>
-            <p className="text-gray-300 mb-4">
-              Stripe je nejpoužívanější platební brána s vynikající developer experience:
-            </p>
-
-            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 my-6">
-              <pre className="text-sm overflow-x-auto">
-                <code className="text-blue-400">{`// API route pro vytvoření platby
-import Stripe from 'stripe'
-import { NextResponse } from 'next/server'
-
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!)
-
-export async function POST(request: Request) {
-  const { items } = await request.json()
-
-  try {
-    const session = await stripe.checkout.sessions.create({
-      payment_method_types: ['card'],
-      line_items: items.map(item => ({
-        price_data: {
-          currency: 'czk',
-          product_data: {
-            name: item.name,
-            images: [item.image],
-          },
-          unit_amount: item.price * 100, // Stripe používá haléře
-        },
-        quantity: item.quantity,
-      })),
-      mode: 'payment',
-      success_url: \`\${process.env.NEXT_PUBLIC_URL}/success?session_id={CHECKOUT_SESSION_ID}\`,
-      cancel_url: \`\${process.env.NEXT_PUBLIC_URL}/cart\`,
-    })
-
-    return NextResponse.json({ sessionId: session.id })
-  } catch (error) {
-    return NextResponse.json(
-      { error: 'Payment failed' },
-      { status: 500 }
-    )
-  }
-}`}</code>
-              </pre>
-            </div>
-
-            <h3 className="text-2xl font-semibold mt-8 mb-4 text-violet-400">PayPal</h3>
-            <p className="text-gray-300 mb-4">
-              PayPal je další populární volba, zejména pro mezinárodní platby:
-            </p>
-
-            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 my-6">
-              <pre className="text-sm overflow-x-auto">
-                <code className="text-green-400">{`'use client'
-
-import { PayPalButtons } from '@paypal/react-paypal-js'
-
-function CheckoutButton({ amount }: { amount: number }) {
-  return (
-    <PayPalButtons
-      createOrder={(data, actions) => {
-        return actions.order.create({
-          purchase_units: [{
-            amount: {
-              value: amount.toString(),
-            },
-          }],
-        })
-      }}
-      onApprove={async (data, actions) => {
-        const details = await actions.order?.capture()
-        
-        // Uložit objednávku do DB
-        await fetch('/api/orders', {
-          method: 'POST',
-          body: JSON.stringify({ orderId: details.id })
-        })
-      }}
-    />
-  )
-}`}</code>
-              </pre>
-            </div>
-
-            <h2 className="text-3xl font-bold mt-12 mb-6 text-white">5. Objednávky a Fulfillment</h2>
-
-            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 my-6">
-              <pre className="text-sm overflow-x-auto">
-                <code className="text-amber-400">{`model Order {
-  id            String      @id @default(cuid())
-  orderNumber   String      @unique
-  userId        String?
-  user          User?       @relation(fields: [userId], references: [id])
-  
-  // Produkty v objednávce
-  items         OrderItem[]
-  
-  // Dodací adresa
-  shippingName     String
-  shippingAddress  String
-  shippingCity     String
-  shippingZip      String
-  shippingCountry  String
-  
-  // Fakturační adresa
-  billingName      String?
-  billingAddress   String?
-  
-  // Ceny
-  subtotal      Decimal  @db.Decimal(10, 2)
-  shipping      Decimal  @db.Decimal(10, 2)
-  tax           Decimal  @db.Decimal(10, 2)
-  total         Decimal  @db.Decimal(10, 2)
-  
-  // Status
-  status        OrderStatus @default(PENDING)
-  paymentStatus PaymentStatus @default(PENDING)
-  
-  // Tracking
-  trackingNumber String?
-  
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
-}
-
-enum OrderStatus {
-  PENDING
-  CONFIRMED
-  PROCESSING
-  SHIPPED
-  DELIVERED
-  CANCELLED
-}
-
-enum PaymentStatus {
-  PENDING
-  PAID
-  FAILED
-  REFUNDED
-}`}</code>
-              </pre>
-            </div>
-
-            <h2 className="text-3xl font-bold mt-12 mb-6 text-white">6. Správa Zásob</h2>
-
-            <p className="text-gray-300 mb-4">
-              Důležité je zajistit, aby zákazníci nemohli koupit vyprodané zboží:
-            </p>
-
-            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 my-6">
-              <pre className="text-sm overflow-x-auto">
-                <code className="text-red-400">{`async function createOrder(items: CartItem[]) {
-  // Začni transakci
-  const result = await prisma.$transaction(async (tx) => {
-    // Zkontroluj dostupnost všech položek
-    for (const item of items) {
-      const product = await tx.product.findUnique({
-        where: { id: item.productId }
-      })
-
-      if (!product || product.stock < item.quantity) {
-        throw new Error(\`Product \${item.productId} not available\`)
-      }
-
-      // Sniž zásoby
-      await tx.product.update({
-        where: { id: item.productId },
-        data: {
-          stock: {
-            decrement: item.quantity
-          }
-        }
-      })
-    }
-
-    // Vytvoř objednávku
-    const order = await tx.order.create({
-      data: {
-        items: {
-          create: items.map(item => ({
-            productId: item.productId,
-            quantity: item.quantity,
-            price: item.price
-          }))
-        },
-        total: calculateTotal(items)
-      }
-    })
-
-    return order
-  })
-
-  return result
-}`}</code>
-              </pre>
-            </div>
-
-            <h2 className="text-3xl font-bold mt-12 mb-6 text-white">7. Email Notifikace</h2>
-
-            <p className="text-gray-300 mb-4">
-              Automatické emaily zvyšují důvěru zákazníků:
-            </p>
-
-            <ul className="list-disc list-inside text-gray-300 space-y-2 mb-6">
-              <li>Potvrzení objednávky</li>
-              <li>Informace o odeslání</li>
-              <li>Tracking info</li>
-              <li>Request na recenzi</li>
-              <li>Abandoned cart reminder</li>
-            </ul>
-
-            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 my-6">
-              <pre className="text-sm overflow-x-auto">
-                <code className="text-green-400">{`import { Resend } from 'resend'
-
-const resend = new Resend(process.env.RESEND_API_KEY)
-
-async function sendOrderConfirmation(order: Order) {
-  await resend.emails.send({
-    from: 'obchod@example.com',
-    to: order.user.email,
-    subject: \`Potvrzení objednávky #\${order.orderNumber}\`,
-    html: \`
-      <h1>Děkujeme za objednávku!</h1>
-      <p>Číslo objednávky: <strong>#\${order.orderNumber}</strong></p>
-      
-      <h2>Objednané produkty:</h2>
-      <ul>
-        \${order.items.map(item => \`
-          <li>\${item.product.name} - \${item.quantity}x \${item.price} Kč</li>
-        \`).join('')}
-      </ul>
-      
-      <p><strong>Celkem: \${order.total} Kč</strong></p>
-      
-      <p>Objednávku expedujeme do 2 pracovních dnů.</p>
-    \`
-  })
-}`}</code>
-              </pre>
-            </div>
-
-            <h2 className="text-3xl font-bold mt-12 mb-6 text-white">8. SEO pro E-commerce</h2>
-
-            <div className="bg-blue-900/20 border border-blue-800 rounded-lg p-6 my-6">
-              <h4 className="text-xl font-semibold mb-3 text-blue-400">Klíčové SEO praktiky:</h4>
-              <ul className="list-disc list-inside text-gray-300 space-y-2">
+              <p className="text-gray-300 mb-4">
+                <strong>Každý produkt musí mít:</strong>
+              </p>
+              <ul className="space-y-3 text-gray-300">
                 <li>
-                  <strong>Unikátní product descriptions</strong> - Ne kopírované od výrobce
+                  <strong className="text-white">📷 Kvalitní fotografie (minimálně 4-6)</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Učím klienty: "Zákazník nemůže sáhnout na produkt. Fotky jsou všechno." Doporučuji profesionální 
+                    foťáka nebo alespoň dobré světlo. Rozmazaná fotka z mobilu = ztracený prodej.
+                  </span>
                 </li>
                 <li>
-                  <strong>Structured data</strong> - Schema.org markup pro produkty
+                  <strong className="text-white">📝 Popis co prodává, ne popisuje</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Špatně: "Tričko 100% bavlna, gramáž 180g"<br/>
+                    Dobře: "Bavlněné tričko, které vás nenechá zpocené ani v srpnovém vedru. Střih, který sedne 
+                    každému - ověřeno na 200+ zákaznících."
+                  </span>
                 </li>
                 <li>
-                  <strong>Optimalizované obrázky</strong> - Alt texty, WebP formát
+                  <strong className="text-white">🏷️ SKU kód a správné varianty</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Tričko červené M = jiné SKU než tričko modré M. Jinak se vám sklady pomíchají a expedujete 
+                    špatně. Už jsem to viděl mockrát.
+                  </span>
                 </li>
                 <li>
-                  <strong>Fast loading</strong> - Core Web Vitals
-                </li>
-                <li>
-                  <strong>Internal linking</strong> - Související produkty
+                  <strong className="text-white">⭐ Prostor pro recenze</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Produkt bez recenzí prodává o 30-40% hůř. Vždy implementuji systém hodnocení a aktivně 
+                    prosím zákazníky o feedback (mailem týden po dodání).
+                  </span>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 my-6">
-              <pre className="text-sm overflow-x-auto">
-                <code className="text-blue-400">{`// Structured data pro produkt
-export function ProductSchema({ product }: { product: Product }) {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    name: product.name,
-    image: product.images.map(img => img.url),
-    description: product.description,
-    sku: product.sku,
-    brand: {
-      '@type': 'Brand',
-      name: product.brand
-    },
-    offers: {
-      '@type': 'Offer',
-      url: \`https://example.com/products/\${product.slug}\`,
-      priceCurrency: 'CZK',
-      price: product.price,
-      availability: product.stock > 0 
-        ? 'https://schema.org/InStock' 
-        : 'https://schema.org/OutOfStock'
-    },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: product.averageRating,
-      reviewCount: product.reviewCount
-    }
-  }
+            <h3 className="text-2xl font-semibold mt-8 mb-4 text-blue-400">Varianty produktů - častá bolest</h3>
+            
+            <p className="text-gray-300 mb-4">
+              Tričko má 4 velikosti × 5 barev = 20 kombinací. E-shop musí vědět, které jsou skladem. Zdá se to 
+              jednoduché, ale viděl jsem desítky obchodů, kde tohle nefungovalo.
+            </p>
 
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  )
-}`}</code>
-              </pre>
+            <div className="bg-blue-900/20 border border-blue-500/30 rounded-lg p-6 mb-6">
+              <p className="text-gray-300 mb-3">
+                <strong>Moje řešení:</strong> Každá kombinace = vlastní záznam ve skladu. Když zákazník vybere 
+                "modrá + L", e-shop okamžitě ví, jestli je skladem. Žádné "omlouváme se, tato kombinace není dostupná" 
+                až u pokladny.
+              </p>
+              <p className="text-sm text-gray-400">
+                Navíc: Šedě zobrazím vyprodané varianty, aby zákazník viděl "taky máme červenou, ale je vyprodaná" - 
+                často počká než si koupí jinde.
+              </p>
             </div>
 
-            <h2 className="text-3xl font-bold mt-12 mb-6 text-white">9. Analytics a Conversion Optimization</h2>
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-white">4. Nákupní košík: Kde se rozhoduje o prodeji</h2>
 
-            <p className="text-gray-300 mb-4">Měřte klíčové metriky:</p>
+            <p className="text-gray-300 mb-6">
+              Statistiky říkají, že 70% košíků se opustí. SEDMDESÁT PROCENT! To je jak kdybyste měli obchod, 
+              kde 7 z 10 zákazníků odejde s plným košíkem u pokladny. Tak proč to děláme online?
+            </p>
 
-            <ul className="list-disc list-inside text-gray-300 space-y-2 mb-6">
-              <li>
-                <strong className="text-white">Conversion Rate</strong> - Procento návštěvníků, kteří nakoupí
-              </li>
-              <li>
-                <strong className="text-white">Average Order Value (AOV)</strong> - Průměrná hodnota objednávky
-              </li>
-              <li>
-                <strong className="text-white">Cart Abandonment Rate</strong> - Opuštěné košíky
-              </li>
-              <li>
-                <strong className="text-white">Customer Lifetime Value (CLV)</strong> - Hodnota zákazníka
-              </li>
-            </ul>
+            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 my-6">
+              <h4 className="text-lg font-semibold mb-3">Jak snižuji opuštěné košíky:</h4>
+              <ul className="space-y-3 text-gray-300">
+                <li>
+                  <strong className="text-white">💾 Košík musí přežít vše</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Zákazník zavře prohlížeč? Košík čeká. Vypne počítač? Košík čeká. Otevře web na mobilu? 
+                    Košík tam je! Ukládám to do prohlížeče (localStorage) + do účtu pokud je přihlášený.
+                  </span>
+                </li>
+                <li>
+                  <strong className="text-white">⚡ Být bleskový</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Kliknutí na "Přidat do košíku" = okamžitá reakce. Žádné načítání. Animace + číslo v košíku 
+                    se změní za 0.2 sekundy. Zákazník musí cítit, že to funguje.
+                  </span>
+                </li>
+                <li>
+                  <strong className="text-white">� Upozornit na doprav zdarma</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    "Přidej ještě za 120 Kč a máš dopravu zdarma!" - Zvyšuje průměrnou objednávku o 15-20%. 
+                    Vždy to implementuji.
+                  </span>
+                </li>
+                <li>
+                  <strong className="text-white">� Email na opuštěný košík</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    24 hodin po opuštění: "Zapomněli jste něco v košíku? Tady je 5% sleva když dokončíte nákup dnes." 
+                    Zachrání 10-15% ztracených objednávek.
+                  </span>
+                </li>
+              </ul>
+            </div>
 
-            <h2 className="text-3xl font-bold mt-12 mb-6 text-white">10. Bezpečnost</h2>
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-white">5. Platby: Nikdy nestavím vlastní platební systém</h2>
+
+            <p className="text-gray-300 mb-6">
+              První dotaz klientů: "Můžeme si udělat platby sami?" Odpověď: "NE!" Viděl jsem pokusy a vždycky to 
+              dopadlo špatně. Banky vyžadují certifikace, bezpečnost je noční můra, zodpovědnost obrovská.
+            </p>
+
+            <h3 className="text-2xl font-semibold mt-8 mb-4 text-violet-400">Moje oblíbené platební brány</h3>
+            
+            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 my-6">
+              <p className="text-gray-300 mb-4">
+                <strong>Pro české e-shopy nejčastěji používám:</strong>
+              </p>
+              <ul className="space-y-4 text-gray-300">
+                <li>
+                  <strong className="text-white">GoPay nebo ComGate</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    České brány, skvělá podpora v češtině, znají lokální specifika. Platba kartou, převodem, 
+                    Google Pay, Apple Pay - všechno hned. Poplatek cca 2% z tržby. Instalace za odpoledne.
+                  </span>
+                </li>
+                <li>
+                  <strong className="text-white">Stripe (pro mezinárodní obchody)</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Nejlepší developer experience. Pokud prodáváte do zahraničí, nemá konkurenci. 
+                    Miluji jejich dokumentaci - implementace za pár hodin.
+                  </span>
+                </li>
+              </ul>
+              
+              <p className="text-gray-300 mt-6 mb-3">
+                <strong>Jaké platební metody vždycky nabízím:</strong>
+              </p>
+              <ul className="space-y-2 text-gray-300 text-sm">
+                <li>✓ Platba kartou (nejpoužívanější - 60% zákazníků)</li>
+                <li>✓ Rychlý bankovní převod přes bránu (15% zákazníků)</li>
+                <li>✓ Google Pay / Apple Pay (mladší generace to miluje)</li>
+                <li>✓ Dobírka - bohužel nutnost v ČR (20% zákazníků ji chce)</li>
+                <li>✓ Klasický bankovní převod (pro B2B a starší zákazníky)</li>
+              </ul>
+            </div>
+
+            <div className="bg-emerald-900/20 border border-emerald-800/50 rounded-lg p-6 mb-6">
+              <p className="text-lg text-gray-200">
+                💡 <strong>Tip z praxe:</strong> Dobírka stojí peníze! 20-30% balíků se vrátí (zákazník není doma, 
+                rozmyslí si to...). Vždy účtuji příplatek 50 Kč za dobírku. Klienti to chápou a mnozí raději 
+                zaplatí kartou.
+              </p>
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-white">6. Automatizace: Ať e-shop pracuje i když spíte</h2>
+
+            <p className="text-gray-300 mb-6">
+              Nejlepší e-shopy jsou ty, které nevyžadují neustálou péči. Zákazník objedná v 2 ráno? 
+              E-shop vše zařídí sám. Tohle nastavuji u každého projektu.
+            </p>
+
+            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 my-6">
+              <h4 className="text-lg font-semibold mb-4">Co automatizuji vždy:</h4>
+              <ol className="list-decimal list-inside space-y-3 text-gray-300">
+                <li>
+                  <strong className="text-white">Potvrzení objednávky (okamžitě)</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Za 30 sekund po objednání dostane zákazník email: "Přijali jsme vaši objednávku #12345, 
+                    zabalíme a odešleme do 24 hodin." + PDF faktury. Automaticky.
+                  </span>
+                </li>
+                <li>
+                  <strong className="text-white">Snížení stavu skladu</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Jakmile zákazník zaplatí, e-shop automaticky sníží počet kusů. Žádné přeprodání!
+                  </span>
+                </li>
+                <li>
+                  <strong className="text-white">Informace o odeslání</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Když klient označí "odesláno" a zadá tracking číslo, e-shop pošle email zákazníkovi: 
+                    "Balík je na cestě! Sledovat: [odkaz]"
+                  </span>
+                </li>
+                <li>
+                  <strong className="text-white">Prosba o recenzi (7 dní po doručení)</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    "Jste spokojení? Napište recenzi a získejte 10% slevu na příští nákup!" Recenze zvýší 
+                    prodeje o 30-40%!
+                  </span>
+                </li>
+                <li>
+                  <strong className="text-white">Email na opuštěný košík (24 hodin)</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    "Zapomněli jste něco v košíku?" + 5-10% sleva. Zachrání 10-15% ztracených objednávek.
+                  </span>
+                </li>
+              </ol>
+            </div>
+
+            <p className="text-sm text-blue-400 mb-6">
+              💡 <strong>Realita:</strong> Tyto automatické emaily generují 15-20% všech prodejů! Bez nich byste 
+              přišli o tisíce korun měsíčně.
+            </p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-white">7. Správa skladu: Nedopustím přeprodání</h2>
+
+            <p className="text-gray-300 mb-6">
+              Nejhorší co se může stát: Zákazník objedná, zaplatí, a vy zjistíte že zboží není skladem. 
+              Viděl jsem obchody, které tohle řešily každý den. Moje e-shopy to MAJĺ vyřešené.
+            </p>
 
             <div className="bg-red-900/20 border border-red-800 rounded-lg p-6 my-6">
-              <h4 className="text-xl font-semibold mb-3 text-red-400">Kritické bezpečnostní požadavky:</h4>
-              <ul className="list-disc list-inside text-gray-300 space-y-2">
+              <h4 className="text-lg font-semibold mb-3 text-red-400">Jak zajistím, aby se to nestalo:</h4>
+              <ul className="space-y-3 text-gray-300">
                 <li>
-                  <strong>SSL Certifikát</strong> - HTTPS je povinnost
+                  <strong className="text-white">Rezervace při přidání do košíku</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Máte poslední kus? Když ho zákazník přidá do košíku, e-shop ho rezervuje na 15 minut. 
+                    Druhý zákazník vidí "Vyprodáno" nebo "V košíku jiného zákazníka".
+                  </span>
                 </li>
                 <li>
-                  <strong>PCI DSS Compliance</strong> - Pro zpracování karet (nebo použít Stripe/PayPal)
+                  <strong className="text-white">Okamžité snížení skladu po platbě</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Platba proběhla? Stav skladu se sníží automaticky. Nemůže se stát, že prodáte 2× to samé.
+                  </span>
                 </li>
                 <li>
-                  <strong>Rate Limiting</strong> - Ochrana proti brute force útokům
+                  <strong className="text-white">Upozornění při nízkém stavu</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Zbývají poslední 3 kusy? Email klientovi: "Pozor, produkt XY se vyprodává!" 
+                    Stihne objednat dřív než přijde dotaz "kdy bude".
+                  </span>
                 </li>
                 <li>
-                  <strong>Input Validation</strong> - Všechny uživatelské vstupy
-                </li>
-                <li>
-                  <strong>GDPR Compliance</strong> - Ochrana osobních údajů
+                  <strong className="text-white">Možnost předobjednávky</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Produkt vyprodaný? Nabídněte "Předobjednat - expedice 15.12." Neztrácíte prodej, 
+                    jen ho posouváte.
+                  </span>
                 </li>
               </ul>
             </div>
 
-            <h2 className="text-3xl font-bold mt-12 mb-6 text-white">Závěr</h2>
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-white">8. SEO: Aby vás zákazníci našli na Googlu</h2>
 
-            <p className="text-gray-300 mb-4">
-              Vytvoření úspěšného e-commerce je komplexní úkol vyžadující péči o mnoho detailů. Klíčem k úspěchu je:
+            <p className="text-gray-300 mb-6">
+              Nejlepší e-shop je k ničemu, pokud ho nikdo nenajde. 90% zákazníků začíná na Googlu. 
+              SEO není "bonus", je to nutnost. A ne, nestačí zaplatit za reklamy - organické výsledky 
+              přivedou 70% zákazníků.
             </p>
 
-            <ul className="list-disc list-inside text-gray-300 space-y-2 mb-6">
-              <li>Začít s jednoduchým MVP a iterovat</li>
-              <li>Použít osvědčené platební brány</li>
-              <li>Zajistit bezpečnost od začátku</li>
-              <li>Optimalizovat pro konverze</li>
-              <li>Měřit vše a neustále zlepšovat</li>
-            </ul>
+            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 my-6">
+              <h4 className="text-xl font-semibold mb-4 text-blue-400">Jak dělám SEO pro e-shopy:</h4>
+              <ul className="space-y-3 text-gray-300">
+                <li>
+                  <strong className="text-white">📝 Unikátní popisy - VŽDY!</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Klient chce zkopírovat popisy od výrobce? Říkám NE. Google to pozná a sesadí vás dolů. 
+                    Píšu vlastní texty pro každý produkt. Ano, je to práce, ale funguje to.
+                  </span>
+                </li>
+                <li>
+                  <strong className="text-white">📷 Optimalizované obrázky</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Každý obrázek přejmenuji: "IMG_1234.webp" → "modre-damske-tricko-bavlna.webp". 
+                    Přidám alt text. Google obrázky jsou ZLATÝ důl - přivedou 20-30% návštěvníků!
+                  </span>
+                </li>
+                <li>
+                  <strong className="text-white">⚡ Rychlost načítání</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Web co se načítá 5 sekund? Google vás sesadí, zákazník odejde. Cíl: pod 2 sekundy. 
+                    Optimalizuji obrázky (WebP formát), používám lazy loading, minimalizuji JavaScript.
+                  </span>
+                </li>
+                <li>
+                  <strong className="text-white">⭐ Structured data pro hvězdičky</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Vidět produkt ve vyhledávání s hvězdičkami ⭐⭐⭐⭐⭐ = +35% kliknutí! Vždycky implementuji 
+                    schema.org markup. Google pak zobrazuje hodnocení, cenu, dostupnost.
+                  </span>
+                </li>
+                <li>
+                  <strong className="text-white">🔗 Interní odkazy</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    "Související produkty", "Zákazníci také kupují" - nejenže zvyšuje prodeje, 
+                    pomáhá to i Googlu pochopit strukturu obchodu.
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <p className="text-sm text-emerald-400 mb-6">
+              ✅ <strong>Výsledek:</strong> Moje e-shopy se obvykle dostanou na první stránku Googlu za 3-6 měsíců. 
+              Organická návštěvnost tvoří 60-70% všech zákazníků.
+            </p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-white">9. Analytics: Měřím všechno</h2>
+
+            <p className="text-gray-300 mb-6">
+              "Jak poznám, že e-shop funguje?" ptají se klienti. Odpověď: Podívejte se na čísla. 
+              Bez měření jen hádáte. S čísly víte přesně, co funguje a co ne.
+            </p>
+
+            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 my-6">
+              <h4 className="text-lg font-semibold mb-4">Čísla, která sleduji každý týden:</h4>
+              <ul className="space-y-4 text-gray-300">
+                <li>
+                  <strong className="text-white">📊 Conversion rate (míra konverze)</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Ze 100 návštěvníků, kolik nakoupí? Průměr: 1-3%. Pod 1% = problém. Nad 3% = skvělé! 
+                    Sleduji to denně a hledám co zlepšit.
+                  </span>
+                </li>
+                <li>
+                  <strong className="text-white">💰 Average Order Value (průměrná objednávka)</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Kolik průměrně utratí zákazník? Cíl: Zvýšit! Jak? "Doprava zdarma nad 1000 Kč", 
+                    "Kup 3, zaplať za 2", doporučené produkty...
+                  </span>
+                </li>
+                <li>
+                  <strong className="text-white">🛒 Abandoned carts (opuštěné košíky)</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Průměr: 70%! Ano, 7 z 10 lidí přidá do košíku a nekoupí. Cíl: Snížit pod 65%. 
+                    Jak? Reminder emaily, zjednodušit checkout, nabídnout více platebních metod.
+                  </span>
+                </li>
+                <li>
+                  <strong className="text-white">🔄 Returning customers (vracející se zákazníci)</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Kolik % zákazníků se vrátí? Pod 20% = problém s kvalitou/cenou. Nad 40% = skvělé! 
+                    Věrní zákazníci jsou 5× levnější než nový.
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <p className="text-gray-300 mb-6">
+              Klientům posílám report každý měsíc: "Tento měsíc jste měli 1234 návštěvníků, 45 objednávek (3.6% konverze), 
+              průměrná objednávka 1850 Kč, celkový obrat 83 000 Kč." Vidí přesně, jak e-shop funguje.
+            </p>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-white">10. Bezpečnost: Nešetřím na tom</h2>
+
+            <p className="text-gray-300 mb-6">
+              Hacknout e-shop = ztratit všechno. Databázi zákazníků, důvěru, peníze, pověst. Viděl jsem to mockrát. 
+              Proto bezpečnost řeším OD ZAČÁTKU, ne až když je problém.
+            </p>
+
+            <div className="bg-red-900/20 border border-red-800 rounded-lg p-6 my-6">
+              <h4 className="text-xl font-semibold mb-3 text-red-400">Bezpečnostní opatření, která VŽDY implementuji:</h4>
+              <ul className="space-y-3 text-gray-300">
+                <li>
+                  <strong className="text-white">🔒 HTTPS certifikát</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    POVINNOST! Bez toho Google označí web "Nezabezpečený" a nikdo u vás nenakoupí. 
+                    Let's Encrypt dává certifikáty zdarma, instaluji to automaticky.
+                  </span>
+                </li>
+                <li>
+                  <strong className="text-white">💳 NIKDY neukládám čísla karet!</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Platební brána (GoPay, Stripe...) to řeší za vás. Kdyby někdo hacknul váš e-shop 
+                    a ukradl čísla karet? Pokuta v milionech + žaloby. Není to vaše starost!
+                  </span>
+                </li>
+                <li>
+                  <strong className="text-white">🛡️ Ochrana proti útokům</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Limit pokusů o přihlášení (3× špatné heslo = 15 min pauza), CAPTCHA na formulářích, 
+                    firewall na serveru. Roboti to vzdají.
+                  </span>
+                </li>
+                <li>
+                  <strong className="text-white">📋 GDPR compliance</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Souhlas se zpracováním údajů, možnost smazání účtu, informace co s daty děláte. 
+                    Pokuta za porušení? Až 20 milionů €! Mám připravené šablony, implementuji automaticky.
+                  </span>
+                </li>
+                <li>
+                  <strong className="text-white">💾 Automatické zálohy</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Každý den automatická záloha databáze + souborů. Server shoří? Za 2 hodiny je e-shop 
+                    zpátky. Testuju obnovu každé 3 měsíce - záloha co nejde obnovit je k ničemu!
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <h2 className="text-3xl font-bold mt-12 mb-6 text-white">Závěr: Moje filozofie tvorby e-shopů</h2>
+
+            <p className="text-gray-300 mb-6">
+              Za roky jsem vytvořil desítky e-shopů a naučil se pár věcí:
+            </p>
+
+            <div className="bg-gray-900/50 border border-gray-800 rounded-lg p-6 mb-6">
+              <ul className="space-y-3 text-gray-300">
+                <li>
+                  <strong>1. Začít jednoduše, pak škálovat</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Nejčastější chyba? Chtít všechno hned. E-shop s 50 funkcemi, který nikdy nevyjde. 
+                    Radši MVP za měsíc, pak přidávat funkce podle zpětné vazby zákazníků.
+                  </span>
+                </li>
+                <li>
+                  <strong>2. Bezpečnost od začátku, ne dodatečně</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Dělat bezpečnost "později" = předělávat půlku e-shopu. Dělám to správně od prvního dne.
+                  </span>
+                </li>
+                <li>
+                  <strong>3. Nestavět to, co už někdo vyřešil</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Platební systém? Použít bránu. Doprava? Integrovat Zásilkovnu. SEO? Structured data. 
+                    Zbytečně nevynalézat kolo.
+                  </span>
+                </li>
+                <li>
+                  <strong>4. Měřit, učit se, zlepšovat</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    E-shop není "hotový" nikdy. Je to živý organismus. Každý týden se dívám na čísla 
+                    a hledám co zlepšit.
+                  </span>
+                </li>
+                <li>
+                  <strong>5. Zaměřit se na zákazníka, ne na technologie</strong><br/>
+                  <span className="text-sm text-gray-400">
+                    Zákazníka nezajímá, jestli používáte React nebo Vue. Zajímá ho: "Rychle jsem našel 
+                    co chci? Šlo to snadno zaplatit? Dorazilo to včas?" To je to podstatné.
+                  </span>
+                </li>
+              </ul>
+            </div>
 
             <div className="bg-gradient-to-r from-emerald-900/20 to-violet-900/20 border border-emerald-800/50 rounded-lg p-6 mt-8 mb-8">
               <p className="text-lg text-gray-200">
-                💡 <strong>Pro tip:</strong> Nezačínejte budováním vlastního platebního systému. Použijte Stripe nebo
-                PayPal. Ušetříte si měsíce vývoje a získáte PCI compliance zdarma. Vlastní řešení má smysl pouze pro
-                velmi specifické požadavky.
+                💡 <strong>Zlaté pravidlo:</strong> Nikdy nebudujte vlastní platební systém. Použijte ověřenou 
+                platební bránu (Stripe, PayPal, GoPay, ComGate...). Ušetříte 6 měsíců vývoje, získáte zabezpečení 
+                zdarma a vyhnete se problémům s bankami. Vlastní řešení má smysl jen pro banky a velké korporace.
               </p>
             </div>
 
             <div className="bg-gradient-to-r from-emerald-900/20 to-violet-900/20 border border-emerald-700/50 rounded-lg p-8 mt-12">
-              <h3 className="text-2xl font-bold mb-4 text-white">Chcete spustit vlastní e-shop?</h3>
+              <h3 className="text-2xl font-bold mb-4 text-white">Chcete vytvořit e-shop, který prodává?</h3>
               <p className="text-lg text-gray-200 mb-6">
-                Pomůžu vám vytvořit profesionální e-commerce řešení přesně podle vašich potřeb. Mám zkušenosti 
-                s integrací platebních bran (Stripe, PayPal), správou produktů a objednávek, optimalizací pro konverze 
-                i SEO. Ať už potřebujete menší boutique e-shop nebo rozsáhlý online obchod s tisíci produkty, 
-                společně vytvoříme řešení, které vám bude přinášet prodeje.
+                Pomůžu vám postavit e-shop přesně podle vašich potřeb. Začneme konzultací - zjistím, co přesně 
+                potřebujete a navrhnu nejlepší řešení. Ať už je to rychlé řešení za pár týdnů nebo kompletní 
+                e-shop na míru, vždy dostanete systém který:
+              </p>
+              <ul className="space-y-2 text-gray-300 mb-6">
+                <li>✓ Je zabezpečený od prvního dne (HTTPS, GDPR, automatické zálohy)</li>
+                <li>✓ Funguje rychle a spolehlivě (optimalizace výkonu, SEO)</li>
+                <li>✓ Nepřeprodá zboží co není skladem (chytrá správa skladu)</li>
+                <li>✓ Automatizuje rutinní úkoly (emaily, faktury, tracking)</li>
+                <li>✓ Měří úspěšnost a dává vám jasná čísla</li>
+              </ul>
+              <p className="text-gray-300 mb-6">
+                Mám zkušenosti s platebními branami (GoPay, Stripe, ComGate), dopravci (Zásilkovna, PPL, DPD), 
+                propojením se skladovými systémy a vším, co moderní e-shop potřebuje.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Link 
                   href="/webovy-vyvojar/kontakt"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors inline-flex items-center"
                 >
-                  Nezávazná poptávka
+                  Nezávazná konzultace
                   <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />
                 </Link>
                 <Link 
                   href="/webovy-vyvojar/projekty"
                   className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                 >
-                  Reference
+                  Ukázat e-shopy v portfoliu
                 </Link>
               </div>
             </div>
@@ -662,10 +622,6 @@ export function ProductSchema({ product }: { product: Product }) {
               <button className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg transition-colors">
                 <Share2 className="h-4 w-4" />
                 Twitter
-              </button>
-              <button className="flex items-center gap-2 bg-blue-800 hover:bg-blue-900 px-4 py-2 rounded-lg transition-colors">
-                <Share2 className="h-4 w-4" />
-                LinkedIn
               </button>
             </div>
           </div>

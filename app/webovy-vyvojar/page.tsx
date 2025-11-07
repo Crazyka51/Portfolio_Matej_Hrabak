@@ -41,7 +41,7 @@ export default function WebDeveloperPage() {
           <div
             className="absolute inset-0 z-0 opacity-20"
             style={{
-              backgroundImage: `url('/images/web-developer-hero.jpg')`,
+              backgroundImage: `url('/images/web-developer-hero.webp')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               transform: `translateY(${parallaxOffset}px)`,
@@ -342,7 +342,7 @@ const projects = [
   {
     title: "Salon Zuza",
     description: "Moderní webové stránky pro kadeřnický salon s rezervačním systémem a prezentací služeb.",
-    image: "/images/salonzuza-project.png",
+    image: "/images/salonzuza-project.webp",
     category: "Profesionální portfolio kadeřnického salónu",
     year: "2023",
     technologies: ["PHP", "HTML", "CSS"],
@@ -353,7 +353,7 @@ const projects = [
   {
     title: "Pavel Fišer",
     description: "Osobní webové stránky pro zastupitele MČ Praha 4 s prezentací aktivit a kontaktními informacemi.",
-    image: "/images/fiserpavel-project.png",
+    image: "/images/fiserpavel-project.webp",
     category: "Profesionální portfolio",
     year: "2025",
     technologies: ["NextJS", "Node", "CSS" , "TypeScript" , "Tailwind CSS"],
@@ -364,7 +364,7 @@ const projects = [
   {
     title: "Straw Stav",
     description: "Firemní web pro stavební společnost s prezentací služeb, referencí a kontaktním formulářem.",
-    image: "/images/strawstav-project.png",
+    image: "/images/strawstav-project.webp",
     category: "Firemní porfolio",
     year: "2025",
     technologies: ["NextJS", "Node", "CSS" , "TypeScript" , "Tailwind CSS"],
@@ -375,7 +375,7 @@ const projects = [
   {
     title: "Matěj Hrabák",
     description: "Osobní portfolio a blog s prezentací služeb pojišťovacího poradce a webového vývojáře.",
-    image: "/images/matejhrabak_portfolio.jpeg",
+    image: "/images/matejhrabak_portfolio.webp",
     category: "Portfolio",
     year: "2024",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],

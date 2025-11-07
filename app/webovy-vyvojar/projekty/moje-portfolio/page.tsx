@@ -26,22 +26,22 @@ export default function PortfolioProjectPage() {
   // Gallery images
   const galleryImages = [
     {
-      src: "/images/pojistovaciporadce.jpeg",
+      src: "/images/pojistovaciporadce.webp",
       alt: "Matěj Hrabák Portfolio Homepage",
       caption: "Úvodní stránka s prezentací služeb a portfolia",
     },
     {
-      src: "/images/sluzby_p.jpeg",
+      src: "/images/sluzby_p.webp",
       alt: "Nabídka služeb",
       caption: "Sekce s nabídkou služeb",
     },
     {
-      src: "/images/blog.jpeg",
+      src: "/images/blog.webp",
       alt: "Portfolio Blog Section",
       caption: "Blogová sekce s články o financích a pojištění",
     },
     {
-      src: "/images/omne_p.jpeg",
+      src: "/images/omne_p.webp",
       alt: "Informace o mně",
       caption: "Strukturovaný přehled mé cesty životem",
     },
@@ -390,7 +390,7 @@ export default function PortfolioProjectPage() {
                 <div className="bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800 hover:border-blue-500/30 transition-all h-full">
                   <div className="relative h-40">
                     <Image
-                      src="/images/fiserpavel-project.png"
+                      src="/images/fiserpavel-project.webp"
                       alt="Pavel Fišer Website"
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -408,7 +408,7 @@ export default function PortfolioProjectPage() {
                 <div className="bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800 hover:border-blue-500/30 transition-all h-full">
                   <div className="relative h-40">
                     <Image
-                      src="/images/salonzuza-project.png"
+                      src="/images/salonzuza-project.webp"
                       alt="Salon Zuza Website"
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -426,7 +426,7 @@ export default function PortfolioProjectPage() {
                 <div className="bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800 hover:border-blue-500/30 transition-all h-full">
                   <div className="relative h-40">
                     <Image
-                      src="/images/strawstav-project.png"
+                      src="/images/strawstav-project.webp"
                       alt="Straw Stav Website"
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"

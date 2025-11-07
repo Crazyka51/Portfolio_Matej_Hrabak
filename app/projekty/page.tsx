@@ -54,8 +54,9 @@ export default function SluzbyPage() {
         <ServiceSection
           title="Životní pojištění"
           description="Životní pojištění je klíčovým nástrojem finanční ochrany vás a vaší rodiny. Nabízí jistotu v případě neočekávaných událostí a pomáhá zajistit finanční stabilitu vašich blízkých."
-          image="/images/life-insurance.jpg"
+          image="/images/life-insurance.webp"
           imageAlt="Životní pojištění"
+          priority={true}
           delay={0.1}
         >
           <div className="space-y-4">
@@ -83,7 +84,7 @@ export default function SluzbyPage() {
         <ServiceSection
           title="Pojištění majetku a domácnosti"
           description="Ochraňte svůj domov a majetek před nepředvídatelnými událostmi. Nabízím komplexní pojištění nemovitostí i vybavení domácnosti, které vám poskytne klid a jistotu."
-          image="/images/home-insurance.jpg"
+          image="/images/home-insurance.webp"
           imageAlt="Pojištění majetku"
           reverse={true}
           delay={0.2}
@@ -112,7 +113,7 @@ export default function SluzbyPage() {
         <ServiceSection
           title="Povinné ručení a havarijní pojištění"
           description="Komplexní řešení pro vaše vozidlo. Nabízím jak zákonné povinné ručení, tak i nadstandardní havarijní pojištění, které vás ochrání před finančními ztrátami."
-          image="/images/liability-insurance.jpg"
+          image="/images/liability-insurance.webp"
           imageAlt="Povinné ručení"
           delay={0.3}
         >
@@ -140,7 +141,7 @@ export default function SluzbyPage() {
         <ServiceSection
           title="Cestovní pojištění"
           description="Cestujte s klidem a jistotou. Cestovní pojištění vás ochrání před nečekanými výdaji v zahraničí, ať už jde o léčebné výlohy, ztrátu zavazadel nebo odpovědnost za škodu."
-          image="/images/travel-insurance.jpg"
+          image="/images/travel-insurance.webp"
           imageAlt="Cestovní pojištění"
           reverse={true}
           delay={0.4}
@@ -168,7 +169,7 @@ export default function SluzbyPage() {
         <ServiceSection
           title="Investice a spoření"
           description="Zajistěte si finanční budoucnost díky chytrým investicím a spoření. Nabízím řešení, která vám pomohou zhodnotit vaše prostředky a dosáhnout vašich finančních cílů."
-          image="/images/investment-strategy.jpg"
+          image="/images/investment-strategy.webp"
           imageAlt="Investice a spoření"
           delay={0.5}
         >
@@ -195,7 +196,7 @@ export default function SluzbyPage() {
         <ServiceSection
           title="Firemní pojištění"
           description="Komplexní ochrana pro vaše podnikání. Nabízím řešení, která pomohou ochránit vaši firmu před různými riziky a zajistí kontinuitu vašeho podnikání."
-          image="/images/insurance-contract.jpg"
+          image="/images/insurance-contract.webp"
           imageAlt="Firemní pojištění"
           reverse={true}
           delay={0.6}
@@ -310,6 +311,7 @@ function ServiceSection({
   children,
   reverse = false,
   delay = 0,
+  priority = false,
 }: {
   title: string
   description: string
@@ -318,6 +320,7 @@ function ServiceSection({
   children: React.ReactNode
   reverse?: boolean
   delay?: number
+  priority?: boolean
 }) {
   return (
     <motion.div
@@ -328,7 +331,14 @@ function ServiceSection({
     >
       <div className="w-full md:w-2/5 relative">
         <div className="relative h-[300px] md:h-full rounded-xl overflow-hidden">
-          <Image src={image || "/placeholder.svg"} alt={imageAlt} fill className="object-cover" />
+          <Image 
+            src={image || "/placeholder.svg"} 
+            alt={imageAlt} 
+            fill 
+            className="object-cover" 
+            priority={priority}
+            sizes="(max-width: 768px) 100vw, 40vw"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
         </div>
       </div>

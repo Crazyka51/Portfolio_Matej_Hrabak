@@ -68,7 +68,7 @@ export default function PojisteniOdpovednostiPage() {
           </div>
 
           <div className="relative w-full h-[400px] mb-8 rounded-lg overflow-hidden">
-            <Image src="/images/liability-insurance.jpg" alt="Pojištění odpovědnosti" fill className="object-cover" />
+            <Image src="/images/liability-insurance.webp" alt="Pojištění odpovědnosti" fill className="object-cover" />
           </div>
 
           <div className="prose prose-lg prose-invert max-w-none">
@@ -135,7 +135,7 @@ export default function PojisteniOdpovednostiPage() {
 
             <div className="relative w-full h-[300px] my-8 rounded-lg overflow-hidden">
               <Image
-                src="/images/liability-claim.jpg"
+                src="/images/liability-claim.webp"
                 alt="Pojistná událost odpovědnosti"
                 fill
                 className="object-cover"
@@ -212,7 +212,7 @@ export default function PojisteniOdpovednostiPage() {
 
             <div className="relative w-full h-[300px] my-8 rounded-lg overflow-hidden">
               <Image
-                src="/images/insurance-contract-signing.jpg"
+                src="/images/insurance-contract-signing.webp"
                 alt="Podpis pojistné smlouvy"
                 fill
                 className="object-cover"
@@ -305,7 +305,7 @@ export default function PojisteniOdpovednostiPage() {
               <Link href="/blog/pojisteni-majetku-a-domacnosti" className="block group">
                 <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
                   <Image
-                    src="/images/home-insurance.jpg"
+                    src="/images/home-insurance.webp"
                     alt="Pojištění majetku a domácnosti"
                     fill
                     className="object-cover transition-transform group-hover:scale-105"
@@ -321,7 +321,7 @@ export default function PojisteniOdpovednostiPage() {
               <Link href="/blog/cestovni-pojisteni-jak-se-spravne-pojistit-na-cesty" className="block group">
                 <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
                   <Image
-                    src="/images/travel-insurance.jpg"
+                    src="/images/travel-insurance.webp"
                     alt="Cestovní pojištění"
                     fill
                     className="object-cover transition-transform group-hover:scale-105"

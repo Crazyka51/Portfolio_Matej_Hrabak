@@ -26,22 +26,22 @@ export default function PavelFiserProjectPage() {
   // Gallery images
   const galleryImages = [
     {
-      src: "/images/fiserpavel-project.png",
+      src: "/images/fiserpavel-project.webp",
       alt: "Pavel Fišer Homepage",
       caption: "Úvodní stránka s prezentací zastupitele a jeho priorit",
     },
     {
-      src: "/images/projekty.jpeg",
+      src: "/images/projekty.webp",
       alt: "Pavel Fišer Projects Page",
       caption: "Sekce projektů a iniciativ s interaktivními kartami",
     },
     {
-      src: "/images/dashboard.jpeg",
+      src: "/images/dashboard.webp",
       alt: "Pavel Fišer CMS Administration",
       caption: "Administrační rozhraní CMS pro správu článků a obsahu",
     },
     {
-      src: "/images/editortextovehoobsahu.jpeg",
+      src: "/images/editortextovehoobsahu.webp",
       alt: "Pavel Fišer Mobile View",
       caption: "Responzivní zobrazení webu na mobilních zařízeních",
     },
@@ -404,7 +404,7 @@ export default function PavelFiserProjectPage() {
                 <div className="bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800 hover:border-blue-500/30 transition-all h-full">
                   <div className="relative h-40">
                     <Image
-                      src="/images/salonzuza-project.png"
+                      src="/images/salonzuza-project.webp"
                       alt="Salon Zuza Website"
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -422,7 +422,7 @@ export default function PavelFiserProjectPage() {
                 <div className="bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800 hover:border-blue-500/30 transition-all h-full">
                   <div className="relative h-40">
                     <Image
-                      src="/images/strawstav-project.png"
+                      src="/images/strawstav-project.webp"
                       alt="Straw Stav Website"
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -440,7 +440,7 @@ export default function PavelFiserProjectPage() {
                 <div className="bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800 hover:border-blue-500/30 transition-all h-full">
                   <div className="relative h-40">
                     <Image
-                      src="/images/matejhrabak-project.png"
+                      src="/images/matejhrabak-project.webp"
                       alt="Matěj Hrabák Website"
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"

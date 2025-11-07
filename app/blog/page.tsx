@@ -16,7 +16,7 @@ export default function BlogPage() {
       title: "Pojištění odpovědnosti: Proč je důležité a jak ho správně nastavit",
       excerpt:
         "Pojištění odpovědnosti vás chrání před finančními následky škod, které způsobíte jiným. Zjistěte, proč je nezbytné a jak ho správně nastavit.",
-      image: "/images/liability-insurance.jpg",
+      image: "/images/liability-insurance.webp",
       date: "12. 6. 2025",
       readTime: 9,
       category: "Pojištění odpovědnosti",
@@ -26,7 +26,7 @@ export default function BlogPage() {
       title: "Investiční strategie pro začátečníky: Jak začít budovat své bohatství",
       excerpt:
         "Průvodce základními principy investování, různými typy investic a praktickými kroky, jak začít budovat své investiční portfolio.",
-      image: "/images/investment-strategy.jpg",
+      image: "/images/investment-strategy.webp",
       date: "5. 6. 2025",
       readTime: 11,
       category: "Investice",
@@ -36,7 +36,7 @@ export default function BlogPage() {
       title: "Penzijní připojištění a spoření na důchod",
       excerpt:
         "Jak se finančně zajistit na stáří, využít státní podpory a vybrat správnou investiční strategii pro důchodové spoření.",
-      image: "/images/dashboard-project.jpg",
+      image: "/images/dashboard-project.webp",
       date: "22. 5. 2025",
       readTime: 10,
       category: "Penzijní připojištění",
@@ -46,7 +46,7 @@ export default function BlogPage() {
       title: "Pojištění majetku a domácnosti",
       excerpt:
         "Komplexní průvodce pojištěním nemovitosti a domácnosti pro maximální ochranu vašeho majetku před nepředvídatelnými událostmi.",
-      image: "/images/home-insurance.jpg",
+      image: "/images/home-insurance.webp",
       date: "15. 5. 2025",
       readTime: 8,
       category: "Pojištění majetku",
@@ -56,7 +56,7 @@ export default function BlogPage() {
       title: "Cestovní pojištění: Jak se správně pojistit na cesty",
       excerpt:
         "Průvodce výběrem správného cestovního pojištění, které vás ochrání před nečekanými událostmi na vašich cestách.",
-      image: "/images/travel-insurance.jpg",
+      image: "/images/travel-insurance.webp",
       date: "28. 5. 2025",
       readTime: 7,
       category: "Cestovní pojištění",
@@ -66,7 +66,7 @@ export default function BlogPage() {
       title: "Jak správně nastavit životní pojištění",
       excerpt:
         "Průvodce nastavením životního pojištění, které skutečně chrání vás i vaši rodinu v případě neočekávaných událostí.",
-      image: "/images/liability-insurance.jpg",
+      image: "/images/liability-insurance.webp",
       date: "15. 4. 2025",
       readTime: 8,
       category: "Životní pojištění",
@@ -76,7 +76,7 @@ export default function BlogPage() {
       title: "Investice vs. spoření: Co je výhodnější?",
       excerpt:
         "Porovnání různých investičních a spořících produktů a jejich výhod a nevýhod pro různé životní situace.",
-      image: "/images/portfolio-allocation.jpg",
+      image: "/images/portfolio-allocation.webp",
       date: "2. 4. 2025",
       readTime: 10,
       category: "Investice",
@@ -86,7 +86,7 @@ export default function BlogPage() {
       title: "Pojištění majetku: Na co si dát pozor",
       excerpt:
         "Nejčastější chyby při sjednávání pojištění majetku a jak se jim vyhnout, abyste byli skutečně chráněni.",
-      image: "/images/home_insurance_watchout.jpg",
+      image: "/images/home_insurance_watchout.webp",
       date: "20. 3. 2025",
       readTime: 7,
       category: "Pojištění majetku",
@@ -95,7 +95,7 @@ export default function BlogPage() {
     {
       title: "Penzijní připojištění: Jak začít",
       excerpt: "Kompletní průvodce penzijním připojištěním - od výběru fondu až po daňové výhody a státní příspěvky.",
-      image: "/images/penzijko.jpg",
+      image: "/images/penzijko.webp",
       date: "5. 3. 2025",
       readTime: 9,
       category: "Penzijní připojištění",
@@ -104,7 +104,7 @@ export default function BlogPage() {
     {
       title: "Chytré cestovní pojištění: Cestujte bez obav po celý rok",
       excerpt: "S celoročním cestovkem s opakovanými výjezdy.",
-      image: "/images/travel-insurance.jpg",
+      image: "/images/travel-insurance.webp",
       date: "18. 2. 2025",
       readTime: 6,
       category: "Cestovní pojištění",
@@ -114,7 +114,7 @@ export default function BlogPage() {
       title: "Pojištění odpovědnosti: Ochrana před finančními dopady nehod",
       excerpt:
         "Jak vás může pojištění odpovědnosti ochránit před vysokými finančními nároky v případě způsobení škody.",
-      image: "/images/pojistka_na_blbost.png",
+      image: "/images/pojistka_na_blbost.webp",
       date: "3. 2. 2025",
       readTime: 8,
       category: "Pojištění odpovědnosti",
@@ -286,7 +286,13 @@ function BlogPostCard({ post, index }: { post: any; index: number }) {
       <div className="absolute inset-0 bg-gradient-to-br from-red-600/10 to-red-900/20 rounded-lg transform rotate-1" />
       <div className="relative z-10 bg-[#111827]/50 backdrop-blur-sm rounded-lg overflow-hidden border border-gray-800 hover:border-red-500/30 transition-colors shadow-lg">
         <div className="relative h-48">
-          <Image src={post.image || "/placeholder.svg"} alt={post.title} fill className="object-cover" />
+          <Image 
+            src={post.image || "/placeholder.svg"} 
+            alt={post.title} 
+            fill 
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>
         </div>
         <div className="p-6">
