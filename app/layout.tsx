@@ -6,7 +6,7 @@ import { ToastProvider } from "./context/toast-context"
 import GridBackground from "./components/grid-background"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { baseMetadata } from "./metadata"
-import { GoogleAnalytics } from "nextjs-google-analytics"
+import GoogleAnalytics from "./components/google-analytics"
 
 const inter = Inter({ 
   subsets: ["latin", "latin-ext"],
@@ -31,7 +31,7 @@ export default function RootLayout({
         <meta name="google-site-verification" content="QHt8eRqoy-6khWzFHKzfLryKMfpCWBD5K5nOwjKGzxM" />
       </head>
       <body className={inter.className}>
-        <GoogleAnalytics trackPageViews />
+        <GoogleAnalytics />
         <ToastProvider>
           {children}
         </ToastProvider>
