@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import Navbar from "@/app/components/navbar"
+import Footer from "@/app/components/footer"
 import {
   Home,
   User,
@@ -220,7 +221,7 @@ export default function InsuranceAdvisorPage() {
         </motion.div>
       </main>
 
-      
+      <Footer />
     </div>
   )
 }

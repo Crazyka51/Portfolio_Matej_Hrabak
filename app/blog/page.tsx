@@ -5,6 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { Calendar, Clock, Search, ArrowRight } from "lucide-react"
+import Footer from "@/app/components/footer"
 
 export default function BlogPage() {
   const [searchQuery, setSearchQuery] = useState("")

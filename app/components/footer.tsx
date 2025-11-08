@@ -1,4 +1,7 @@
+"use client"
+
 import { Github, Mail } from "lucide-react"
+import { motion } from "framer-motion"
 
 /**
  * @component Footer
@@ -23,16 +26,26 @@ import { Github, Mail } from "lucide-react"
  */
 export default function Footer() {
   return (
-    <footer className="container mx-auto px-4 py-8 mt-24 border-t border-gray-800">
+    <footer className="container mx-auto px-4 py-8 mt-24 border-t border-gray-800 relative z-10">
       <div className="flex flex-col sm:flex-row justify-between items-center">
-        <p className="text-sm text-gray-400 mb-4 sm:mb-0">© 2025 / Matěj Hrabák </p>
+        <p className="text-sm text-gray-400 mb-4 sm:mb-0">© 2025 / Matěj Hrabák / Powered by Next.js</p>
         <div className="flex space-x-4">
-          <a href="https://github.com/Crazyka51" className="text-gray-400 hover:text-white transition-colors">
+          <motion.a
+            whileHover={{ scale: 1.2, rotate: 5 }}
+            href="https://github.com/crazyka51"
+            className="text-gray-400 hover:text-white transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Github size={20} />
-          </a>
-          <a href="mailto:matejhrabak@gmail.com" className="text-gray-400 hover:text-white transition-colors">
+          </motion.a>
+          <motion.a
+            whileHover={{ scale: 1.2, rotate: 5 }}
+            href="mailto:matejhraba@gmail.com"
+            className="text-gray-400 hover:text-white transition-colors"
+          >
             <Mail size={20} />
-          </a>
+          </motion.a>
         </div>
       </div>
     </footer>

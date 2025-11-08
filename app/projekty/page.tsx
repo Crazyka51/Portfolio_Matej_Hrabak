@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-
+import { Github, Mail } from "lucide-react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
@@ -287,14 +287,22 @@ export default function SluzbyPage() {
 
       <footer className="container mx-auto px-4 py-8 mt-24 border-t border-gray-800 relative z-10">
         <div className="flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-sm text-gray-400 mb-4 sm:mb-0">© 2025 / Matěj Hrabák</p>
+          <p className="text-sm text-gray-400 mb-4 sm:mb-0">© 2025 / Matěj Hrabák / Powered by Next.js</p>
           <div className="flex space-x-4">
-            <Link
-              href="mailto:matej.hrabak@generaliceska.cz"
+            <motion.a
+              whileHover={{ scale: 1.2, rotate: 5 }}
+              href="https://github.com/crazyka51"
               className="text-gray-400 hover:text-white transition-colors"
             >
-              matej.hrabak@generaliceska.cz
-            </Link>
+              <Github size={20} />
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.2, rotate: 5 }}
+              href="mailto:matejhraba@gmail.com"
+              className="text-gray-400 hover:text-white transition-colors"
+            >
+              <Mail size={20} />
+            </motion.a>
           </div>
         </div>
       </footer>

@@ -174,7 +174,7 @@ export default function BusinessInsurancePage() {
 
       <footer className="container mx-auto px-4 py-8 mt-24 border-t border-gray-800">
         <div className="flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-sm text-gray-400 mb-4 sm:mb-0">© 2025 / Matěj Hrabák / Build by UI</p>
+          <p className="text-sm text-gray-400 mb-4 sm:mb-0">© 2025 / Matěj Hrabák / Powered by Next.js / Build by UI</p>
           <div className="flex space-x-4">
             <a href="https://github.com" className="text-gray-400 hover:text-white transition-colors">
               <svg

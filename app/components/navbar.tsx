@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Home, User, FolderKanban, FileText } from "lucide-react"
+import { Home, User, FolderKanban, FileText, UnfoldHorizontal, HouseHeart, IdCard } from "lucide-react"
 import Clock from "./clock"
 import { usePathname } from "next/navigation"
 import { motion } from "framer-motion"
@@ -14,10 +14,12 @@ export default function Navbar() {
   }
 
   const navItems = [
-    { path: "/", icon: <Home size={18} />, label: "Domů" },
-    { path: "/o-mne", icon: <User size={18} />, label: "O mně" },
+    { path: "/", icon: <UnfoldHorizontal size={18} />, label: "Úvodní stránka" },
+    { path: "/pojistovaci-poradce", icon: <HouseHeart size={18} />, label: "Domů" },
+    { path: "/o-mne", icon: <IdCard size={18} />, label: "O mně" },
     { path: "/projekty", icon: <FolderKanban size={18} />, label: "Služby" },
     { path: "/blog", icon: <FileText size={18} />, label: "Blog" },
+    { path: "/schuzka", icon: <FileText size={18} />, label: "Schůzka" },
   ]
 
   return (

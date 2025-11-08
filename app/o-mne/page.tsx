@@ -5,6 +5,8 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { Home, User, FolderKanban, FileText, ImageIcon, ArrowRight, Calendar, MapPin, Github, Mail } from "lucide-react"
 import Clock from "@/app/components/clock"
+import Navbar from "@/app/components/navbar"
+import Footer from "@/app/components/footer"
 
 
 export default function AboutPage() {
@@ -40,41 +42,7 @@ export default function AboutPage() {
         />
       </div>
 
-      {/* Navigation */}
-      <header className="container mx-auto px-4 py-4 relative z-10">
-        <motion.nav
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="flex justify-center"
-        >
-          <div className="flex space-x-4 bg-[#111827]/80 px-6 py-2 rounded-full backdrop-blur-sm shadow-lg">
-            <Link href="/" className="flex items-center space-x-1 px-2 py-1 hover:text-gray-300 transition-colors">
-              <Home size={18} />
-              <span>Domů</span>
-            </Link>
-            <Link href="/o-mne" className="flex items-center space-x-1 px-2 py-1 text-white bg-gray-700/50 rounded-md">
-              <User size={18} />
-              <span>O mně</span>
-            </Link>
-            <Link
-              href="/projekty"
-              className="flex items-center space-x-1 px-2 py-1 hover:text-gray-300 transition-colors"
-            >
-              <FolderKanban size={18} />
-              <span>Služby</span>
-            </Link>
-            <Link href="/blog" className="flex items-center space-x-1 px-2 py-1 hover:text-gray-300 transition-colors">
-              <FileText size={18} />
-              <span>Blog</span>
-            </Link>
-           
-          </div>
-          <div className="absolute right-4 top-4">
-            
-          </div>
-        </motion.nav>
-      </header>
+      <Navbar />
 
       <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row gap-8 relative z-10">
         {/* Sidebar Navigation */}
@@ -395,27 +363,7 @@ export default function AboutPage() {
         </motion.main>
       </div>
 
-      <footer className="container mx-auto px-4 py-8 mt-24 border-t border-gray-800 relative z-10">
-        <div className="flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-sm text-gray-400 mb-4 sm:mb-0">© 2025 / Matěj Hrabák / Powered by Next.js</p>
-          <div className="flex space-x-4">
-            <motion.a
-              whileHover={{ scale: 1.2, rotate: 5 }}
-              href="https://github.com/crazyka51"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              <Github size={20} />
-            </motion.a>
-            <motion.a
-              whileHover={{ scale: 1.2, rotate: 5 }}
-              href="mailto:matejhraba@gmail.com"
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              <Mail size={20} />
-            </motion.a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
