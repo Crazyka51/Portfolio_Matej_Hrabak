@@ -1,10 +1,14 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Home, User, FolderKanban, FileText, HeartPulse, ArrowRight, Check } from "lucide-react"
+import { HeartPulse, ArrowRight, Check } from "lucide-react"
+import Navbar from "@/app/components/navbar"
+import Footer from "@/app/components/footer"
 
 export default function LifeInsurancePage() {
   return (
     <div className="min-h-screen bg-[#050A14] text-white">
+      <Navbar />
+
       <main className="container mx-auto px-4 py-8 relative">
         <div className="flex items-center justify-center mb-12">
           <HeartPulse className="text-red-500 h-12 w-12 mr-4" />
@@ -129,6 +133,8 @@ export default function LifeInsurancePage() {
           </Link>
         </div>
       </main>
+
+      <Footer />
     </div>
   )
 }

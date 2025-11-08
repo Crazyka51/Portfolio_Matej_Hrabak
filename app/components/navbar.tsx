@@ -17,7 +17,7 @@ export default function Navbar() {
     { path: "/", icon: <UnfoldHorizontal size={18} />, label: "Úvodní stránka" },
     { path: "/pojistovaci-poradce", icon: <HouseHeart size={18} />, label: "Domů" },
     { path: "/o-mne", icon: <IdCard size={18} />, label: "O mně" },
-    { path: "/projekty", icon: <FolderKanban size={18} />, label: "Služby" },
+    { path: "/nabizene-sluzby", icon: <FolderKanban size={18} />, label: "Služby" },
     { path: "/blog", icon: <FileText size={18} />, label: "Blog" },
     { path: "/schuzka", icon: <FileText size={18} />, label: "Schůzka" },
   ]

@@ -58,6 +58,7 @@ export default function SluzbyPage() {
           imageAlt="Životní pojištění"
           priority={true}
           delay={0.1}
+          link="/pojistovaci-poradce/sluzby/zivotni-pojisteni"
         >
           <div className="space-y-4">
             <FeatureItem>
@@ -88,6 +89,7 @@ export default function SluzbyPage() {
           imageAlt="Pojištění majetku"
           reverse={true}
           delay={0.2}
+          link="/pojistovaci-poradce/sluzby/pojisteni-majetku"
         >
           <div className="space-y-4">
             <FeatureItem>
@@ -116,6 +118,7 @@ export default function SluzbyPage() {
           image="/images/liability-insurance.webp"
           imageAlt="Povinné ručení"
           delay={0.3}
+          link="/pojistovaci-poradce/sluzby/povinne-ruceni"
         >
           <div className="space-y-4">
             <FeatureItem>
@@ -145,6 +148,7 @@ export default function SluzbyPage() {
           imageAlt="Cestovní pojištění"
           reverse={true}
           delay={0.4}
+          link="/pojistovaci-poradce/sluzby/cestovni-pojisteni"
         >
           <div className="space-y-4">
             <FeatureItem>
@@ -172,6 +176,7 @@ export default function SluzbyPage() {
           image="/images/investment-strategy.webp"
           imageAlt="Investice a spoření"
           delay={0.5}
+          link="/pojistovaci-poradce/sluzby/generali-investice"
         >
           <div className="space-y-4">
             <FeatureItem>
@@ -200,6 +205,7 @@ export default function SluzbyPage() {
           imageAlt="Firemní pojištění"
           reverse={true}
           delay={0.6}
+          link="/pojistovaci-poradce/sluzby/firemni-pojisteni"
         >
           <div className="space-y-4">
             <FeatureItem>
@@ -320,6 +326,7 @@ function ServiceSection({
   reverse = false,
   delay = 0,
   priority = false,
+  link,
 }: {
   title: string
   description: string
@@ -329,6 +336,7 @@ function ServiceSection({
   reverse?: boolean
   delay?: number
   priority?: boolean
+  link?: string
 }) {
   return (
     <motion.div
@@ -356,6 +364,16 @@ function ServiceSection({
         </h2>
         <p className="text-lg text-gray-300 mb-6">{description}</p>
         {children}
+        {link && (
+          <motion.div whileHover={{ scale: 1.02 }} className="mt-6">
+            <Link
+              href={link}
+              className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-md transition-colors"
+            >
+              Zjistit více <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </motion.div>
+        )}
       </div>
     </motion.div>
   )
