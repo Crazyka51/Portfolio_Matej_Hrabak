@@ -203,7 +203,7 @@ const blogPosts = [
     slug: "ecommerce-reseni",
     excerpt:
       "Desítky vytvořených e-shopů mě naučily, co funguje a co ne. Sdílím svou filozofii tvorby e-shopů: od konzultace přes výběr technologie až po automatizaci a bezpečnost.",
-    image: "/placeholder.svg",
+    image: "images/ecommerce-project.webp",
     date: "9. 11. 2025",
     readTime: 15,
     tags: ["E-commerce", "Byznys", "Konverze"],
