@@ -75,36 +75,36 @@ export default function WebDevFooter() {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Blog Articles */}
           <div>
-            <h3 className="font-semibold mb-3 md:mb-4 text-sm md:text-base">Služby</h3>
+            <h3 className="font-semibold mb-3 md:mb-4 text-sm md:text-base">Z blogu</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/webovy-vyvojar#frontend" className="text-gray-400 hover:text-blue-400 transition-colors text-sm md:text-base min-h-[44px] flex items-center">
-                  Frontend Development
+                <Link href="/webovy-vyvojar/blog/nextjs-15-co-je-noveho" className="text-gray-400 hover:text-blue-400 transition-colors text-sm md:text-base min-h-[44px] flex items-center">
+                  Next.js 15 - Co je nového
                 </Link>
               </li>
               <li>
-                <Link href="/webovy-vyvojar#backend" className="text-gray-400 hover:text-blue-400 transition-colors text-sm md:text-base min-h-[44px] flex items-center">
-                  Backend Development
+                <Link href="/webovy-vyvojar/blog/jak-optimalizovat-vykon-react-aplikaci" className="text-gray-400 hover:text-blue-400 transition-colors text-sm md:text-base min-h-[44px] flex items-center">
+                  Optimalizace React aplikací
                 </Link>
               </li>
               <li>
-                <Link href="/webovy-vyvojar#react" className="text-gray-400 hover:text-blue-400 transition-colors text-sm md:text-base min-h-[44px] flex items-center">
-                  React & Next.js
+                <Link href="/webovy-vyvojar/blog/typescript-tipy-pro-efektivnejsi-typovani" className="text-gray-400 hover:text-blue-400 transition-colors text-sm md:text-base min-h-[44px] flex items-center">
+                  TypeScript tipy
                 </Link>
               </li>
               <li>
-                <Link href="/webovy-vyvojar#ecommerce" className="text-gray-400 hover:text-blue-400 transition-colors text-sm md:text-base min-h-[44px] flex items-center">
-                  E-commerce řešení
+                <Link href="/webovy-vyvojar/blog/tailwind-css-od-skeptika-k-fanouskovi" className="text-gray-400 hover:text-blue-400 transition-colors text-sm md:text-base min-h-[44px] flex items-center">
+                  Tailwind CSS
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/webovy-vyvojar#optimization"
+                  href="/webovy-vyvojar/blog/pristupnost-webu-proc-je-dulezita"
                   className="text-gray-400 hover:text-blue-400 transition-colors text-sm md:text-base min-h-[44px] flex items-center"
                 >
-                  Optimalizace výkonu
+                  Přístupnost webu
                 </Link>
               </li>
             </ul>
