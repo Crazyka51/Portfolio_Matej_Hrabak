@@ -79,8 +79,9 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
       transition={{ duration: 0.6, delay: index * 0.1 }}
       className="bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800 hover:border-blue-500/30 transition-all group"
     >
+      {/* Image Section */}
       {project.detailUrl ? (
-        <Link href={project.detailUrl} className="block">
+        <Link href={project.detailUrl}>
           <div className="relative h-48">
             <Image
               src={project.image || "/placeholder.svg"}
@@ -90,48 +91,6 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
-          </div>
-          <div className="p-6">
-            <div className="flex items-center text-sm text-gray-400 mb-3">
-              <span className="bg-blue-900/50 text-blue-300 px-2 py-1 rounded text-xs">{project.category}</span>
-              <span className="mx-2">•</span>
-              <span>{project.year}</span>
-            </div>
-            <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-400 transition-colors">{project.title}</h3>
-            <p className="text-gray-400 mb-4">{project.description}</p>
-            <div className="flex justify-between items-center">
-              <div className="flex flex-wrap gap-2">
-                {project.technologies.map((tech: string, i: number) => (
-                  <span key={i} className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <div className="flex space-x-3">
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-white transition-colors"
-                    title="GitHub repozitář"
-                  >
-                    <Github size={18} />
-                  </a>
-                )}
-                {project.live && (
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-white transition-colors"
-                    title="Navštívit web"
-                  >
-                    <ExternalLink size={18} />
-                  </a>
-                )}
-              </div>
-            </div>
           </div>
         </Link>
       ) : (
@@ -146,6 +105,61 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
         </div>
       )}
+
+      {/* Content Section */}
+      <div className="p-6">
+        <div className="flex items-center text-sm text-gray-400 mb-3">
+          <span className="bg-blue-900/50 text-blue-300 px-2 py-1 rounded text-xs">{project.category}</span>
+          <span className="mx-2">•</span>
+          <span>{project.year}</span>
+        </div>
+        
+        {project.detailUrl ? (
+          <Link href={project.detailUrl}>
+            <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-400 transition-colors">{project.title}</h3>
+          </Link>
+        ) : (
+          <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+        )}
+        
+        <p className="text-gray-400 mb-4">{project.description}</p>
+        
+        <div className="flex justify-between items-center">
+          <div className="flex flex-wrap gap-2">
+            {project.technologies.map((tech: string, i: number) => (
+              <span key={i} className="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">
+                {tech}
+              </span>
+            ))}
+          </div>
+          <div className="flex space-x-3">
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                title="GitHub repozitář"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Github size={18} />
+              </a>
+            )}
+            {project.live && (
+              <a
+                href={project.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                title="Navštívit web"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <ExternalLink size={18} />
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
     </motion.div>
   )
 }

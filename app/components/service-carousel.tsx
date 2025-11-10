@@ -63,17 +63,17 @@ export default function ServiceCarousel() {
 
   /**
    * Service items to display in the carousel
-   * Each service has an icon and title
+   * Each service has an icon, title, and URL path
    */
   const services = [
-    { icon: <Shield className="text-red-500" size={24} />, title: "Pojištění vozidel" },
-    { icon: <TrendingUp className="text-red-500" size={24} />, title: "Investice a spoření" },
-    { icon: <Umbrella className="text-red-500" size={24} />, title: "Pojištění majetku" },
-    { icon: <Home className="text-red-500" size={24} />, title: "Pojištění domácnosti" },
-    { icon: <Heart className="text-red-500" size={24} />, title: "Životní pojištění" },
-    { icon: <Briefcase className="text-red-500" size={24} />, title: "Pojištění podnikatelů" },
-    { icon: <Plane className="text-red-500" size={24} />, title: "Cestovní pojištění" },
-    { icon: <CreditCard className="text-red-500" size={24} />, title: "Pojištění plateb" },
+    { icon: <Shield className="text-red-500" size={24} />, title: "Pojištění vozidel", url: "/pojistovaci-poradce/sluzby/povinne-ruceni" },
+    { icon: <TrendingUp className="text-red-500" size={24} />, title: "Investice a spoření", url: "/pojistovaci-poradce/sluzby/generali-investice" },
+    { icon: <Umbrella className="text-red-500" size={24} />, title: "Pojištění majetku a domácnosti", url: "/pojistovaci-poradce/sluzby/pojisteni-majetku" },
+    
+    { icon: <Heart className="text-red-500" size={24} />, title: "Životní pojištění", url: "/pojistovaci-poradce/sluzby/zivotni-pojisteni" },
+    { icon: <Briefcase className="text-red-500" size={24} />, title: "Pojištění podnikatelů", url: "/pojistovaci-poradce/sluzby/firemni-pojisteni" },
+    { icon: <Plane className="text-red-500" size={24} />, title: "Cestovní pojištění", url: "/pojistovaci-poradce/sluzby/cestovni-pojisteni" },
+    { icon: <CreditCard className="text-red-500" size={24} />, title: "Bankovní služby", url: "/pojistovaci-poradce/sluzby/bankovni-sluzby" },
   ]
 
   // Create a circular array for continuous rotation
@@ -155,7 +155,7 @@ export default function ServiceCarousel() {
                 }}
               >
                 <Link
-                  href={`/sluzby/${createSlug(service.title)}`}
+                  href={service.url}
                   className="flex flex-col items-center p-6 bg-[#111827]/50 backdrop-blur-sm rounded-xl border border-gray-800 hover:border-red-500/30 transition-all shadow-lg hover:shadow-red-600/10"
                 >
                   <div className="w-12 h-12 flex items-center justify-center bg-red-900/20 rounded-full mb-4">
