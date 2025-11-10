@@ -49,7 +49,7 @@ export default function AboutPage() {
                   >
                     <Github size={18} />
                   </a>
-                  ;;
+                  
                   
                   <a
                     href="mailto:matejhrabak@gmail.com"

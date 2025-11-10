@@ -61,12 +61,15 @@ export default function AboutPage() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
+                className="relative w-full h-full"
               >
                 <Image
                   src="/avatar.webp"
                   alt="Matěj Hrabák"
                   fill
+                  sizes="(max-width: 768px) 192px, 192px"
                   className="object-cover"
+                  priority
                 />
               </motion.div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-red-600/20 rounded-full blur-xl" />

@@ -49,6 +49,7 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
             src={images[currentIndex].src || "/placeholder.svg"}
             alt={images[currentIndex].alt}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
             className="object-contain"
             priority
           />
@@ -100,7 +101,13 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
                 : "border-transparent opacity-70 hover:opacity-100"
             }`}
           >
-            <Image src={image.src || "/placeholder.svg"} alt={`Thumbnail ${index + 1}`} fill className="object-cover" />
+            <Image 
+              src={image.src || "/placeholder.svg"} 
+              alt={`Thumbnail ${index + 1}`} 
+              fill 
+              sizes="120px"
+              className="object-cover" 
+            />
           </button>
         ))}
       </div>
@@ -129,6 +136,7 @@ export default function ProjectGallery({ images }: ProjectGalleryProps) {
                   src={images[currentIndex].src || "/placeholder.svg"}
                   alt={images[currentIndex].alt}
                   fill
+                  sizes="100vw"
                   className="object-contain"
                   priority
                 />

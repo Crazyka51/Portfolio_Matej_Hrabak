@@ -222,6 +222,7 @@ export default function BlogPage() {
                 src={filteredPosts[0].image || "/placeholder.svg"}
                 alt={filteredPosts[0].title}
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#111827] to-transparent opacity-60"></div>

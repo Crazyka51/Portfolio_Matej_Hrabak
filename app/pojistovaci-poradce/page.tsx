@@ -81,12 +81,12 @@ export default function InsuranceAdvisorPage() {
       
       <main className="container mx-auto px-4 py-12 relative z-10">
         {/* Hero Section s paralaxovým efektem */}
-        <div className="flex flex-col md:flex-row items-center md:items-start gap-12 mb-24">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12 mb-12 md:mb-24">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="w-64 h-80 relative"
+            className="w-48 h-60 md:w-64 md:h-80 relative flex-shrink-0"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-red-900/20 rounded-lg transform -rotate-3 scale-105" />
             <Image
@@ -99,6 +99,7 @@ export default function InsuranceAdvisorPage() {
                 transform: `translateY(${scrollY * 0.05}px)`,
               }}
               priority
+              sizes="(max-width: 768px) 192px, 256px"
             />
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-red-600/20 rounded-full blur-xl" />
           </motion.div>
@@ -109,24 +110,24 @@ export default function InsuranceAdvisorPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="max-w-2xl"
           >
-            <div className="flex items-center mb-4">
-              <Shield className="text-red-500 mr-2" size={24} />
-              <span className="text-red-400 font-medium">Generali Česká pojišťovna</span>
+            <div className="flex items-center mb-3 md:mb-4">
+              <Shield className="text-red-500 mr-2" size={20} />
+              <span className="text-red-400 font-medium text-sm md:text-base">Generali Česká pojišťovna</span>
             </div>
-            <h1 className="text-5xl font-bold mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6">
               Váš poradce a{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-700">
                 celoživotní partner
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-base md:text-xl text-gray-300 mb-6 md:mb-8">
               Jsem Matěj Hrabák, poradce Generali České pojišťovny, kde pomáhám chránit Vaše zdraví, finance a majetek.
               Společně najdeme nejlepší řešení.
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
                 href="/schuzka"
-                className="inline-flex items-center bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-3 rounded-full transition-all shadow-lg hover:shadow-red-600/20 hover:shadow-xl"
+                className="inline-flex items-center bg-gradient-to-r from-red-600 to-red-700 text-white px-5 py-2.5 md:px-6 md:py-3 rounded-full transition-all shadow-lg hover:shadow-red-600/20 hover:shadow-xl text-sm md:text-base min-h-[44px]"
               >
                 <Calendar className="mr-2" size={18} />
                 Domluvit schůzku
@@ -140,28 +141,28 @@ export default function InsuranceAdvisorPage() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-24 max-w-5xl mx-auto"
+          className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mb-12 md:mb-24 max-w-5xl mx-auto"
         >
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="bg-[#111827]/50 backdrop-blur-sm p-6 rounded-xl border border-gray-800 text-center"
+              className="bg-[#111827]/50 backdrop-blur-sm p-4 md:p-6 rounded-xl border border-gray-800 text-center"
             >
               <CountUp
                 to={stat.value}
-                className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600"
+                className="text-2xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600"
                 suffix={stat.symbol}
               />
-              <p className="text-gray-400 mt-2">{stat.label}</p>
+              <p className="text-gray-400 mt-1 md:mt-2 text-xs md:text-base">{stat.label}</p>
             </div>
           ))}
         </motion.div>
 
         {/* Services Section */}
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.6 }}>
-          <div className="flex items-center justify-center mb-12">
-            <TrendingUp className="text-red-500 mr-3" size={24} />
-            <h2 className="text-3xl font-bold">Moje služby</h2>
+          <div className="flex items-center justify-center mb-8 md:mb-12">
+            <TrendingUp className="text-red-500 mr-2 md:mr-3" size={20} />
+            <h2 className="text-2xl md:text-3xl font-bold">Moje služby</h2>
           </div>
 
           <div className="relative max-w-5xl mx-auto">
@@ -174,14 +175,14 @@ export default function InsuranceAdvisorPage() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-24 max-w-5xl mx-auto"
+          className="mt-12 md:mt-24 max-w-5xl mx-auto"
         >
-          <div className="flex items-center justify-center mb-12">
-            <CheckCircle className="text-red-500 mr-3" size={24} />
-            <h2 className="text-3xl font-bold">Proč se mnou spolupracovat</h2>
+          <div className="flex items-center justify-center mb-8 md:mb-12">
+            <CheckCircle className="text-red-500 mr-2 md:mr-3" size={20} />
+            <h2 className="text-2xl md:text-3xl font-bold">Proč se mnou spolupracovat</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
             <BenefitCard
               title="Nezávislé poradenství"
               description="Nabízím produkty od různých pojišťoven, vždy vyberu to nejlepší pro vaše potřeby."
@@ -205,17 +206,17 @@ export default function InsuranceAdvisorPage() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="mt-24 max-w-4xl mx-auto"
+          className="mt-12 md:mt-24 max-w-4xl mx-auto"
         >
-          <div className="bg-gradient-to-r from-red-900/30 to-red-700/20 p-8 md:p-12 rounded-2xl border border-red-900/20 text-center backdrop-blur-sm">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Připraveni začít?</h2>
-            <p className="text-xl text-gray-300 mb-8">
+          <div className="bg-gradient-to-r from-red-900/30 to-red-700/20 p-6 md:p-8 lg:p-12 rounded-2xl border border-red-900/20 text-center backdrop-blur-sm">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">Připraveni začít?</h2>
+            <p className="text-base md:text-lg lg:text-xl text-gray-300 mb-6 md:mb-8">
               Domluvte si nezávaznou konzultaci a společně najdeme nejlepší řešení pro vaše potřeby.
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
                 href="/schuzka"
-                className="inline-flex items-center bg-gradient-to-r from-red-600 to-red-700 text-white py-3 px-8 rounded-full transition-all shadow-lg hover:shadow-red-600/20 hover:shadow-xl text-lg"
+                className="inline-flex items-center bg-gradient-to-r from-red-600 to-red-700 text-white py-2.5 px-6 md:py-3 md:px-8 rounded-full transition-all shadow-lg hover:shadow-red-600/20 hover:shadow-xl text-base md:text-lg min-h-[44px]"
               >
                 Domluvit schůzku <ChevronRight className="ml-2" size={18} />
               </Link>
@@ -236,12 +237,12 @@ function BenefitCard({ title, description, delay = 0 }: { title: string; descrip
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
-      className="bg-[#111827]/50 backdrop-blur-sm p-6 rounded-xl border border-gray-800"
+      className="bg-[#111827]/50 backdrop-blur-sm p-4 md:p-6 rounded-xl border border-gray-800"
     >
-      <h3 className="text-xl font-semibold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">
+      <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">
         {title}
       </h3>
-      <p className="text-gray-300">{description}</p>
+      <p className="text-sm md:text-base text-gray-300">{description}</p>
     </motion.div>
   )
 }

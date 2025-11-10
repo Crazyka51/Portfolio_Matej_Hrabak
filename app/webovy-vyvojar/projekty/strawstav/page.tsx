@@ -435,6 +435,7 @@ export default function StrawstavProjectPage() {
                       src="/images/fiserpavel-project.webp"
                       alt="Pavel Fišer Website"
                       fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
@@ -453,6 +454,7 @@ export default function StrawstavProjectPage() {
                       src="/images/salonzuza-project.webp"
                       alt="Salon Zuza Website"
                       fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
@@ -471,6 +473,7 @@ export default function StrawstavProjectPage() {
                       src="/images/matejhrabak_portfolio.webp"
                       alt="Matěj Hrabák Portfolio"
                       fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
