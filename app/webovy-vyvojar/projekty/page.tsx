@@ -167,6 +167,17 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
 // Aktualizované projekty
 const allProjects = [
   {
+    title: "DealShip",
+    description: "B2B platforma pro business růst s analýzou trhu, lead generation a automatizací obchodních procesů.",
+    image: "/images/dealship-project.webp",
+    category: "B2B SaaS",
+    year: "2025",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    github: null,
+    live: "https://dealshipweb.vercel.app/",
+    detailUrl: "/webovy-vyvojar/projekty/dealship",
+  },
+  {
     title: "Salon Zuza",
     description: "Webové stránky pro kadeřnický salon s online rezervačním systémem a galerií prací.",
     image: "/images/salonzuza-project.webp",
@@ -210,5 +221,4 @@ const allProjects = [
     live: "https://matejhrabak.cz",
     detailUrl: "/webovy-vyvojar/projekty/moje-portfolio",
   },
-  
 ]

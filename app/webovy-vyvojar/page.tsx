@@ -341,6 +341,17 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
 // Sample Data
 const projects = [
   {
+    title: "DealShip",
+    description: "B2B platforma pro business růst s analýzou trhu, lead generation a automatizací.",
+    image: "/images/dealship-project.webp",
+    category: "B2B SaaS platforma",
+    year: "2025",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+    github: "",
+    live: "https://dealshipweb.vercel.app/",
+    detailUrl: "/webovy-vyvojar/projekty/dealship",
+  },
+  {
     title: "Salon Zuza",
     description: "Moderní webové stránky pro kadeřnický salon s rezervačním systémem a prezentací služeb.",
     image: "/images/salonzuza-project.webp",
