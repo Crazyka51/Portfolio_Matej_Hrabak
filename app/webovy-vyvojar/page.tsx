@@ -17,8 +17,17 @@ import Clock from "@/app/components/clock"
  */
 export default function WebDeveloperPage() {
   const [scrollY, setScrollY] = useState(0)
+  const [performanceMode, setPerformanceMode] = useState<"high" | "low">("low")
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
+    setIsClient(true)
+    // Načti performance mode z localStorage
+    const savedMode = localStorage.getItem("performanceMode") as "high" | "low" | null
+    if (savedMode) {
+      setPerformanceMode(savedMode)
+    }
+
     const handleScroll = () => {
       setScrollY(window.scrollY)
     }
@@ -29,7 +38,7 @@ export default function WebDeveloperPage() {
     }
   }, [])
 
-  const parallaxOffset = scrollY * 0.2
+  const parallaxOffset = performanceMode === "high" ? scrollY * 0.2 : 0
 
   return (
     <div className="min-h-screen bg-[#050A14] text-white relative">
@@ -54,9 +63,9 @@ export default function WebDeveloperPage() {
 
           <div className="container mx-auto px-4 z-10">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={performanceMode === "high" ? { opacity: 0, y: 20 } : false}
+              animate={performanceMode === "high" ? { opacity: 1, y: 0 } : {}}
+              transition={performanceMode === "high" ? { duration: 0.8 } : { duration: 0 }}
               className="max-w-3xl"
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -68,8 +77,8 @@ export default function WebDeveloperPage() {
 
               <div className="flex flex-wrap gap-4">
                 <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={performanceMode === "high" ? { scale: 1.05 } : {}}
+                  whileTap={performanceMode === "high" ? { scale: 0.95 } : {}}
                   className="flex items-center bg-amber-100/10 text-amber-200 px-4 py-2 rounded-full"
                 >
                   <Layout className="mr-2 h-5 w-5" />
@@ -77,8 +86,8 @@ export default function WebDeveloperPage() {
                 </motion.div>
 
                 <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={performanceMode === "high" ? { scale: 1.05 } : {}}
+                  whileTap={performanceMode === "high" ? { scale: 0.95 } : {}}
                   className="flex items-center bg-purple-100/10 text-purple-200 px-4 py-2 rounded-full"
                 >
                   <Database className="mr-2 h-5 w-5" />
@@ -86,8 +95,8 @@ export default function WebDeveloperPage() {
                 </motion.div>
 
                 <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={performanceMode === "high" ? { scale: 1.05 } : {}}
+                  whileTap={performanceMode === "high" ? { scale: 0.95 } : {}}
                   className="flex items-center bg-blue-100/10 text-blue-200 px-4 py-2 rounded-full"
                 >
                   <Code className="mr-2 h-5 w-5" />
@@ -97,31 +106,33 @@ export default function WebDeveloperPage() {
             </motion.div>
           </div>
 
-          {/* Animated code snippet */}
-          <div className="hidden lg:block absolute right-10 bottom-20 z-10">
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="bg-gray-900/80 p-4 rounded-lg border border-gray-700 backdrop-blur-sm"
-            >
-              <pre className="text-sm text-green-400 font-mono">
-                <TypewriterEffect
-                  text={`function Developer() {\n  const skills = [\n    'React',\n    'Next.js',\n    'TypeScript',\n    'Node.js'\n  ];\n\n  return (\n    <Coder skills={skills} />\n  );\n}`}
-                />
-              </pre>
-            </motion.div>
-          </div>
+          {/* Animated code snippet - pouze v high módu */}
+          {performanceMode === "high" && isClient && (
+            <div className="hidden lg:block absolute right-10 bottom-20 z-10">
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="bg-gray-900/80 p-4 rounded-lg border border-gray-700 backdrop-blur-sm"
+              >
+                <pre className="text-sm text-green-400 font-mono">
+                  <TypewriterEffect
+                    text={`function Developer() {\n  const skills = [\n    'React',\n    'Next.js',\n    'TypeScript',\n    'Node.js'\n  ];\n\n  return (\n    <Coder skills={skills} />\n  );\n}`}
+                  />
+                </pre>
+              </motion.div>
+            </div>
+          )}
         </section>
 
         {/* Projects Section */}
         <section className="py-20 bg-gradient-to-b from-[#010714] to-[#0a1428]">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={performanceMode === "high" ? { opacity: 0, y: 20 } : false}
+              whileInView={performanceMode === "high" ? { opacity: 1, y: 0 } : {}}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={performanceMode === "high" ? { duration: 0.6 } : { duration: 0 }}
             >
               <h2 className="text-3xl font-bold mb-12 flex items-center">
                 <Terminal className="mr-3 h-6 w-6 text-blue-400" />
@@ -131,7 +142,7 @@ export default function WebDeveloperPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project, index) => (
-                <ProjectCard key={index} project={project} index={index} />
+                <ProjectCard key={index} project={project} index={index} performanceMode={performanceMode} />
               ))}
             </div>
 
@@ -271,13 +282,13 @@ function TypewriterEffect({ text }: { text: string }) {
 }
 
 // Project Card Component
-function ProjectCard({ project, index }: { project: any; index: number }) {
+function ProjectCard({ project, index, performanceMode }: { project: any; index: number; performanceMode: "high" | "low" }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={performanceMode === "high" ? { opacity: 0, y: 20 } : false}
+      whileInView={performanceMode === "high" ? { opacity: 1, y: 0 } : {}}
       viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
+      transition={performanceMode === "high" ? { duration: 0.6, delay: index * 0.1 } : { duration: 0 }}
       className="bg-gray-900/50 rounded-lg overflow-hidden border border-gray-800 hover:border-blue-500/30 transition-all group"
     >
       <div className="relative h-48">
@@ -287,7 +298,7 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
             alt={project.title}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            className={`object-cover ${performanceMode === "high" ? "transition-transform duration-500 group-hover:scale-105" : ""}`}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-60"></div>
         </Link>
