@@ -112,7 +112,7 @@ export default function WebDevFooter() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 md:mt-12 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs md:text-sm text-gray-400 text-center md:text-left">© 2025 / Matěj Hrabák / Powered by Next.js</p>
+          <p className="text-xs md:text-sm text-gray-400 text-center md:text-left">© 2026 / Matěj Hrabák / Powered by Next.js</p>
           <div className="flex flex-wrap justify-center gap-4 md:gap-6">
             <Link href="/privacy" className="text-xs md:text-sm text-gray-400 hover:text-blue-400 transition-colors min-h-[44px] flex items-center">
               Ochrana soukromí

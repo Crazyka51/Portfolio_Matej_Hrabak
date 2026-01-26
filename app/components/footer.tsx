@@ -49,7 +49,7 @@ export default function Footer() {
         {/* Copyright a sociální sítě */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-xs md:text-sm text-gray-400 text-center sm:text-left">
-            © 2025 / Matěj Hrabák / Powered by Next.js
+            © 2026 / Matěj Hrabák / Powered by Next.js
           </p>
           <div className="flex space-x-6 md:space-x-4">
             <motion.a

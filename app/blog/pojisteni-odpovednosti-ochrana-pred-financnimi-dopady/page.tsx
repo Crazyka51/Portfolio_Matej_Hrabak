@@ -130,7 +130,7 @@ export default function PojisteniOdpovednostiochranaPage() {
       {/* Footer */}
       <footer className="container mx-auto px-4 py-8 mt-24 border-t border-gray-800 relative z-10">
         <div className="flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-sm text-gray-400 mb-4 sm:mb-0">© 2025 / Matěj Hrabák / Powered by Next.js</p>
+          <p className="text-sm text-gray-400 mb-4 sm:mb-0">© 2026 / Matěj Hrabák / Powered by Next.js</p>
           <div className="flex space-x-4">
             <motion.a
               href="https://github.com/Crazyka51"
