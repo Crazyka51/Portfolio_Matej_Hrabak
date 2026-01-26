@@ -5,6 +5,7 @@ import { Inter } from "next/font/google"
 import { ToastProvider } from "./context/toast-context"
 import GridBackground from "./components/grid-background"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
 import { baseMetadata } from "./metadata"
 import GoogleAnalytics from "./components/google-analytics"
 
@@ -36,6 +37,7 @@ export default function RootLayout({
           {children}
         </ToastProvider>
          <SpeedInsights />
+         <Analytics />
       </body>
     </html>
   )
