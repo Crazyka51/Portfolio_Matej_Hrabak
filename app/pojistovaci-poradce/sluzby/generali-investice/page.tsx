@@ -37,7 +37,7 @@ export default function GeneraliInvesticePage() {
               potřebám a rizikovému profilu.
             </p>
             <p className="text-gray-300 mb-6">
-              Jako certifikovaný poradce Generali České pojišťovny vám pomohu vybrat nejvhodnější investiční strategii,
+              Jako certifikovaný Fullstack developer vám pomohu vybrat nejvhodnější investiční strategii,
               která bude odpovídat vašim cílům, časovému horizontu a ochotě podstupovat riziko. Společně vytvoříme plán,
               který vám pomůže budovat finanční jistotu pro budoucnost.
             </p>

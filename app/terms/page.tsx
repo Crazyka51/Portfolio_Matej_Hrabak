@@ -3,8 +3,8 @@
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { FileText, ArrowLeft } from "lucide-react"
-import Navbar from "@/app/components/navbar"
-import Footer from "@/app/components/footer"
+import WebDevNavbar from "@/app/components/webdev-navbar"
+import WebDevFooter from "@/app/components/webdev-footer"
 
 export default function TermsPage() {
   return (
@@ -13,7 +13,7 @@ export default function TermsPage() {
       <div className="absolute inset-0 overflow-hidden">
         {/* Hlavní gradient */}
         <div
-          className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-red-900/20 to-transparent"
+          className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-indigo-900/20 to-transparent"
           style={{ opacity: 0.4 }}
         />
 
@@ -22,14 +22,14 @@ export default function TermsPage() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 0.15, scale: 1 }}
           transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" }}
-          className="absolute top-20 right-20 w-96 h-96 rounded-full bg-red-600/20 blur-3xl"
+          className="absolute top-20 right-20 w-96 h-96 rounded-full bg-indigo-600/20 blur-3xl"
         />
 
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 0.1, scale: 1 }}
           transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse", delay: 1 }}
-          className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-blue-600/20 blur-3xl"
+          className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-purple-600/20 blur-3xl"
         />
 
         {/* Mřížka na pozadí */}
@@ -43,7 +43,7 @@ export default function TermsPage() {
         />
       </div>
 
-      <Navbar />
+      <WebDevNavbar />
 
       <main className="container mx-auto px-4 py-12 max-w-4xl relative z-10">
         <motion.div
@@ -60,7 +60,7 @@ export default function TermsPage() {
           </Link>
 
           <div className="flex items-center mb-6">
-            <FileText className="text-red-500 mr-3" size={32} />
+            <FileText className="text-indigo-500 mr-3" size={32} />
             <h1 className="text-4xl font-bold">Podmínky použití</h1>
           </div>
 
@@ -68,146 +68,169 @@ export default function TermsPage() {
 
           <div className="space-y-8">
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">1. Úvodní ustanovení</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-indigo-400">1. Úvodní ustanovení</h2>
               <p className="text-gray-300 leading-relaxed">
                 Tyto podmínky použití upravují pravidla používání webových stránek a služeb poskytovaných Matějem
-                Hrabákem, poradcem Generali České pojišťovny. Používáním těchto webových stránek souhlasíte s těmito
+                Hrabákem v oblasti webového vývoje. Používáním těchto webových stránek souhlasíte s těmito
                 podmínkami.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">2. Poskytované služby</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-indigo-400">2. Poskytované služby</h2>
               <p className="text-gray-300 leading-relaxed mb-4">Prostřednictvím těchto stránek poskytujeme:</p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
-                  <span>Informace o pojišťovacích a finančních produktech</span>
+                  <span className="text-indigo-400 mr-3">•</span>
+                  <span>Vývoj webových stránek a aplikací</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
-                  <span>Poradenství v oblasti pojištění a investic</span>
+                  <span className="text-indigo-400 mr-3">•</span>
+                  <span>Konzultace a poradenství v oblasti webových technologií</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
-                  <span>Zprostředkování pojistných a investičních produktů</span>
+                  <span className="text-indigo-400 mr-3">•</span>
+                  <span>Prezentaci portfolia a referencí</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
-                  <span>Možnost objednání konzultace</span>
+                  <span className="text-indigo-400 mr-3">•</span>
+                  <span>Možnost objednání zakázkového vývoje</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
-                  <span>Blogové články a vzdělávací obsah</span>
+                  <span className="text-indigo-400 mr-3">•</span>
+                  <span>Blogové články a technické tipy</span>
                 </li>
               </ul>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">3. Práva a povinnosti uživatele</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-indigo-400">3. Práva a povinnosti uživatele</h2>
               <p className="text-gray-300 leading-relaxed mb-4">Jako uživatel se zavazujete:</p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
-                  <span>Poskytovat pravdivé a aktuální informace</span>
+                  <span className="text-indigo-400 mr-3">•</span>
+                  <span>Poskytovat pravdivé a aktuální informace při kontaktu</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
+                  <span className="text-indigo-400 mr-3">•</span>
                   <span>Nepoužívat stránky k nezákonným účelům</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
-                  <span>Respektovat práva duševního vlastnictví</span>
+                  <span className="text-indigo-400 mr-3">•</span>
+                  <span>Respektovat autorská práva a práva duševního vlastnictví</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
+                  <span className="text-indigo-400 mr-3">•</span>
                   <span>Nešířit škodlivý software nebo spam</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
-                  <span>Používat stránky v souladu s platnými zákony</span>
+                  <span className="text-indigo-400 mr-3">•</span>
+                  <span>Používat stránky v souladu s platnými zákony České republiky</span>
                 </li>
               </ul>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">4. Duševní vlastnictví</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-indigo-400">4. Autorská práva a duševní vlastnictví</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                Veškerý obsah těchto webových stránek, včetně textů, grafiky, log, fotografií a softwaru, je chráněn
-                autorskými právy a jinými právy duševního vlastnictví.
+                Veškerý obsah těchto webových stránek, včetně textů, grafiky, log, fotografií, kódu a designu, je chráněn
+                autorskými právy a jinými právy duševního vlastnictví a je majetkem Matěje Hrabáka.
               </p>
               <p className="text-gray-300 leading-relaxed">
                 Bez předchozího písemného souhlasu není dovoleno obsah kopírovat, distribuovat, upravovat nebo jinak
-                využívat pro komerční účely.
+                využívat pro komerční účely. To platí zejména pro zdrojový kód, design a grafické prvky.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">5. Vyloučení odpovědnosti</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-indigo-400">5. Vyloučení odpovědnosti</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
                 Informace na těchto stránkách jsou poskytovány v dobré víře, nicméně:
               </p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
-                  <span>Neposkytujeme záruku za úplnost a přesnost všech informací</span>
+                  <span className="text-indigo-400 mr-3">•</span>
+                  <span>Neposkytujeme záruku za úplnost a aktuálnost všech technických informací</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
-                  <span>Informace mají pouze obecný informativní charakter</span>
+                  <span className="text-indigo-400 mr-3">•</span>
+                  <span>Informace mají obecný informativní a prezentační charakter</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
-                  <span>Nenahrazují individuální poradenství</span>
+                  <span className="text-indigo-400 mr-3">•</span>
+                  <span>Prezentované projekty mohou být zobrazeny ve zkrácené podobě</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
-                  <span>Neneseme odpovědnost za rozhodnutí učiněná na základě těchto informací</span>
+                  <span className="text-indigo-400 mr-3">•</span>
+                  <span>Neneseme odpovědnost za rozhodnutí učiněná výhradně na základě těchto informací</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
-                  <span>Neručíme za obsah externích odkazů</span>
+                  <span className="text-indigo-400 mr-3">•</span>
+                  <span>Neručíme za obsah a dostupnost externích odkazů</span>
                 </li>
               </ul>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">6. Zprostředkování pojištění</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-indigo-400">6. Zakázkový vývoj</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                Matěj Hrabák je samostatným zprostředkovatelem pojištění:
+                V případě zakázkového vývoje je vztah mezi klientem a vývojářem řízen samostatnou smlouvou, která specifikuje:
               </p>
               <div className="bg-[#111827]/50 backdrop-blur-sm p-6 rounded-lg border border-gray-800 space-y-2">
                 <p className="text-gray-300">
-                  <strong>Registrace:</strong> Česká národní banka
+                  <strong>Rozsah práce:</strong> Detailní popis funkcí a specifikací projektu
                 </p>
                 <p className="text-gray-300">
-                  <strong>Registrační číslo:</strong> IČO 19328001
+                  <strong>Časový harmonogram:</strong> Termíny dodání jednotlivých fází projektu
                 </p>
                 <p className="text-gray-300">
-                  <strong>Pojištění odpovědnosti:</strong> Pojištěn v souladu s požadavky zákona o distribuci pojištění
+                  <strong>Cena a platební podmínky:</strong> Celková cena, zálohy a platební kalendář
                 </p>
                 <p className="text-gray-300">
-                  <strong>Odborná způsobilost:</strong> Držitel certifikace ČNB - IDD VII
+                  <strong>Autorská práva:</strong> Převod autorských práv po úplném uhrazení ceny díla
+                </p>
+                <p className="text-gray-300">
+                  <strong>Záruční podmínky:</strong> Poskytování záručního servisu a údržby
                 </p>
               </div>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">7. Odměna zprostředkovatele</h2>
-              <p className="text-gray-300 leading-relaxed">
-                Za zprostředkování pojištění obdržíváme provizi od pojišťovny. Výše provize se liší podle typu
-                produktu a je součástí pojistného. Na Vaši žádost Vám sdělíme přesnou výši odměny za konkrétní produkt.
+              <h2 className="text-2xl font-semibold mb-4 text-indigo-400">7. Ceny a platební podmínky</h2>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                Ceny za služby webového vývoje jsou stanoveny individuálně na základě:
+              </p>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex">
+                  <span className="text-indigo-400 mr-3">•</span>
+                  <span>Rozsahu a složitosti projektu</span>
+                </li>
+                <li className="flex">
+                  <span className="text-indigo-400 mr-3">•</span>
+                  <span>Počtu hodin vývoje a konzultací</span>
+                </li>
+                <li className="flex">
+                  <span className="text-indigo-400 mr-3">•</span>
+                  <span>Použitých technologií a nástrojů</span>
+                </li>
+                <li className="flex">
+                  <span className="text-indigo-400 mr-3">•</span>
+                  <span>Požadavků na podporu a údržbu</span>
+                </li>
+              </ul>
+              <p className="text-gray-300 leading-relaxed mt-4">
+                Konkrétní cena a platební podmínky jsou vždy uvedeny v cenové nabídce nebo smlouvě o dílo.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">8. Reklamace a stížnosti</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-indigo-400">8. Reklamace a stížnosti</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
-                V případě nespokojenosti s našimi službami máte právo podat reklamaci nebo stížnost:
+                V případě nespokojenos ti s našimi službami máte právo podat reklamaci nebo stížnost:
               </p>
               <div className="bg-[#111827]/50 backdrop-blur-sm p-6 rounded-lg border border-gray-800">
                 <p className="text-gray-300 mb-2">
-                  <strong>Email:</strong> matej.hrabak@generaliceska.cz
+                  <strong>Email:</strong> matejhrabak@gmail.com
                 </p>
                 <p className="text-gray-300 mb-2">
                   <strong>Telefon:</strong> +420 776 084 700
@@ -216,17 +239,17 @@ export default function TermsPage() {
                   <strong>Lhůta pro vyřízení:</strong> 30 dnů od doručení
                 </p>
                 <p className="text-gray-300 text-sm">
-                  Pokud nejste spokojeni s vyřízením reklamace, můžete se obrátit na Českou národní banku nebo
-                  finančního arbitra.
+                  Pokud nejste spokojeni s vyřízením reklamace, můžete se obrátit na soud či jinak řešit spor v souladu
+                  s platnými právními předpisy České republiky.
                 </p>
               </div>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">9. Ochrana osobních údajů</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-indigo-400">9. Ochrana osobních údajů</h2>
               <p className="text-gray-300 leading-relaxed">
                 Zpracování osobních údajů se řídí naším dokumentem{" "}
-                <Link href="/privacy" className="text-red-400 hover:text-red-300 underline">
+                <Link href="/privacy" className="text-indigo-400 hover:text-indigo-300 underline">
                   Ochrana soukromí
                 </Link>
                 , který je v souladu s nařízením GDPR.
@@ -234,25 +257,25 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">10. Odkazy na třetí strany</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-indigo-400">10. Odkazy na třetí strany</h2>
               <p className="text-gray-300 leading-relaxed">
-                Naše stránky mohou obsahovat odkazy na webové stránky třetích stran. Za obsah a bezpečnost těchto
-                stránek neneseme odpovědnost. Doporučujeme seznámit se s jejich podmínkami použití a zásadami ochrany
-                soukromí.
+                Naše stránky mohou obsahovat odkazy na webové stránky třetích stran, portfoliové projekty nebo externí nástroje.
+                Za obsah, bezpečnost a dostupnost těchto stránek neneseme odpovědnost. Doporučujeme seznámit se s jejich
+                podmínkami použití a zásadami ochrany soukromí.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">11. Dostupnost služeb</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-indigo-400">11. Dostupnost služeb</h2>
               <p className="text-gray-300 leading-relaxed">
-                Snažíme se zajistit nepřetržitou dostupnost našich webových stránek, nicméně si vyhrazujeme právo na
-                dočasné přerušení provozu z důvodu údržby, aktualizace nebo jiných technických důvodů bez předchozího
-                upozornění.
+                Snažíme se zajišťovat nepřetržitou dostupnost našich webových stránek, nicméně si vyhrazujeme právo na
+                dočasné přerušení provozu z důvodu údržby, aktualizace, zálohování nebo jiných technických důvodů bez
+                předchozího upozornění.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">12. Změny podmínek</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-indigo-400">12. Změny podmínek</h2>
               <p className="text-gray-300 leading-relaxed">
                 Vyhrazujeme si právo tyto podmínky kdykoli změnit. Změny budou zveřejněny na těchto stránkách a
                 nabývají účinnosti okamžikem zveřejnění. Doporučujeme tyto podmínky pravidelně kontrolovat.
@@ -260,41 +283,41 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">13. Řešení sporů</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-indigo-400">13. Řešení sporů</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
                 Případné spory vyplývající z používání těchto stránek nebo poskytovaných služeb budou řešeny:
               </p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
+                  <span className="text-indigo-400 mr-3">•</span>
                   <span>Primárně smírnou cestou</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
-                  <span>Případně prostřednictvím finančního arbitra (pro spotřebitelské spory)</span>
+                  <span className="text-indigo-400 mr-3">•</span>
+                  <span>Případně prostřednictvím soudů České republiky</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
+                  <span className="text-indigo-400 mr-3">•</span>
                   <span>V souladu s právním řádem České republiky</span>
                 </li>
               </ul>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">14. Kontaktní informace</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-indigo-400">14. Kontaktní informace</h2>
               <div className="bg-[#111827]/50 backdrop-blur-sm p-6 rounded-lg border border-gray-800">
                 <p className="text-gray-300 mb-2">
                   <strong>Matěj Hrabák</strong>
                 </p>
-                <p className="text-gray-300 mb-2">Poradce Generali České pojišťovny</p>
-                <p className="text-gray-300 mb-2">Email: matej.hrabak@generaliceska.cz</p>
+                <p className="text-gray-300 mb-2">Fullstack developer</p>
+                <p className="text-gray-300 mb-2">Email: matejhrabak@gmail.com</p>
                 <p className="text-gray-300 mb-2">Telefon: +420 776 084 700</p>
-                <p className="text-gray-300">Web: www.matejhrabak.cz</p>
+                <p className="text-gray-300">Web: www.matejhrabak.eu</p>
               </div>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">15. Závěrečná ustanovení</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-indigo-400">15. Závěrečná ustanovení</h2>
               <p className="text-gray-300 leading-relaxed">
                 Tyto podmínky nabývají účinnosti dnem 1. ledna 2025. Používáním těchto webových stránek vyjadřujete
                 souhlas s těmito podmínkami. Pokud s nimi nesouhlasíte, prosíme, nepoužívejte naše služby.
@@ -305,14 +328,13 @@ export default function TermsPage() {
           <div className="mt-12 pt-8 border-t border-gray-800">
             <p className="text-gray-400 text-sm">
               Poslední aktualizace: 1. ledna 2025
-              <br />V souladu se zákonem č. 89/2012 Sb., občanský zákoník a zákonem č. 170/2018 Sb., o distribuci
-              pojištění a zajištění
+              <br />V souladu se zákonem č. 89/2012 Sb., občanský zákoník a zákonem č. 121/2000 Sb., autorským zákonem
             </p>
           </div>
         </motion.div>
       </main>
 
-      <Footer />
+      <WebDevFooter />
     </div>
   )
 }

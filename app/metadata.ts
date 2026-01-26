@@ -1,9 +1,9 @@
 import type { Metadata } from "next"
 
 export const baseMetadata: Metadata = {
-  title: "Matěj Hrabák | Osobní webové stránky",
-  description: "Osobní webové stránky Matěje Hrabáka - pojišťovací poradce a webový vývojář",
-  keywords: ["pojištění", "investice", "webový vývoj", "React", "Next.js", "Matěj Hrabák"],
+  title: "Matěj Hrabák | Webový vývojář",
+  description: "Osobní webové stránky Matěje Hrabáka - fullstack webový vývojář specializující se na moderní technologie",
+  keywords: ["webový vývoj", "React", "Next.js", "TypeScript", "fullstack developer", "Matěj Hrabák"],
   authors: [{ name: "Matěj Hrabák" }],
   creator: "Matěj Hrabák",
   publisher: "Matěj Hrabák",
@@ -12,7 +12,7 @@ export const baseMetadata: Metadata = {
     address: true,
     telephone: true,
   },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.matejhrabak.cz"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.matejhrabak.eu"),
   icons: {
     icon: [
       { url: "/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -26,8 +26,8 @@ export const baseMetadata: Metadata = {
     type: "website",
     locale: "cs_CZ",
     url: "/",
-    title: "Matěj Hrabák | Osobní webové stránky",
-    description: "Osobní webové stránky Matěje Hrabáka - pojišťovací poradce a webový vývojář",
+    title: "Matěj Hrabák | Webový vývojář",
+    description: "Fullstack webový vývojář specializující se na moderní technologie - React, Next.js, TypeScript",
     siteName: "Matěj Hrabák",
     images: [
       {

@@ -352,14 +352,25 @@ function ProjectCard({ project, index, performanceMode }: { project: any; index:
 // Sample Data
 const projects = [
   {
-    title: "DealShip",
+    title: "Nexos E-commerce",
+    description: "Moderní e-commerce šablona s pokročilými funkcemi pro online prodej.",
+    image: "/images/nexos-project.webp",
+    category: "E-commerce šablona",
+    year: "2025",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+    github: "",
+    live: "https://nexos-eshop.vercel.app/",
+    detailUrl: "/webovy-vyvojar/projekty/nexos",
+  },
+  {
+    title: "B2B firemí portfolio ",
     description: "B2B platforma pro business růst s analýzou trhu, lead generation a automatizací.",
     image: "/images/dealship-project.webp",
     category: "B2B SaaS platforma",
     year: "2025",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
     github: "",
-    live: "https://dealshipweb.vercel.app/",
+    live: "https://b2bportfolio.vercel.app/",
     detailUrl: "/webovy-vyvojar/projekty/dealship",
   },
   {

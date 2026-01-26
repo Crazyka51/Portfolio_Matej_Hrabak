@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.matejhrabak.cz/sitemap.xml
+Sitemap: https://www.matejhrabak.eu/sitemap.xml

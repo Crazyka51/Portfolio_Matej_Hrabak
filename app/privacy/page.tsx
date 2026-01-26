@@ -3,8 +3,8 @@
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { Shield, ArrowLeft } from "lucide-react"
-import Navbar from "@/app/components/navbar"
-import Footer from "@/app/components/footer"
+import WebDevNavbar from "@/app/components/webdev-navbar"
+import WebDevFooter from "@/app/components/webdev-footer"
 
 export default function PrivacyPage() {
   return (
@@ -13,7 +13,7 @@ export default function PrivacyPage() {
       <div className="absolute inset-0 overflow-hidden">
         {/* Hlavní gradient */}
         <div
-          className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-red-900/20 to-transparent"
+          className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-indigo-900/20 to-transparent"
           style={{ opacity: 0.4 }}
         />
 
@@ -22,14 +22,14 @@ export default function PrivacyPage() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 0.15, scale: 1 }}
           transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" }}
-          className="absolute top-20 right-20 w-96 h-96 rounded-full bg-red-600/20 blur-3xl"
+          className="absolute top-20 right-20 w-96 h-96 rounded-full bg-indigo-600/20 blur-3xl"
         />
 
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 0.1, scale: 1 }}
           transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse", delay: 1 }}
-          className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-blue-600/20 blur-3xl"
+          className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-purple-600/20 blur-3xl"
         />
 
         {/* Mřížka na pozadí */}
@@ -43,7 +43,7 @@ export default function PrivacyPage() {
         />
       </div>
 
-      <Navbar />
+      <WebDevNavbar />
 
       <main className="container mx-auto px-4 py-12 max-w-4xl relative z-10">
         <motion.div
@@ -60,7 +60,7 @@ export default function PrivacyPage() {
           </Link>
 
           <div className="flex items-center mb-6">
-            <Shield className="text-red-500 mr-3" size={32} />
+            <Shield className="text-indigo-500 mr-3" size={32} />
             <h1 className="text-4xl font-bold">Ochrana soukromí</h1>
           </div>
 
@@ -68,104 +68,104 @@ export default function PrivacyPage() {
 
           <div className="space-y-8">
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">1. Úvod</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-indigo-400">1. Úvod</h2>
               <p className="text-gray-300 leading-relaxed">
                 Vážíme si Vašeho soukromí a zavazujeme se chránit Vaše osobní údaje. Tato stránka popisuje, jak
-                shromažďujeme, používáme a chráníme Vaše informace v souvislosti s poskytováním pojišťovacích a
-                finančních služeb.
+                shromažďujeme, používáme a chráníme Vaše informace v souvislosti s poskytováním webových
+                a vývojářských služeb.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">2. Správce osobních údajů</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-indigo-400">2. Správce osobních údajů</h2>
               <div className="bg-[#111827]/50 backdrop-blur-sm p-6 rounded-lg border border-gray-800">
                 <p className="text-gray-300 mb-2">
                   <strong>Matěj Hrabák</strong>
                 </p>
-                <p className="text-gray-300 mb-2">Poradce Generali České pojišťovny</p>
-                <p className="text-gray-300 mb-2">Email: matej.hrabak@generaliceska.cz</p>
+                <p className="text-gray-300 mb-2">Fullstack developer</p>
+                <p className="text-gray-300 mb-2">Email: matejhrabak@gmail.com</p>
                 <p className="text-gray-300">Telefon: +420 776 084 700</p>
               </div>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">3. Jaké údaje sbíráme</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-indigo-400">3. Jaké údaje sbíráme</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
                 V rámci poskytování našich služeb můžeme zpracovávat následující kategorie osobních údajů:
               </p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
+                  <span className="text-indigo-400 mr-3">•</span>
                   <span>
-                    <strong>Identifikační údaje:</strong> jméno, příjmení, datum narození, rodné číslo
+                    <strong>Identifikační údaje:</strong> jméno, příjmení, firma
                   </span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
+                  <span className="text-indigo-400 mr-3">•</span>
                   <span>
-                    <strong>Kontaktní údaje:</strong> adresa, email, telefonní číslo
+                    <strong>Kontaktní údaje:</strong> email, telefonní číslo
                   </span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
+                  <span className="text-indigo-400 mr-3">•</span>
                   <span>
-                    <strong>Finanční údaje:</strong> informace o příjmech, majetku a finančních cílech
+                    <strong>Projektové údaje:</strong> informace o požadavcích na webový projekt, rozpočtu a preferencích
                   </span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
+                  <span className="text-indigo-400 mr-3">•</span>
                   <span>
-                    <strong>Údaje o pojištění:</strong> informace potřebné pro sjednání pojistných smluv
+                    <strong>Technické údaje:</strong> IP adresa, typ prohlížeče, informace o návštěvě webu
                   </span>
                 </li>
               </ul>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">4. Účel zpracování údajů</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-indigo-400">4. Účel zpracování údajů</h2>
               <p className="text-gray-300 leading-relaxed mb-4">Vaše osobní údaje zpracováváme za účelem:</p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
-                  <span>Poskytování pojišťovacích a finančních služeb</span>
+                  <span className="text-indigo-400 mr-3">•</span>
+                  <span>Poskytování webových a vývojářských služeb</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
-                  <span>Zprostředkování pojištění a investičních produktů</span>
+                  <span className="text-indigo-400 mr-3">•</span>
+                  <span>Vývoj webových aplikací a stránek</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
-                  <span>Komunikace ohledně sjednaných služeb</span>
+                  <span className="text-indigo-400 mr-3">•</span>
+                  <span>Komunikace ohledně projektů</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
+                  <span className="text-indigo-400 mr-3">•</span>
                   <span>Plnění zákonných povinností</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
-                  <span>Zasílání obchodních nabídek (se souhlasem)</span>
+                  <span className="text-indigo-400 mr-3">•</span>
+                  <span>Zasílání informací o službách (se souhlasem)</span>
                 </li>
               </ul>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">5. Právní základ zpracování</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-indigo-400">5. Právní základ zpracování</h2>
               <p className="text-gray-300 leading-relaxed mb-4">Osobní údaje zpracováváme na základě:</p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
+                  <span className="text-indigo-400 mr-3">•</span>
                   <span>Plnění smlouvy nebo přípravy smlouvy</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
+                  <span className="text-indigo-400 mr-3">•</span>
                   <span>Plnění právních povinností správce</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
+                  <span className="text-indigo-400 mr-3">•</span>
                   <span>Vašeho souhlasu (pro marketingové účely)</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
+                  <span className="text-indigo-400 mr-3">•</span>
                   <span>Oprávněného zájmu správce</span>
                 </li>
               </ul>
@@ -197,7 +197,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">7. Doba uložení údajů</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-indigo-400">7. Doba uložení údajů</h2>
               <p className="text-gray-300 leading-relaxed">
                 Osobní údaje uchováváme po dobu trvání smluvního vztahu a následně po dobu stanovenou právními
                 předpisy (obvykle 10 let od ukončení smlouvy). Údaje zpracovávané na základě souhlasu uchováváme do
@@ -206,48 +206,48 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">8. Vaše práva</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-indigo-400">8. Vaše práva</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
                 V souvislosti se zpracováním osobních údajů máte následující práva:
               </p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
+                  <span className="text-indigo-400 mr-3">•</span>
                   <span>Právo na přístup k osobním údajům</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
+                  <span className="text-indigo-400 mr-3">•</span>
                   <span>Právo na opravu nepřesných údajů</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
+                  <span className="text-indigo-400 mr-3">•</span>
                   <span>Právo na výmaz údajů</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
+                  <span className="text-indigo-400 mr-3">•</span>
                   <span>Právo na omezení zpracování</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
+                  <span className="text-indigo-400 mr-3">•</span>
                   <span>Právo na přenositelnost údajů</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
+                  <span className="text-indigo-400 mr-3">•</span>
                   <span>Právo vznést námitku proti zpracování</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
+                  <span className="text-indigo-400 mr-3">•</span>
                   <span>Právo odvolat souhlas</span>
                 </li>
                 <li className="flex">
-                  <span className="text-red-400 mr-3">•</span>
+                  <span className="text-indigo-400 mr-3">•</span>
                   <span>Právo podat stížnost u Úřadu pro ochranu osobních údajů</span>
                 </li>
               </ul>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">9. Cookies</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-indigo-400">9. Cookies</h2>
               <p className="text-gray-300 leading-relaxed">
                 Naše webové stránky používají pouze nezbytné technické cookies pro zajištění základní funkčnosti.
                 Nepoužíváme analytické ani marketingové cookies bez Vašeho souhlasu.
@@ -255,18 +255,18 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">10. Kontakt</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-indigo-400">10. Kontakt</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
                 Máte-li jakékoli dotazy ohledně zpracování osobních údajů, kontaktujte nás prosím:
               </p>
               <div className="bg-[#111827]/50 backdrop-blur-sm p-6 rounded-lg border border-gray-800">
-                <p className="text-gray-300 mb-2">Email: matej.hrabak@generaliceska.cz</p>
+                <p className="text-gray-300 mb-2">Email: matejhrabak@gmail.com</p>
                 <p className="text-gray-300">Telefon: +420 776 084 700</p>
               </div>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-red-400">11. Změny tohoto dokumentu</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-indigo-400">11. Změny tohoto dokumentu</h2>
               <p className="text-gray-300 leading-relaxed">
                 Vyhrazujeme si právo tyto zásady ochrany soukromí aktualizovat. O významných změnách Vás budeme
                 informovat prostřednictvím webu nebo emailem.
@@ -283,7 +283,7 @@ export default function PrivacyPage() {
         </motion.div>
       </main>
 
-      <Footer />
+      <WebDevFooter />
     </div>
   )
 }

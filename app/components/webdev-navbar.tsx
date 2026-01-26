@@ -16,8 +16,8 @@ export default function WebDevNavbar() {
   const isActive = (path: string) => pathname === path
 
 const navItems = [
-  { path: "/", icon: <UnfoldHorizontal size={18} />, label: "Úvodní stránka" },
-  { path: "/webovy-vyvojar", icon: <BotMessageSquare size={18} />, label: "Domů - Vývojář" },
+  
+  { path: "/webovy-vyvojar", icon: <BotMessageSquare size={18} />, label: "Domů" },
   { path: "/webovy-vyvojar/o-mne", icon: <Icon icon="lucide-lab:face-alien" width={18} height={18} />, label: "O mně" },
   { path: "/webovy-vyvojar/projekty", icon: <FolderKanban size={18} />, label: "Projekty" },
   { path: "/webovy-vyvojar/kontakt", icon: <PhoneCall size={18} />, label: "Kontakt" },

@@ -121,7 +121,7 @@ export default function InsuranceAdvisorPage() {
               </span>
             </h1>
             <p className="text-base md:text-xl text-gray-300 mb-6 md:mb-8">
-              Jsem Matěj Hrabák, poradce Generali České pojišťovny, kde pomáhám chránit Vaše zdraví, finance a majetek.
+              Jsem Matěj Hrabák, Fullstack developer, kde pomáhám chránit Vaše zdraví, finance a majetek.
               Společně najdeme nejlepší řešení.
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.matejhrabak.cz/</loc>
+    <loc>https://www.matejhrabak.eu/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.matejhrabak.cz/o-mne</loc>
+    <loc>https://www.matejhrabak.eu/o-mne</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.matejhrabak.cz/pojistovaci-poradce</loc>
+    <loc>https://www.matejhrabak.eu/pojistovaci-poradce</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.matejhrabak.cz/projekty</loc>
+    <loc>https://www.matejhrabak.eu/projekty</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.matejhrabak.cz/blog</loc>
+    <loc>https://www.matejhrabak.eu/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.matejhrabak.cz/kontakt</loc>
+    <loc>https://www.matejhrabak.eu/kontakt</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.matejhrabak.cz/webovy-vyvojar</loc>
+    <loc>https://www.matejhrabak.eu/webovy-vyvojar</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.matejhrabak.cz/webovy-vyvojar/o-mne</loc>
+    <loc>https://www.matejhrabak.eu/webovy-vyvojar/o-mne</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.matejhrabak.cz/webovy-vyvojar/projekty</loc>
+    <loc>https://www.matejhrabak.eu/webovy-vyvojar/projekty</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.matejhrabak.cz/webovy-vyvojar/blog</loc>
+    <loc>https://www.matejhrabak.eu/webovy-vyvojar/blog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.matejhrabak.cz/webovy-vyvojar/kontakt</loc>
+    <loc>https://www.matejhrabak.eu/webovy-vyvojar/kontakt</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

@@ -45,7 +45,7 @@ export default function SluzbyPage() {
             </span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Jako pojišťovací poradce Generali České pojišťovny nabízím kompletní portfolio služeb pro jednotlivce,
+            Jako pojišťovací Fullstack developer nabízím kompletní portfolio služeb pro jednotlivce,
             rodiny i firmy. Mým cílem je poskytnout vám optimální řešení přesně podle vašich potřeb.
           </p>
         </motion.div>

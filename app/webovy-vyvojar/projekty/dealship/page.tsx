@@ -521,7 +521,7 @@ export default function DealShipProjectPage() {
 
                 <div>
                   <h3 className="font-bold text-lg mb-2">Status</h3>
-                  <p className="text-green-400">Live - Demo verze</p>
+                  
                 </div>
               </div>
             </motion.div>

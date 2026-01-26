@@ -210,7 +210,7 @@ export default function AboutPage() {
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  href="mailto:matej.hrabak@generaliceska.cz"
+                  href="mailto:matejhrabak@gmail.com"
                   className="flex items-center gap-2 bg-[#111827] hover:bg-[#1d2739] px-3 py-2 rounded-md transition-colors"
                 >
                   <Mail className="h-4 w-4" />

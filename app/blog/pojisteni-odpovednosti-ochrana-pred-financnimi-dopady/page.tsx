@@ -140,7 +140,7 @@ export default function PojisteniOdpovednostiochranaPage() {
               <Github size={20} />
             </motion.a>
             <motion.a
-              href="mailto:matej.hrabak@generaliceska.cz"
+              href="mailto:matejhrabak@gmail.com"
               className="text-gray-400 hover:text-white transition-colors"
               whileHover={{ scale: 1.2, rotate: 5 }}
             >

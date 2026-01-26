@@ -167,6 +167,17 @@ function ProjectCard({ project, index }: { project: any; index: number }) {
 // Aktualizované projekty
 const allProjects = [
   {
+    title: "Nexos E-commerce",
+    description: "Vyvíjená moderní e-commerce šablona s pokročilými funkcemi pro online prodej, košíkem a platební bránou.",
+    image: "/images/nexos-project.webp",
+    category: "E-commerce",
+    year: "2025",
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    github: null,
+    live: "https://nexos-eshop.vercel.app/",
+    detailUrl: "/webovy-vyvojar/projekty/nexos",
+  },
+  {
     title: "DealShip",
     description: "B2B platforma pro business růst s analýzou trhu, lead generation a automatizací obchodních procesů.",
     image: "/images/dealship-project.webp",
