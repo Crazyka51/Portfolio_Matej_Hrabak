@@ -2,59 +2,16 @@
 
 import type React from "react"
 
-import { useState } from "react"
-import { useForm } from "react-hook-form"
 import { motion } from "framer-motion"
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from "lucide-react"
+import { Mail, Phone, MapPin, Send, Github } from "lucide-react"
+import { useForm, ValidationError } from "@formspree/react"
 import WebDevNavbar from "@/app/components/webdev-navbar"
 import WebDevFooter from "@/app/components/webdev-footer"
 import PageTransition from "@/app/components/page-transition"
 import LoadingSpinner from "@/app/components/loading-spinner"
-import { useToast } from "@/app/context/toast-context"
-
-interface FormData {
-  name: string
-  email: string
-  subject: string
-  message: string
-}
 
 export default function ContactPage() {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors, isSubmitting },
-  } = useForm<FormData>()
-  
-  const { showToast } = useToast()
-
-  const onSubmit = async (data: FormData) => {
-    try {
-      const response = await fetch("/api/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      })
-
-      const result = await response.json()
-
-      if (!response.ok) {
-        throw new Error(result.error || "Nepodařilo se odeslat zprávu")
-      }
-
-      showToast("Zpráva byla úspěšně odeslána! Děkujeme za váš zájem.", "success")
-      reset()
-    } catch (error) {
-      console.error("Error sending email:", error)
-      showToast(
-        error instanceof Error ? error.message : "Něco se pokazilo. Zkuste to prosím znovu.",
-        "error"
-      )
-    }
-  }
+  const [state, handleSubmit] = useForm(process.env.NEXT_PUBLIC_FORM || "meegzloy")
 
   return (
     <PageTransition>
@@ -84,110 +41,90 @@ export default function ContactPage() {
             >
               <h2 className="text-2xl font-bold mb-6">Napište mi</h2>
 
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2">
-                    Jméno a příjmení <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    {...register("name", { 
-                      required: "Jméno je povinné",
-                      minLength: { value: 2, message: "Jméno musí mít alespoň 2 znaky" }
-                    })}
-                    className={`w-full px-4 py-2 bg-gray-800/50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                      errors.name ? "border-red-500" : "border-gray-700"
-                    }`}
-                  />
-                  {errors.name && (
-                    <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
-                  )}
+              {state.succeeded ? (
+                <div className="p-6 bg-green-900/20 border border-green-500/30 rounded-lg">
+                  <h3 className="font-medium mb-2 text-green-400">Zpráva byla úspěšně odeslána!</h3>
+                  <p className="text-sm text-gray-300">Děkuji za váš zájem. Brzy se vám ozvu.</p>
                 </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium mb-2">
+                      Jméno a příjmení <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                    <ValidationError prefix="Jméno" field="name" errors={state.errors} />
+                  </div>
 
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">
-                    E-mail <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    {...register("email", { 
-                      required: "Email je povinný",
-                      pattern: {
-                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                        message: "Neplatná emailová adresa"
-                      }
-                    })}
-                    className={`w-full px-4 py-2 bg-gray-800/50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                      errors.email ? "border-red-500" : "border-gray-700"
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium mb-2">
+                      E-mail <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                    <ValidationError prefix="E-mail" field="email" errors={state.errors} />
+                  </div>
+
+                  <div>
+                    <label htmlFor="subject" className="block text-sm font-medium mb-2">
+                      Předmět <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      required
+                      className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                    <ValidationError prefix="Předmět" field="subject" errors={state.errors} />
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium mb-2">
+                      Zpráva <span className="text-red-500">*</span>
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      rows={6}
+                      className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    ></textarea>
+                    <ValidationError prefix="Zpráva" field="message" errors={state.errors} />
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={state.submitting}
+                    className={`w-full flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg transition-colors ${
+                      state.submitting ? "opacity-70 cursor-not-allowed" : ""
                     }`}
-                  />
-                  {errors.email && (
-                    <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
-                  )}
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                    Předmět <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    {...register("subject", { 
-                      required: "Předmět je povinný",
-                      minLength: { value: 3, message: "Předmět musí mít alespoň 3 znaky" }
-                    })}
-                    className={`w-full px-4 py-2 bg-gray-800/50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                      errors.subject ? "border-red-500" : "border-gray-700"
-                    }`}
-                  />
-                  {errors.subject && (
-                    <p className="text-red-500 text-sm mt-1">{errors.subject.message}</p>
-                  )}
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-2">
-                    Zpráva <span className="text-red-500">*</span>
-                  </label>
-                  <textarea
-                    id="message"
-                    {...register("message", { 
-                      required: "Zpráva je povinná",
-                      minLength: { value: 10, message: "Zpráva musí mít alespoň 10 znaků" }
-                    })}
-                    rows={6}
-                    className={`w-full px-4 py-2 bg-gray-800/50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
-                      errors.message ? "border-red-500" : "border-gray-700"
-                    }`}
-                  ></textarea>
-                  {errors.message && (
-                    <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>
-                  )}
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className={`w-full flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg transition-colors ${
-                    isSubmitting ? "opacity-70 cursor-not-allowed" : ""
-                  }`}
-                >
-                  {isSubmitting ? (
-                    <div className="flex items-center">
-                      <LoadingSpinner size={20} color="text-white" thickness={2} />
-                      <span className="ml-2">Odesílání...</span>
-                    </div>
-                  ) : (
-                    <>
-                      <Send className="mr-2 h-5 w-5" />
-                      Odeslat zprávu
-                    </>
-                  )}
-                </button>
-              </form>
+                  >
+                    {state.submitting ? (
+                      <div className="flex items-center">
+                        <LoadingSpinner size={20} color="text-white" thickness={2} />
+                        <span className="ml-2">Odesílání...</span>
+                      </div>
+                    ) : (
+                      <>
+                        <Send className="mr-2 h-5 w-5" />
+                        Odeslat zprávu
+                      </>
+                    )}
+                  </button>
+                </form>
+              )}
             </motion.div>
 
             {/* Contact Info */}
@@ -242,7 +179,7 @@ export default function ContactPage() {
                   <Github className="mr-2 h-5 w-5" />
                   <span>GitHub</span>
                 </a>
-                </div>
+              </div>
                 
 
               <div className="mt-12 p-4 bg-blue-900/20 border border-blue-500/30 rounded-lg">
