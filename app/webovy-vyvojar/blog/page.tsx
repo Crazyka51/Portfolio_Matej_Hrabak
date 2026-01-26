@@ -199,14 +199,83 @@ function BlogPostCard({ post, index }: { post: any; index: number }) {
 // Sample Data for blog posts
 const blogPosts = [
   {
-    title: "Jak vytvářím e-shopy: Můj přístup k úspěšnému online obchodu",
-    slug: "ecommerce-reseni",
+    title: "Next.js 15 - Co je nového?",
+    slug: "nextjs-15-co-je-noveho",
     excerpt:
-      "Desítky vytvořených e-shopů mě naučily, co funguje a co ne. Sdílím svou filozofii tvorby e-shopů: od konzultace přes výběr technologie až po automatizaci a bezpečnost.",
-    image: "/images/ecommerce-project.webp",
-    date: "9. 11. 2025",
+      "Podrobný průvodce nejnovější verzí Next.js 15. Objevte nové funkce, vylepšení a změny, které přináší tato aktualizace.",
+    image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=300&fit=crop",
+    date: "20. 1. 2025",
+    readTime: 10,
+    tags: ["Next.js", "React", "Framework"],
+  },
+  {
+    title: "TypeScript tipy pro efektivnější typování",
+    slug: "typescript-tipy-pro-efektivnejsi-typovani",
+    excerpt:
+      "Pokročilé techniky a best practices v TypeScriptu. Naučte se psát lepší a bezpečnější kód s využitím pokročilých TypeScript funkcí.",
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=300&fit=crop",
+    date: "18. 1. 2025",
+    readTime: 12,
+    tags: ["TypeScript", "Best Practices", "Tipy"],
+  },
+  {
+    title: "Web pro všechny = více zákazníků: Proč přístupnost není jen morálka",
+    slug: "pristupnost-webu-proc-je-dulezita",
+    excerpt: "15% populace má nějaké omezení. Ignorovat je = házet peníze oknem. Ukazuji, proč přístupnost není morální povinnost, ale chytrý byznys.",
+    image: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=400&h=300&fit=crop",
+    date: "15. 1. 2025",
+    readTime: 8,
+    tags: ["Přístupnost", "UX", "Byznys"],
+  },
+  {
+    title: "Tailwind CSS: Od skeptika k fanouškoví",
+    slug: "tailwind-css-od-skeptika-k-fanouskovi",
+    excerpt:
+      "Moje cesta od odporu k Tailwind CSS až k tomu, že ho používám v každém projektu. Co mě přesvědčilo a proč byste mu měli dát šanci.",
+    image: "https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?w=400&h=300&fit=crop",
+    date: "12. 1. 2025",
+    readTime: 9,
+    tags: ["Tailwind CSS", "CSS", "Styling"],
+  },
+  {
+    title: "Jak optimalizovat výkon React aplikací",
+    slug: "jak-optimalizovat-vykon-react-aplikaci",
+    excerpt:
+      "Praktické tipy a triky pro zrychlení React aplikací. Od lazy loading přes memoizaci až po optimalizaci re-renderů.",
+    image: "/images/jakoptimalizovatreact.webp",
+    date: "10. 1. 2025",
+    readTime: 13,
+    tags: ["React", "Optimalizace", "Performance"],
+  },
+  {
+    title: "Serverless funkce: Kdy je použít a kdy ne",
+    slug: "serverless-funkce-kdy-pouzit",
+    excerpt:
+      "Průvodce serverless architekturou. Zjistěte, kdy jsou serverless funkce ideální řešení a kdy je lepší zvolit tradiční přístup.",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop",
+    date: "8. 1. 2025",
+    readTime: 11,
+    tags: ["Serverless", "Cloud", "Architektura"],
+  },
+  {
+    title: "Docker pro frontend vývojáře",
+    slug: "docker-pro-frontend-vyvojare",
+    excerpt:
+      "Vše, co potřebujete vědět o Dockeru jako frontend vývojář. Od základů kontejnerizace až po praktické použití v development workflow.",
+    image: "https://images.unsplash.com/photo-1605745341112-85968b19335b?w=400&h=300&fit=crop",
+    date: "5. 1. 2025",
+    readTime: 14,
+    tags: ["Docker", "DevOps", "Nástroje"],
+  },
+  {
+    title: "Jak jsem implementoval GraphQL a proč to změnilo můj přístup k API",
+    slug: "jak-jsem-implementoval-graphql",
+    excerpt:
+      "Moje zkušenosti s implementací GraphQL API. Výhody, nevýhody a porovnání s REST API na reálných projektech.",
+    image: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=400&h=300&fit=crop",
+    date: "2. 1. 2025",
     readTime: 15,
-    tags: ["E-commerce", "Byznys", "Konverze"],
+    tags: ["GraphQL", "API", "Backend"],
   },
   {
     title: "Rychlý web = více zákazníků: Proč rychlost rozhoduje o úspěchu",
@@ -219,6 +288,16 @@ const blogPosts = [
     tags: ["Rychlost", "UX", "Konverze"],
   },
   {
+    title: "Jak vytvářím e-shopy: Můj přístup k úspěšnému online obchodu",
+    slug: "ecommerce-reseni",
+    excerpt:
+      "Desítky vytvořených e-shopů mě naučily, co funguje a co ne. Sdílím svou filozofii tvorby e-shopů: od konzultace přes výběr technologie až po automatizaci a bezpečnost.",
+    image: "/images/ecommerce-project.webp",
+    date: "9. 11. 2025",
+    readTime: 15,
+    tags: ["E-commerce", "Byznys", "Konverze"],
+  },
+  {
     title: "Moderní web, který s vámi poroste: Proč technologie rozhoduje o budoucnosti",
     slug: "react-nextjs",
     excerpt:
@@ -229,15 +308,6 @@ const blogPosts = [
     tags: ["Moderní technologie", "Škálovatelnost", "Budoucnost"],
   },
   {
-    title: "Web pro všechny = více zákazníků: Proč přístupnost není jen morálka",
-    slug: "pristupnost-webu-proc-je-dulezita",
-    excerpt: "15% populace má nějaké omezení. Ignorovat je = házet peníze oknem. Ukazuji, proč přístupnost není morální povinnost, ale chytrý byznys.",
-    image: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=400&h=300&fit=crop",
-    date: "15. 1. 2025",
-    readTime: 8,
-    tags: ["Přístupnost", "UX", "Byznys"],
-  },
-  {
     title: "Design webu, který prodává: Proč vzhled rozhoduje o penězích",
     slug: "frontend-development",
     excerpt: "První dojem rozhoduje za 0,05 sekundy. Design není o tom, jak to vypadá - je o tom, jak to funguje a kolik to přinese zákazníků.",
@@ -245,5 +315,15 @@ const blogPosts = [
     date: "6. 11. 2025",
     readTime: 11,
     tags: ["Design", "UX/UI", "Konverze"],
+  },
+  {
+    title: "Backend development: Síla, která stojí za každým webem",
+    slug: "backend-development",
+    excerpt:
+      "Backend je mozek vaší aplikace. Bez kvalitního backendu je i nejhezčí web jen prázdná slupka. Vysvětluji, proč backend rozhoduje o úspěchu.",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop",
+    date: "5. 11. 2025",
+    readTime: 13,
+    tags: ["Backend", "API", "Architektura"],
   },
 ]
