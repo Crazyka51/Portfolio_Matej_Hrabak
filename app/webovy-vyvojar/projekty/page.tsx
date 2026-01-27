@@ -185,7 +185,7 @@ const allProjects = [
     year: "2025",
     technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     github: null,
-    live: "https://dealshipweb.vercel.app/",
+    live: "https://b2bportfolio.vercel.app//",
     detailUrl: "/webovy-vyvojar/projekty/dealship",
   },
   {

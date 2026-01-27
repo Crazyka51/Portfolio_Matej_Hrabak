@@ -112,7 +112,7 @@ export default function DealShipProjectPage() {
               className="flex items-center space-x-4"
             >
               <a
-                href="https://dealshipweb.vercel.app/"
+                href="https://b2bportfolio.vercel.app//"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors"
