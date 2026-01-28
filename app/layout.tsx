@@ -29,8 +29,17 @@ export default function RootLayout({
     "@type": "Person",
     "name": "Matěj Hrabák",
     "url": "https://www.matejhrabak.eu",
+    "image": "https://www.matejhrabak.eu/avatar.webp",
     "jobTitle": "Senior Next.js & React Web Developer",
     "description": "Full-stack webový vývojář specializující se na Next.js, React, TypeScript a Node.js",
+    "email": "jackvolat@gmail.com",
+    "telephone": "+420 777 777 777",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Praha",
+      "addressRegion": "Praha",
+      "addressCountry": "CZ"
+    },
     "knowsAbout": [
       "Next.js",
       "React",
@@ -52,6 +61,16 @@ export default function RootLayout({
     "@type": "ProfessionalService",
     "name": "Matěj Hrabák - Web Development Services",
     "description": "Profesionální vývoj webových aplikací využívajících Next.js, React a moderní technologie",
+    "image": "https://www.matejhrabak.eu/avatar.webp",
+    "telephone": "+420 777 777 777",
+    "email": "jackvolat@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Praha",
+      "addressRegion": "Praha",
+      "addressCountry": "CZ"
+    },
+    "priceRange": "$$",
     "provider": {
       "@type": "Person",
       "name": "Matěj Hrabák"
