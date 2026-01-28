@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Webový Vývoj na Míru: React, Next.js, Node.js a Optimalizace | Matěj Hrabák",
-  description: "Kompletní vývoj webových aplikací. Frontend i Backend, migrace starších systémů, SEO optimalizace. Rychle, moderně, efektivně. Poptávka zdarma.",
+  title: "Webový Vývoj na Míru: React, Next.js | Matěj Hrabák",
+  description: "Kompletní vývoj webových aplikací. Frontend i Backend, migrace systémů, SEO optimalizace. Rychle, moderně, efektivně.",
   keywords: [
     "webový vývoj na míru",
     "React",
@@ -19,15 +19,15 @@ export const metadata: Metadata = {
     canonical: "/nabizene-sluzby",
   },
   openGraph: {
-    title: "Webový Vývoj na Míru: React, Next.js, Node.js a Optimalizace",
-    description: "Kompletní vývoj webových aplikací. Frontend i Backend, migrace starších systémů, SEO optimalizace. Rychle, moderně, efektivně.",
+    title: "Webový Vývoj na Míru: React, Next.js | Matěj Hrabák",
+    description: "Kompletní vývoj webových aplikací. Frontend i Backend, migrace systémů, SEO optimalizace.",
     type: "website",
     locale: "cs_CZ",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Webový Vývoj na Míru: React, Next.js, Node.js a Optimalizace",
-    description: "Kompletní vývoj webových aplikací. Frontend i Backend, migrace starších systémů, SEO optimalizace.",
+    title: "Webový Vývoj na Míru: React, Next.js | Matěj Hrabák",
+    description: "Kompletní vývoj webových aplikací. Frontend i Backend, migrace systémů, SEO optimalizace.",
   },
 }
 

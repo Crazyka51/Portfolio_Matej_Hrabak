@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 
 export const baseMetadata: Metadata = {
-  title: "Matěj Hrabák | Senior Next.js & React Web Vývojář a Konzultant",
-  description: "Hledáte Full-stack developera? Specializuji se na rychlé a škálovatelné Next.js/React aplikace, TypeScript a Node.js. Získejte expertní konzultaci a moderní web.",
+  title: "Matěj Hrabák | Next.js & React Web Vývojář",
+  description: "Full-stack developer specializující se na Next.js, React, TypeScript a Node.js. Rychlé a škálovatelné webové aplikace. Expertní konzultace.",
   keywords: ["Next.js", "React", "webový vývojář", "TypeScript", "Node.js", "fullstack developer", "Matěj Hrabák", "web development", "frontend", "backend", "konzultace"],
   authors: [{ name: "Matěj Hrabák" }],
   creator: "Matěj Hrabák",
@@ -29,8 +29,8 @@ export const baseMetadata: Metadata = {
     type: "website",
     locale: "cs_CZ",
     url: "/",
-    title: "Matěj Hrabák | Senior Next.js & React Web Vývojář a Konzultant",
-    description: "Hledáte Full-stack developera? Specializuji se na rychlé a škálovatelné Next.js/React aplikace, TypeScript a Node.js. Získejte expertní konzultaci a moderní web.",
+    title: "Matěj Hrabák | Next.js & React Web Vývojář",
+    description: "Full-stack developer specializující se na Next.js, React, TypeScript a Node.js. Rychlé a škálovatelné webové aplikace.",
     siteName: "Matěj Hrabák",
     images: [
       {
@@ -43,8 +43,8 @@ export const baseMetadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Matěj Hrabák | Senior Next.js & React Web Vývojář a Konzultant",
-    description: "Hledáte Full-stack developera? Specializuji se na rychlé a škálovatelné Next.js/React aplikace, TypeScript a Node.js. Získejte expertní konzultaci a moderní web.",
+    title: "Matěj Hrabák | Next.js & React Web Vývojář",
+    description: "Full-stack developer specializující se na Next.js, React, TypeScript a Node.js. Rychlé a škálovatelné webové aplikace.",
     images: ["/avatar.webp"],
   },
   robots: {
