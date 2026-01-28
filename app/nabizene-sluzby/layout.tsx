@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     "migrace systémů",
     "Matěj Hrabák"
   ],
+  alternates: {
+    canonical: "/nabizene-sluzby",
+  },
   openGraph: {
     title: "Webový Vývoj na Míru: React, Next.js, Node.js a Optimalizace",
     description: "Kompletní vývoj webových aplikací. Frontend i Backend, migrace starších systémů, SEO optimalizace. Rychle, moderně, efektivně.",

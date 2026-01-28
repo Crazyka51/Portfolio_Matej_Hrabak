@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     "web development",
     "konzultace"
   ],
+  alternates: {
+    canonical: "/webovy-vyvojar",
+  },
   openGraph: {
     title: "Matěj Hrabák | Senior Next.js & React Web Vývojář a Konzultant",
     description: "Hledáte Full-stack developera? Specializuji se na rychlé a škálovatelné Next.js/React aplikace, TypeScript a Node.js. Získejte expertní konzultaci a moderní web.",

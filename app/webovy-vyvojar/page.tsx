@@ -72,7 +72,14 @@ export default function WebDeveloperPage() {
                 Matěj Hrabák – Expert na Next.js a Tvorbu moderních Webových Aplikací
               </h1>
               <p className="text-xl text-gray-300 mb-8">
-                Specializuji se na vývoj responzivních webových aplikací s důrazem na uživatelský zážitek a výkon.
+                Specializuji se na{" "}
+                <Link href="#sluzby" className="text-blue-400 hover:text-blue-300 transition-colors">
+                  vývoj responzivních webových aplikací
+                </Link>
+                {" "}s důrazem na uživatelský zážitek a výkon. Prohlédněte si{" "}
+                <Link href="/webovy-vyvojar/projekty" className="text-blue-400 hover:text-blue-300 transition-colors">
+                  moje portfolio projektů v Next.js a React
+                </Link>.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -167,10 +174,16 @@ export default function WebDeveloperPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold mb-12 flex items-center">
+              <h2 className="text-3xl font-bold mb-4 flex items-center">
                 <Code className="mr-3 h-6 w-6 text-blue-400" />
                 <span>Technologie a Odbornost</span>
               </h2>
+              <p className="text-gray-300 mb-8 max-w-3xl">
+                Využívám moderní technologie pro tvorbu výkonných webových aplikací. Více informací o mém přístupu najdete v{" "}
+                <Link href="/webovy-vyvojar/blog" className="text-blue-400 hover:text-blue-300 transition-colors">
+                  blogu o Next.js, React a TypeScript
+                </Link>.
+              </p>
             </motion.div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -198,7 +211,7 @@ export default function WebDeveloperPage() {
         </section>
 
         {/* Services Section */}
-        <section className="py-20 bg-gradient-to-b from-[#0a1428] to-[#010714]">
+        <section id="sluzby" className="py-20 bg-gradient-to-b from-[#0a1428] to-[#010714]">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -206,10 +219,20 @@ export default function WebDeveloperPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold mb-12 flex items-center">
+              <h2 className="text-3xl font-bold mb-4 flex items-center">
                 <Layout className="mr-3 h-6 w-6 text-blue-400" />
                 <span>Moje Klíčové Služby: Frontend i Backend Development</span>
               </h2>
+              <p className="text-gray-300 mb-8 max-w-3xl">
+                Nabízím komplexní služby od návrhu po nasazení. Podívejte se na{" "}
+                <Link href="/webovy-vyvojar/o-mne" className="text-blue-400 hover:text-blue-300 transition-colors">
+                  více informací o mně a mých zkušenostech
+                </Link>
+                {" "}nebo{" "}
+                <Link href="/webovy-vyvojar/kontakt" className="text-blue-400 hover:text-blue-300 transition-colors">
+                  mě kontaktujte pro nezávaznou konzultaci
+                </Link>.
+              </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
