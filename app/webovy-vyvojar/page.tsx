@@ -69,10 +69,17 @@ export default function WebDeveloperPage() {
               className="max-w-3xl"
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                Webový vývojář se zaměřením na moderní technologie
+                Matěj Hrabák – Expert na Next.js a Tvorbu moderních Webových Aplikací
               </h1>
               <p className="text-xl text-gray-300 mb-8">
-                Specializuji se na vývoj responzivních webových aplikací s důrazem na uživatelský zážitek a výkon.
+                Specializuji se na{" "}
+                <Link href="#sluzby" className="text-blue-400 hover:text-blue-300 transition-colors">
+                  vývoj responzivních webových aplikací
+                </Link>
+                {" "}s důrazem na uživatelský zážitek a výkon. Prohlédněte si{" "}
+                <Link href="/webovy-vyvojar/projekty" className="text-blue-400 hover:text-blue-300 transition-colors">
+                  moje portfolio projektů v Next.js a React
+                </Link>.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -136,7 +143,7 @@ export default function WebDeveloperPage() {
             >
               <h2 className="text-3xl font-bold mb-12 flex items-center">
                 <Terminal className="mr-3 h-6 w-6 text-blue-400" />
-                <span>Moje projekty</span>
+                <span>Projekty v Portfoliu – Ukázky Webových Řešení</span>
               </h2>
             </motion.div>
 
@@ -151,7 +158,7 @@ export default function WebDeveloperPage() {
                 href="/webovy-vyvojar/projekty"
                 className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
               >
-                <span>Zobrazit všechny projekty</span>
+                <span>Prohlédněte si všechny projekty v mém portfoliu</span>
                 <ChevronRight className="ml-1 h-4 w-4" />
               </Link>
             </div>
@@ -167,10 +174,16 @@ export default function WebDeveloperPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold mb-12 flex items-center">
+              <h2 className="text-3xl font-bold mb-4 flex items-center">
                 <Code className="mr-3 h-6 w-6 text-blue-400" />
-                <span>Technologie</span>
+                <span>Technologie a Odbornost</span>
               </h2>
+              <p className="text-gray-300 mb-8 max-w-3xl">
+                Využívám moderní technologie pro tvorbu výkonných webových aplikací. Více informací o mém přístupu najdete v{" "}
+                <Link href="/webovy-vyvojar/blog" className="text-blue-400 hover:text-blue-300 transition-colors">
+                  blogu o Next.js, React a TypeScript
+                </Link>.
+              </p>
             </motion.div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -198,7 +211,7 @@ export default function WebDeveloperPage() {
         </section>
 
         {/* Services Section */}
-        <section className="py-20 bg-gradient-to-b from-[#0a1428] to-[#010714]">
+        <section id="sluzby" className="py-20 bg-gradient-to-b from-[#0a1428] to-[#010714]">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -206,10 +219,20 @@ export default function WebDeveloperPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold mb-12 flex items-center">
+              <h2 className="text-3xl font-bold mb-4 flex items-center">
                 <Layout className="mr-3 h-6 w-6 text-blue-400" />
-                <span>Služby</span>
+                <span>Moje Klíčové Služby: Frontend i Backend Development</span>
               </h2>
+              <p className="text-gray-300 mb-8 max-w-3xl">
+                Nabízím komplexní služby od návrhu po nasazení. Podívejte se na{" "}
+                <Link href="/webovy-vyvojar/o-mne" className="text-blue-400 hover:text-blue-300 transition-colors">
+                  více informací o mně a mých zkušenostech
+                </Link>
+                {" "}nebo{" "}
+                <Link href="/webovy-vyvojar/kontakt" className="text-blue-400 hover:text-blue-300 transition-colors">
+                  mě kontaktujte pro nezávaznou konzultaci
+                </Link>.
+              </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -241,15 +264,15 @@ export default function WebDeveloperPage() {
               transition={{ duration: 0.6 }}
               className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 p-8 md:p-12 rounded-2xl border border-blue-500/20 text-center max-w-4xl mx-auto"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Začněme společně</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Začněte s profesionálním vývojem webu</h2>
               <p className="text-xl text-gray-300 mb-8">
-                Pojďme společně vytvořit něco úžasného. Kontaktujte mě a probereme vaše požadavky.
+                Potřebujete moderní webovou aplikaci v Next.js nebo React? Kontaktujte mě pro bezplatnou konzultaci a společně vytvoříme řešení na míru.
               </p>
               <Link
                 href="/webovy-vyvojar/kontakt"
                 className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white py-3 px-8 rounded-lg transition-colors text-lg"
               >
-                Kontaktujte mě
+                Získejte expertní konzultaci zdarma
               </Link>
             </motion.div>
           </div>
@@ -295,7 +318,7 @@ function ProjectCard({ project, index, performanceMode }: { project: any; index:
         <Link href={project.detailUrl || "#"}>
           <Image
             src={project.image || "/placeholder.svg"}
-            alt={project.title}
+            alt={project.altText || project.title}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className={`object-cover ${performanceMode === "high" ? "transition-transform duration-500 group-hover:scale-105" : ""}`}
@@ -355,6 +378,7 @@ const projects = [
     title: "Nexos E-commerce",
     description: "Moderní e-commerce šablona s pokročilými funkcemi pro online prodej.",
     image: "/images/nexos-project.webp",
+    altText: "Nexos e-commerce šablona v Next.js a TypeScript - moderní eshop",
     category: "E-commerce šablona",
     year: "2025",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
@@ -363,9 +387,10 @@ const projects = [
     detailUrl: "/webovy-vyvojar/projekty/nexos",
   },
   {
-    title: "B2B firemí portfolio ",
+    title: "B2B firemní portfolio ",
     description: "B2B platforma pro business růst s analýzou trhu, lead generation a automatizací.",
     image: "/images/dealship-project.webp",
+    altText: "B2B SaaS platforma vytvořená v Next.js - portfolio pro business růst",
     category: "B2B SaaS platforma",
     year: "2025",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
@@ -377,6 +402,7 @@ const projects = [
     title: "Salon Zuza",
     description: "Moderní webové stránky pro kadeřnický salon s rezervačním systémem a prezentací služeb.",
     image: "/images/salonzuza-project.webp",
+    altText: "Web kadeřnického salonu Zuza s rezervačním systémem v PHP",
     category: "Profesionální portfolio kadeřnického salónu",
     year: "2023",
     technologies: ["PHP", "HTML", "CSS"],
@@ -388,6 +414,7 @@ const projects = [
     title: "Pavel Fišer",
     description: "Osobní webové stránky pro zastupitele MČ Praha 4 s prezentací aktivit a kontaktními informacemi.",
     image: "/images/fiserpavel-project.webp",
+    altText: "Web zastupitele Pavla Fišera v Next.js a TypeScript",
     category: "Profesionální portfolio",
     year: "2025",
     technologies: ["NextJS", "Node", "CSS" , "TypeScript" , "Tailwind CSS"],
@@ -399,7 +426,8 @@ const projects = [
     title: "Straw Stav",
     description: "Firemní web pro stavební společnost s prezentací služeb, referencí a kontaktním formulářem.",
     image: "/images/strawstav-project.webp",
-    category: "Firemní porfolio",
+    altText: "Firemní web stavební společnosti Straw Stav v Next.js a TypeScript",
+    category: "Firemní portfolio",
     year: "2025",
     technologies: ["NextJS", "Node", "CSS" , "TypeScript" , "Tailwind CSS"],
     github: "",
@@ -410,6 +438,7 @@ const projects = [
     title: "Matěj Hrabák",
     description: "Osobní portfolio a blog s prezentací služeb pojišťovacího poradce a webového vývojáře.",
     image: "/images/matejhrabak_portfolio.webp",
+    altText: "Portfolio webového vývojáře Matěje Hrabáka v Next.js",
     category: "Portfolio",
     year: "2024",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],

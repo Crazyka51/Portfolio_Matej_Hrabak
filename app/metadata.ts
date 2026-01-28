@@ -1,9 +1,9 @@
 import type { Metadata } from "next"
 
 export const baseMetadata: Metadata = {
-  title: "Matěj Hrabák | Webový vývojář",
-  description: "Osobní webové stránky Matěje Hrabáka - fullstack webový vývojář specializující se na moderní technologie",
-  keywords: ["webový vývoj", "React", "Next.js", "TypeScript", "fullstack developer", "Matěj Hrabák"],
+  title: "Matěj Hrabák | Next.js & React Web Vývojář",
+  description: "Full-stack developer specializující se na Next.js, React, TypeScript a Node.js. Rychlé a škálovatelné webové aplikace. Expertní konzultace.",
+  keywords: ["Next.js", "React", "webový vývojář", "TypeScript", "Node.js", "fullstack developer", "Matěj Hrabák", "web development", "frontend", "backend", "konzultace"],
   authors: [{ name: "Matěj Hrabák" }],
   creator: "Matěj Hrabák",
   publisher: "Matěj Hrabák",
@@ -13,6 +13,9 @@ export const baseMetadata: Metadata = {
     telephone: true,
   },
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.matejhrabak.eu"),
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: [
       { url: "/favicon/favicon-16x16.png", sizes: "16x16", type: "image/png" },
@@ -26,8 +29,8 @@ export const baseMetadata: Metadata = {
     type: "website",
     locale: "cs_CZ",
     url: "/",
-    title: "Matěj Hrabák | Webový vývojář",
-    description: "Fullstack webový vývojář specializující se na moderní technologie - React, Next.js, TypeScript",
+    title: "Matěj Hrabák | Next.js & React Web Vývojář",
+    description: "Full-stack developer specializující se na Next.js, React, TypeScript a Node.js. Rychlé a škálovatelné webové aplikace.",
     siteName: "Matěj Hrabák",
     images: [
       {
@@ -40,8 +43,8 @@ export const baseMetadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Matěj Hrabák | Osobní webové stránky",
-    description: "Osobní webové stránky Matěje Hrabáka - pojišťovací poradce a webový vývojář",
+    title: "Matěj Hrabák | Next.js & React Web Vývojář",
+    description: "Full-stack developer specializující se na Next.js, React, TypeScript a Node.js. Rychlé a škálovatelné webové aplikace.",
     images: ["/avatar.webp"],
   },
   robots: {
