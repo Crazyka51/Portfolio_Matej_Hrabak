@@ -1,28 +1,32 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Matěj Hrabák - Webový vývojář",
-  description: "Specializuji se na vývoj moderních webových aplikací s důrazem na uživatelský zážitek a výkon. React, Next.js, TypeScript.",
+  title: "Matěj Hrabák | Senior Next.js & React Web Vývojář a Konzultant",
+  description: "Hledáte Full-stack developera? Specializuji se na rychlé a škálovatelné Next.js/React aplikace, TypeScript a Node.js. Získejte expertní konzultaci a moderní web.",
   keywords: [
+    "Next.js",
+    "React",
     "webový vývojář",
     "frontend developer",
-    "React",
-    "Next.js",
     "TypeScript",
+    "Node.js",
+    "fullstack developer",
     "tvorba webů",
     "vývoj aplikací",
-    "Matěj Hrabák"
+    "Matěj Hrabák",
+    "web development",
+    "konzultace"
   ],
   openGraph: {
-    title: "Matěj Hrabák - Webový vývojář",
-    description: "Specializuji se na vývoj moderních webových aplikací s důrazem na uživatelský zážitek a výkon.",
+    title: "Matěj Hrabák | Senior Next.js & React Web Vývojář a Konzultant",
+    description: "Hledáte Full-stack developera? Specializuji se na rychlé a škálovatelné Next.js/React aplikace, TypeScript a Node.js. Získejte expertní konzultaci a moderní web.",
     type: "website",
     locale: "cs_CZ",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Matěj Hrabák - Webový vývojář",
-    description: "Specializuji se na vývoj moderních webových aplikací s důrazem na uživatelský zážitek a výkon.",
+    title: "Matěj Hrabák | Senior Next.js & React Web Vývojář a Konzultant",
+    description: "Hledáte Full-stack developera? Specializuji se na rychlé a škálovatelné Next.js/React aplikace, TypeScript a Node.js. Získejte expertní konzultaci a moderní web.",
   },
 }
 
