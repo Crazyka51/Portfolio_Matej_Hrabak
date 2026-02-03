@@ -5,6 +5,7 @@ import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import { Zap, ZapOff } from "lucide-react"
 import dynamic from "next/dynamic"
+import { usePerformance } from "./context/performance-context"
 
 // Dynamický import stránky webového vývojáře
 const WebDeveloperPage = dynamic(() => import("./webovy-vyvojar/page"), {
@@ -20,29 +21,40 @@ const WebDeveloperPage = dynamic(() => import("./webovy-vyvojar/page"), {
 
 export default function HomePage() {
   const [showPerformanceChoice, setShowPerformanceChoice] = useState(false)
-  const [performanceSelected, setPerformanceSelected] = useState(false)
+  const { performanceMode, setPerformanceMode, isLoading } = usePerformance()
 
   useEffect(() => {
+    if (isLoading) return
+    
     // Kontrola, zda už uživatel vybral preferenci
-    const savedMode = localStorage.getItem("performanceMode") as "high" | "low" | null
-    if (savedMode) {
-      // Pokud už má uložený mód, zobraz obsah
-      setPerformanceSelected(true)
+    if (performanceMode) {
+      // Už má vybraný mód, necháme zobrazit obsah
+      setShowPerformanceChoice(false)
     } else {
       // Pokud nemá uložený mód, zobraz výběr
       setTimeout(() => setShowPerformanceChoice(true), 100)
     }
-  }, [])
+  }, [performanceMode, isLoading])
 
   const handlePerformanceChoice = (mode: "high" | "low") => {
-    localStorage.setItem("performanceMode", mode)
+    setPerformanceMode(mode)
     setShowPerformanceChoice(false)
-    // Zobraz obsah webového vývojáře
-    setPerformanceSelected(true)
+  }
+
+  // Pokud načítáme, zobraz loader
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-[#050A14] text-white flex items-center justify-center">
+        <div className="animate-pulse">
+          <div className="w-12 h-12 border-4 border-indigo-500 border-t-transparent rounded-full animate-spin"></div>
+        </div>
+        <SpeedInsights />
+      </div>
+    )
   }
 
   // Pokud je performance vybraný, zobraz stránku webového vývojáře
-  if (performanceSelected) {
+  if (performanceMode) {
     return <WebDeveloperPage />
   }
 

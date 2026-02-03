@@ -21,9 +21,11 @@ import {
 } from "lucide-react"
 import Clock from "@/app/components/clock"
 import ServiceCarousel from "@/app/components/service-carousel"
+import { usePerformance } from "@/app/context/performance-context"
 
 export default function InsuranceAdvisorPage() {
   const [scrollY, setScrollY] = useState(0)
+  const { performanceMode } = usePerformance()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,16 +57,16 @@ export default function InsuranceAdvisorPage() {
 
         {/* Animované kruhy */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 0.15, scale: 1 }}
-          transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" }}
+          initial={performanceMode === "high" ? { opacity: 0, scale: 0.8 } : false}
+          animate={performanceMode === "high" ? { opacity: 0.15, scale: 1 } : {}}
+          transition={performanceMode === "high" ? { duration: 3, repeat: Infinity, repeatType: "reverse" } : { duration: 0 }}
           className="absolute top-20 right-20 w-96 h-96 rounded-full bg-red-600/20 blur-3xl"
         />
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 0.1, scale: 1 }}
-          transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse", delay: 1 }}
+          initial={performanceMode === "high" ? { opacity: 0, scale: 0.8 } : false}
+          animate={performanceMode === "high" ? { opacity: 0.1, scale: 1 } : {}}
+          transition={performanceMode === "high" ? { duration: 4, repeat: Infinity, repeatType: "reverse", delay: 1 } : { duration: 0 }}
           className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-blue-600/20 blur-3xl"
         />
          
@@ -83,9 +85,9 @@ export default function InsuranceAdvisorPage() {
         {/* Hero Section s paralaxovým efektem */}
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-12 mb-12 md:mb-24">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={performanceMode === "high" ? { opacity: 0, x: -50 } : false}
+            animate={performanceMode === "high" ? { opacity: 1, x: 0 } : {}}
+            transition={performanceMode === "high" ? { duration: 0.8 } : { duration: 0 }}
             className="w-48 h-60 md:w-64 md:h-80 relative flex-shrink-0"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-red-900/20 rounded-lg transform -rotate-3 scale-105" />
@@ -105,9 +107,9 @@ export default function InsuranceAdvisorPage() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={performanceMode === "high" ? { opacity: 0, y: 30 } : false}
+            animate={performanceMode === "high" ? { opacity: 1, y: 0 } : {}}
+            transition={performanceMode === "high" ? { duration: 0.8, delay: 0.2 } : { duration: 0 }}
             className="max-w-2xl"
           >
             <div className="flex items-center mb-3 md:mb-4">
@@ -124,7 +126,10 @@ export default function InsuranceAdvisorPage() {
               Jsem Matěj Hrabák, Fullstack developer, kde pomáhám chránit Vaše zdraví, finance a majetek.
               Společně najdeme nejlepší řešení.
             </p>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.div
+              whileHover={performanceMode === "high" ? { scale: 1.05 } : {}}
+              whileTap={performanceMode === "high" ? { scale: 0.95 } : {}}
+            >
               <Link
                 href="/schuzka"
                 className="inline-flex items-center bg-gradient-to-r from-red-600 to-red-700 text-white px-5 py-2.5 md:px-6 md:py-3 rounded-full transition-all shadow-lg hover:shadow-red-600/20 hover:shadow-xl text-sm md:text-base min-h-[44px]"
@@ -138,9 +143,9 @@ export default function InsuranceAdvisorPage() {
 
         {/* Statistiky s animovanými čísly */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={performanceMode === "high" ? { opacity: 0, y: 50 } : false}
+          animate={performanceMode === "high" ? { opacity: 1, y: 0 } : {}}
+          transition={performanceMode === "high" ? { duration: 0.8, delay: 0.4 } : { duration: 0 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 mb-12 md:mb-24 max-w-5xl mx-auto"
         >
           {stats.map((stat, index) => (
@@ -159,7 +164,11 @@ export default function InsuranceAdvisorPage() {
         </motion.div>
 
         {/* Services Section */}
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.6 }}>
+        <motion.div
+          initial={performanceMode === "high" ? { opacity: 0 } : false}
+          animate={performanceMode === "high" ? { opacity: 1 } : {}}
+          transition={performanceMode === "high" ? { duration: 0.8, delay: 0.6 } : { duration: 0 }}
+        >
           <div className="flex items-center justify-center mb-8 md:mb-12">
             <TrendingUp className="text-red-500 mr-2 md:mr-3" size={20} />
             <h2 className="text-2xl md:text-3xl font-bold">Moje služby</h2>
@@ -172,9 +181,9 @@ export default function InsuranceAdvisorPage() {
 
         {/* Výhody spolupráce */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+          initial={performanceMode === "high" ? { opacity: 0, y: 50 } : false}
+          animate={performanceMode === "high" ? { opacity: 1, y: 0 } : {}}
+          transition={performanceMode === "high" ? { duration: 0.8, delay: 0.8 } : { duration: 0 }}
           className="mt-12 md:mt-24 max-w-5xl mx-auto"
         >
           <div className="flex items-center justify-center mb-8 md:mb-12">
@@ -203,9 +212,9 @@ export default function InsuranceAdvisorPage() {
 
         {/* CTA sekce */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 1 }}
+          initial={performanceMode === "high" ? { opacity: 0, scale: 0.95 } : false}
+          animate={performanceMode === "high" ? { opacity: 1, scale: 1 } : {}}
+          transition={performanceMode === "high" ? { duration: 0.8, delay: 1 } : { duration: 0 }}
           className="mt-12 md:mt-24 max-w-4xl mx-auto"
         >
           <div className="bg-gradient-to-r from-red-900/30 to-red-700/20 p-6 md:p-8 lg:p-12 rounded-2xl border border-red-900/20 text-center backdrop-blur-sm">
@@ -213,7 +222,10 @@ export default function InsuranceAdvisorPage() {
             <p className="text-base md:text-lg lg:text-xl text-gray-300 mb-6 md:mb-8">
               Domluvte si nezávaznou konzultaci a společně najdeme nejlepší řešení pro vaše potřeby.
             </p>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <motion.div
+              whileHover={performanceMode === "high" ? { scale: 1.05 } : {}}
+              whileTap={performanceMode === "high" ? { scale: 0.95 } : {}}
+            >
               <Link
                 href="/schuzka"
                 className="inline-flex items-center bg-gradient-to-r from-red-600 to-red-700 text-white py-2.5 px-6 md:py-3 md:px-8 rounded-full transition-all shadow-lg hover:shadow-red-600/20 hover:shadow-xl text-base md:text-lg min-h-[44px]"
@@ -232,11 +244,13 @@ export default function InsuranceAdvisorPage() {
 
 // Benefit Card Component
 function BenefitCard({ title, description, delay = 0 }: { title: string; description: string; delay?: number }) {
+  const { performanceMode } = usePerformance()
+  
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay }}
+      initial={performanceMode === "high" ? { opacity: 0, y: 20 } : false}
+      animate={performanceMode === "high" ? { opacity: 1, y: 0 } : {}}
+      transition={performanceMode === "high" ? { duration: 0.5, delay } : { duration: 0 }}
       className="bg-[#111827]/50 backdrop-blur-sm p-4 md:p-6 rounded-xl border border-gray-800"
     >
       <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">

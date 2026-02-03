@@ -3,6 +3,7 @@ import "./globals.css"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import { ToastProvider } from "./context/toast-context"
+import { PerformanceProvider } from "./context/performance-context"
 import GridBackground from "./components/grid-background"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/next"
@@ -86,9 +87,11 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <GoogleAnalytics />
-        <ToastProvider>
-          {children}
-        </ToastProvider>
+        <PerformanceProvider>
+          <ToastProvider>
+            {children}
+          </ToastProvider>
+        </PerformanceProvider>
          <SpeedInsights />
          <Analytics />
       </body>

@@ -8,6 +8,7 @@ import { Code, Database, Layout, Terminal, Github, ExternalLink, ChevronRight } 
 import WebDevNavbar from "@/app/components/webdev-navbar"
 import WebDevFooter from "@/app/components/webdev-footer"
 import Clock from "@/app/components/clock"
+import { usePerformance } from "@/app/context/performance-context"
 
 /**
  * Web Developer Page Component
@@ -17,16 +18,11 @@ import Clock from "@/app/components/clock"
  */
 export default function WebDeveloperPage() {
   const [scrollY, setScrollY] = useState(0)
-  const [performanceMode, setPerformanceMode] = useState<"high" | "low">("low")
+  const { performanceMode } = usePerformance()
   const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
     setIsClient(true)
-    // Načti performance mode z localStorage
-    const savedMode = localStorage.getItem("performanceMode") as "high" | "low" | null
-    if (savedMode) {
-      setPerformanceMode(savedMode)
-    }
 
     const handleScroll = () => {
       setScrollY(window.scrollY)
@@ -305,7 +301,7 @@ function TypewriterEffect({ text }: { text: string }) {
 }
 
 // Project Card Component
-function ProjectCard({ project, index, performanceMode }: { project: any; index: number; performanceMode: "high" | "low" }) {
+function ProjectCard({ project, index, performanceMode }: { project: any; index: number; performanceMode: "high" | "low" | null }) {
   return (
     <motion.div
       initial={performanceMode === "high" ? { opacity: 0, y: 20 } : false}

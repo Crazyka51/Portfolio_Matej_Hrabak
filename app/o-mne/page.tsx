@@ -7,9 +7,12 @@ import { Home, User, FolderKanban, FileText, ImageIcon, ArrowRight, Calendar, Ma
 import Clock from "@/app/components/clock"
 import Navbar from "@/app/components/navbar"
 import Footer from "@/app/components/footer"
+import { usePerformance } from "@/app/context/performance-context"
 
 
 export default function AboutPage() {
+  const { performanceMode } = usePerformance()
+  
   return (
     <div className="min-h-screen bg-[#050A14] text-white overflow-hidden">
       {/* Animované pozadí */}
@@ -22,16 +25,16 @@ export default function AboutPage() {
 
         {/* Animované kruhy */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 0.15, scale: 1 }}
-          transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse" }}
+          initial={performanceMode === "high" ? { opacity: 0, scale: 0.8 } : false}
+          animate={performanceMode === "high" ? { opacity: 0.15, scale: 1 } : {}}
+          transition={performanceMode === "high" ? { duration: 3, repeat: Infinity, repeatType: "reverse" } : { duration: 0 }}
           className="absolute top-20 right-20 w-96 h-96 rounded-full bg-red-600/20 blur-3xl"
         />
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 0.1, scale: 1 }}
-          transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, repeatType: "reverse", delay: 1 }}
+          initial={performanceMode === "high" ? { opacity: 0, scale: 0.8 } : false}
+          animate={performanceMode === "high" ? { opacity: 0.1, scale: 1 } : {}}
+          transition={performanceMode === "high" ? { duration: 4, repeat: Infinity, repeatType: "reverse", delay: 1 } : { duration: 0 }}
           className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-blue-600/20 blur-3xl"
         />
 
@@ -50,17 +53,17 @@ export default function AboutPage() {
       <div className="container mx-auto px-4 py-8 flex flex-col md:flex-row gap-8 relative z-10">
         {/* Sidebar Navigation */}
         <motion.aside
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+          initial={performanceMode === "high" ? { opacity: 0, x: -30 } : false}
+          animate={performanceMode === "high" ? { opacity: 1, x: 0 } : {}}
+          transition={performanceMode === "high" ? { duration: 0.6 } : { duration: 0 }}
           className="w-full md:w-64 flex-shrink-0"
         >
           <div className="sticky top-24">
             <div className="relative w-48 h-48 mx-auto md:mx-0 rounded-xl overflow-hidden mb-6 border-2 border-red-500/30">
               <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                initial={performanceMode === "high" ? { opacity: 0, scale: 0.8 } : false}
+                animate={performanceMode === "high" ? { opacity: 1, scale: 1 } : {}}
+                transition={performanceMode === "high" ? { duration: 0.6, delay: 0.2 } : { duration: 0 }}
                 className="relative w-full h-full"
               >
                 <Image
@@ -76,9 +79,9 @@ export default function AboutPage() {
             </div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              initial={performanceMode === "high" ? { opacity: 0, y: 20 } : false}
+              animate={performanceMode === "high" ? { opacity: 1, y: 0 } : {}}
+              transition={performanceMode === "high" ? { duration: 0.6, delay: 0.3 } : { duration: 0 }}
             >
               <h1 className="text-2xl font-bold mb-2">Matěj Hrabák</h1>
               <p className="text-red-400 mb-4">Pojišťovací poradce</p>
@@ -90,8 +93,8 @@ export default function AboutPage() {
 
               <div className="flex space-x-3 mb-6">
                 <motion.a
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={performanceMode === "high" ? { scale: 1.1, rotate: 5 } : {}}
+                  whileTap={performanceMode === "high" ? { scale: 0.95 } : {}}
                   href="https://github.com/crazyka51"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -100,8 +103,8 @@ export default function AboutPage() {
                   <Github size={18} />
                 </motion.a>
                 <motion.a
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={performanceMode === "high" ? { scale: 1.1, rotate: 5 } : {}}
+                  whileTap={performanceMode === "high" ? { scale: 0.95 } : {}}
                   href="mailto:matejhrabak@gmail.com"
                   className="bg-gray-800 hover:bg-gray-700 p-2 rounded-full transition-colors"
                 >
@@ -109,7 +112,10 @@ export default function AboutPage() {
                 </motion.a>
               </div>
 
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <motion.div
+                whileHover={performanceMode === "high" ? { scale: 1.05 } : {}}
+                whileTap={performanceMode === "high" ? { scale: 0.95 } : {}}
+              >
                 <Link
                   href="/schuzka"
                   className="block w-full bg-red-600 hover:bg-red-700 text-center py-2 px-4 rounded-lg transition-colors mb-6"
@@ -121,9 +127,9 @@ export default function AboutPage() {
             </motion.div>
 
             <motion.nav
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial={performanceMode === "high" ? { opacity: 0, y: 20 } : false}
+              animate={performanceMode === "high" ? { opacity: 1, y: 0 } : {}}
+              transition={performanceMode === "high" ? { duration: 0.6, delay: 0.4 } : { duration: 0 }}
               className="space-y-6 bg-[#111827]/50 p-6 rounded-lg backdrop-blur-sm border border-gray-800 mt-8"
             >
               <div>
@@ -132,8 +138,8 @@ export default function AboutPage() {
                   className="text-white hover:text-gray-300 transition-colors flex items-center space-x-2"
                 >
                   <motion.span
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY, repeatType: "loop", repeatDelay: 5 }}
+                    animate={performanceMode === "high" ? { x: [0, 5, 0] } : {}}
+                    transition={performanceMode === "high" ? { duration: 1, repeat: Infinity, repeatType: "loop", repeatDelay: 5 } : { duration: 0 }}
                   >
                     →
                   </motion.span>
@@ -146,8 +152,8 @@ export default function AboutPage() {
                   className="text-white hover:text-gray-300 transition-colors flex items-center space-x-2"
                 >
                   <motion.span
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY, repeatType: "loop", repeatDelay: 7 }}
+                    animate={performanceMode === "high" ? { x: [0, 5, 0] } : {}}
+                    transition={performanceMode === "high" ? { duration: 1, repeat: Infinity, repeatType: "loop", repeatDelay: 7 } : { duration: 0 }}
                   >
                     →
                   </motion.span>
@@ -168,8 +174,8 @@ export default function AboutPage() {
                   className="text-white hover:text-gray-300 transition-colors flex items-center space-x-2"
                 >
                   <motion.span
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY, repeatType: "loop", repeatDelay: 9 }}
+                    animate={performanceMode === "high" ? { x: [0, 5, 0] } : {}}
+                    transition={performanceMode === "high" ? { duration: 1, repeat: Infinity, repeatType: "loop", repeatDelay: 9 } : { duration: 0 }}
                   >
                     →
                   </motion.span>
@@ -182,17 +188,17 @@ export default function AboutPage() {
 
         {/* Main Content */}
         <motion.main
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          initial={performanceMode === "high" ? { opacity: 0, y: 30 } : false}
+          animate={performanceMode === "high" ? { opacity: 1, y: 0 } : {}}
+          transition={performanceMode === "high" ? { duration: 0.6, delay: 0.3 } : { duration: 0 }}
           className="flex-1"
         >
           {/* Profile Section */}
           <section id="uvod" className="mb-16">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              initial={performanceMode === "high" ? { opacity: 0, y: 20 } : false}
+              animate={performanceMode === "high" ? { opacity: 1, y: 0 } : {}}
+              transition={performanceMode === "high" ? { duration: 0.6, delay: 0.4 } : { duration: 0 }}
             >
               <h1 className="text-5xl font-bold mb-2">Matěj Hrabák</h1>
               <h2 className="text-2xl text-gray-400 mb-6">Pojišťovací poradce a expert</h2>
@@ -201,8 +207,8 @@ export default function AboutPage() {
 
               <div className="flex gap-4 mb-8">
                 <motion.a
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={performanceMode === "high" ? { scale: 1.05 } : {}}
+                  whileTap={performanceMode === "high" ? { scale: 0.95 } : {}}
                   href="https://github.com/crazyka51"
                   className="flex items-center gap-2 bg-[#111827] hover:bg-[#1d2739] px-3 py-2 rounded-md transition-colors"
                 >
@@ -210,8 +216,8 @@ export default function AboutPage() {
                   <span>GitHub</span>
                 </motion.a>
                 <motion.a
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={performanceMode === "high" ? { scale: 1.05 } : {}}
+                  whileTap={performanceMode === "high" ? { scale: 0.95 } : {}}
                   href="mailto:matejhrabak@gmail.com"
                   className="flex items-center gap-2 bg-[#111827] hover:bg-[#1d2739] px-3 py-2 rounded-md transition-colors"
                 >
@@ -230,15 +236,15 @@ export default function AboutPage() {
           {/* Work Experience */}
           <section id="pracovni-zkusenosti" className="mb-16">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              initial={performanceMode === "high" ? { opacity: 0, y: 20 } : false}
+              animate={performanceMode === "high" ? { opacity: 1, y: 0 } : {}}
+              transition={performanceMode === "high" ? { duration: 0.6, delay: 0.5 } : { duration: 0 }}
             >
               <h2 className="text-3xl font-bold mb-8">Pracovní zkušenosti</h2>
 
               <motion.div
-                whileHover={{ scale: 1.02, borderColor: "rgba(239, 68, 68, 0.3)" }}
-                transition={{ duration: 0.2 }}
+                whileHover={performanceMode === "high" ? { scale: 1.02, borderColor: "rgba(239, 68, 68, 0.3)" } : {}}
+                transition={performanceMode === "high" ? { duration: 0.2 } : { duration: 0 }}
                 id="generali"
                 className="mb-12 bg-[#111827]/30 p-6 rounded-lg border border-gray-800 hover:border-red-500/20 transition-all"
               >
@@ -269,8 +275,8 @@ export default function AboutPage() {
               </motion.div>
 
               <motion.div
-                whileHover={{ scale: 1.02, borderColor: "rgba(239, 68, 68, 0.3)" }}
-                transition={{ duration: 0.2 }}
+                whileHover={performanceMode === "high" ? { scale: 1.02, borderColor: "rgba(239, 68, 68, 0.3)" } : {}}
+                transition={performanceMode === "high" ? { duration: 0.2 } : { duration: 0 }}
                 id="doosan"
                 className="mb-12 bg-[#111827]/30 p-6 rounded-lg border border-gray-800 hover:border-red-500/20 transition-all"
               >
@@ -306,15 +312,15 @@ export default function AboutPage() {
           {/* Education */}
           <section id="vzdelani" className="mb-16">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              initial={performanceMode === "high" ? { opacity: 0, y: 20 } : false}
+              animate={performanceMode === "high" ? { opacity: 1, y: 0 } : {}}
+              transition={performanceMode === "high" ? { duration: 0.6, delay: 0.6 } : { duration: 0 }}
             >
               <h2 className="text-3xl font-bold mb-8">Vzdělání a certifikace</h2>
 
               <motion.div
-                whileHover={{ scale: 1.02, borderColor: "rgba(239, 68, 68, 0.3)" }}
-                transition={{ duration: 0.2 }}
+                whileHover={performanceMode === "high" ? { scale: 1.02, borderColor: "rgba(239, 68, 68, 0.3)" } : {}}
+                transition={performanceMode === "high" ? { duration: 0.2 } : { duration: 0 }}
                 id="pribram"
                 className="mb-8 bg-[#111827]/30 p-6 rounded-lg border border-gray-800 hover:border-red-500/20 transition-all"
               >
@@ -326,8 +332,8 @@ export default function AboutPage() {
               </motion.div>
 
               <motion.div
-                whileHover={{ scale: 1.02, borderColor: "rgba(239, 68, 68, 0.3)" }}
-                transition={{ duration: 0.2 }}
+                whileHover={performanceMode === "high" ? { scale: 1.02, borderColor: "rgba(239, 68, 68, 0.3)" } : {}}
+                transition={performanceMode === "high" ? { duration: 0.2 } : { duration: 0 }}
                 id="cnb"
                 className="mb-8 bg-[#111827]/30 p-6 rounded-lg border border-gray-800 hover:border-red-500/20 transition-all"
               >
@@ -341,14 +347,14 @@ export default function AboutPage() {
 
           {/* CTA Section */}
           <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
+            initial={performanceMode === "high" ? { opacity: 0, y: 20 } : false}
+            animate={performanceMode === "high" ? { opacity: 1, y: 0 } : {}}
+            transition={performanceMode === "high" ? { duration: 0.6, delay: 0.7 } : { duration: 0 }}
             className="mb-16"
           >
             <motion.div
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.2 }}
+              whileHover={performanceMode === "high" ? { scale: 1.02 } : {}}
+              transition={performanceMode === "high" ? { duration: 0.2 } : { duration: 0 }}
               className="bg-gradient-to-r from-red-900/30 to-red-700/20 p-8 rounded-xl border border-red-500/20 text-center"
             >
               <h2 className="text-2xl font-bold mb-4">Pojďme společně najít řešení pro vaše potřeby</h2>
@@ -356,7 +362,10 @@ export default function AboutPage() {
                 Ať už hledáte životní pojištění, investiční příležitosti nebo finanční plánování, jsem tu, abych vám
                 pomohl najít to nejlepší řešení.
               </p>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <motion.div
+                whileHover={performanceMode === "high" ? { scale: 1.05 } : {}}
+                whileTap={performanceMode === "high" ? { scale: 0.95 } : {}}
+              >
                 <Link
                   href="/schuzka"
                   className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white py-3 px-6 rounded-md transition-colors"
