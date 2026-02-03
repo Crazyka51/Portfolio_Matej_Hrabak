@@ -95,7 +95,7 @@ export default function AboutPage() {
                     efektivní a udržitelný kód.
                   </p>
                   <p>
-                    Kromě vývoje webových stránek pracuji jako pojišťovací poradce, což mi dává jedinečnou perspektivu
+                    Kromě vývoje webových stránek mám zkušenosti jako pojišťovací poradce, což mi dává jedinečnou perspektivu
                     na potřeby klientů a firem v oblasti online prezentace. Tato kombinace mi umožňuje vytvářet webové
                     stránky, které nejen skvěle vypadají, ale také efektivně plní svůj obchodní účel.
                   </p>
@@ -226,8 +226,8 @@ export default function AboutPage() {
 
                 <div className="space-y-6">
                   <p className="text-gray-300">
-                    Za posledních 14 let jsem vytvořil desítky webových stránek a aplikací pro klienty z různých
-                    odvětví. Mé projekty zahrnují:
+                    Za posledních 8 let jsem vytvořil desítky webových stránek a aplikací pro klienty z různých
+                    odvětví. Mezi mé nedávné projekty patří:
                   </p>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

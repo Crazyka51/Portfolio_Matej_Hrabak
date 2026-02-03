@@ -143,7 +143,7 @@ export default function WebDeveloperPage() {
             >
               <h2 className="text-3xl font-bold mb-12 flex items-center">
                 <Terminal className="mr-3 h-6 w-6 text-blue-400" />
-                <span>Projekty v Portfoliu – Ukázky Webových Řešení</span>
+                <span>Portfolio projektů – ukázky webových řešení</span>
               </h2>
             </motion.div>
 
