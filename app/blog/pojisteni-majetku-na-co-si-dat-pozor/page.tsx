@@ -52,7 +52,7 @@ export default function PojisteniMajetkuNaCoSiDatPozorPage() {
       <h3>3. Opomenutí pojištění odpovědnosti</h3>
       <p>
         Pojištění odpovědnosti je často opomíjenou součástí pojištění majetku. Toto pojištění vás chrání v případě, že
-        způsobíte škodu třetí osobě – například když vám praskne vodovodní potrubí a vytopíte sousedy nebo když z vaší
+        způsobíte škodu třetí osobě - například když vám praskne vodovodní potrubí a vytopíte sousedy nebo když z vaší
         střechy spadne sníh a poškodí zaparkované auto.
       </p>
       <p>

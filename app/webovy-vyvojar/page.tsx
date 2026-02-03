@@ -69,7 +69,7 @@ export default function WebDeveloperPage() {
               className="max-w-3xl"
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                Matěj Hrabák – Expert na Next.js a Tvorbu moderních Webových Aplikací
+                Matěj Hrabák - Expert na Next.js a Tvorbu moderních Webových Aplikací
               </h1>
               <p className="text-xl text-gray-300 mb-8">
                 Specializuji se na{" "}
@@ -143,7 +143,7 @@ export default function WebDeveloperPage() {
             >
               <h2 className="text-3xl font-bold mb-12 flex items-center">
                 <Terminal className="mr-3 h-6 w-6 text-blue-400" />
-                <span>Portfolio projektů – ukázky webových řešení</span>
+                <span>Portfolio projektů - ukázky webových řešení</span>
               </h2>
             </motion.div>
 

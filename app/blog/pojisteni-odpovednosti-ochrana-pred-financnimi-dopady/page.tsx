@@ -101,9 +101,9 @@ export default function PojisteniOdpovednostiochranaPage() {
                 jednat o:
               </p>
               <ul>
-                <li>Škody na majetku – například pokud omylem poškodíte sousedův plot, rozbijete okno nebo způsobíte škodu na pronajatém bytě.</li>
-                <li>Újmu na zdraví – pokud například při sportovní aktivitě nešťastně srazíte jiného člověka a způsobíte mu zranění.</li>
-                <li>Následné finanční škody – například pokud vaše dítě při hře poškodí školní vybavení nebo pokud váš domácí mazlíček způsobí dopravní nehodu.</li>
+                <li>Škody na majetku - například pokud omylem poškodíte sousedův plot, rozbijete okno nebo způsobíte škodu na pronajatém bytě.</li>
+                <li>Újmu na zdraví - pokud například při sportovní aktivitě nešťastně srazíte jiného člověka a způsobíte mu zranění.</li>
+                <li>Následné finanční škody - například pokud vaše dítě při hře poškodí školní vybavení nebo pokud váš domácí mazlíček způsobí dopravní nehodu.</li>
               </ul>
               <p>
                 Pojištění odpovědnosti vám pomůže pokrýt náklady na opravu, léčbu nebo právní zastoupení v případě soudního sporu.

@@ -56,7 +56,7 @@ Dodržujte správnou hierarchii:
 
 Příklad:
 ```tsx
-<h1>Matěj Hrabák – Expert na Next.js</h1>
+<h1>Matěj Hrabák - Expert na Next.js</h1>
 <section>
   <h2>Moje Klíčové Služby</h2>
   <div>

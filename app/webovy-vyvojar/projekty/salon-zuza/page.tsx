@@ -157,7 +157,7 @@ export default function SalonZuzaProjectPage() {
               <div className="prose prose-lg prose-invert max-w-none">
                 <p>
                   Již od prvních kroků svého profesionálního vývoje jsem se rozhodl kombinovat moderní design s
-                  funkčností – a právě tento web to dokonale reflektuje. Projekt pro Kadeřnický Salon Zuza mi umožnil
+                  funkčností - a právě tento web to dokonale reflektuje. Projekt pro Kadeřnický Salon Zuza mi umožnil
                   vytvořit prezentaci, která nejen vystihuje jedinečnou atmosféru salonu, ale zároveň usnadňuje klientům
                   objednávání služeb díky integrovanému rezervačnímu systému.
                 </p>

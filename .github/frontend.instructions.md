@@ -19,7 +19,7 @@ Tyto instrukce platí pro veškerý frontendový kód v tomto Next.js 16 App Rou
 ## Základní pokyny
 
 - Před navrhováním změn si projdi související komponenty v `/app/components/`, hooky v `/hooks/` a utility v `/app/lib/`, `/app/utils/`.
-- Nikdy neodhaduj, jak komponenta funguje – vždy si přečti její implementaci, props a použití v jiných souborách.
+- Nikdy neodhaduj, jak komponenta funguje - vždy si přečti její implementaci, props a použití v jiných souborách.
 - Vždy zvaž UX dopad změny: loading stavy, error stavy, přístupnost, responzivita, performance (LCP, CLS, FID).
 - Dodržuj konvence z hlavního `copilot-instructions.md` souboru.
 

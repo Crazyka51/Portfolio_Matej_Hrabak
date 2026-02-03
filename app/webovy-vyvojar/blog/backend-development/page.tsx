@@ -394,7 +394,7 @@ const decoded = jwt.verify(token, process.env.JWT_SECRET)`}</code>
             <h2 className="text-3xl font-bold mt-12 mb-6 text-white">Závěr</h2>
 
             <p className="text-gray-300 mb-4">
-              Backend development je rozsáhlé pole vyžadující znalosti z mnoha oblastí – od databází přes bezpečnost
+              Backend development je rozsáhlé pole vyžadující znalosti z mnoha oblastí - od databází přes bezpečnost
               až po distribuované systémy. Klíčem k úspěchu je:
             </p>
 
@@ -409,7 +409,7 @@ const decoded = jwt.verify(token, process.env.JWT_SECRET)`}</code>
             <div className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border border-green-800/50 rounded-lg p-6 mt-8 mb-8">
               <p className="text-lg text-gray-200">
                 💡 <strong>Pro tip:</strong> Neexistuje "nejlepší" technologie. Vyberte stack, který odpovídá vašim
-                potřebám, velikosti týmu a typu projektu. A nezapomeňte – dobře napsaný monolith je lepší než špatně
+                potřebám, velikosti týmu a typu projektu. A nezapomeňte - dobře napsaný monolith je lepší než špatně
                 navržené microservices.
               </p>
             </div>

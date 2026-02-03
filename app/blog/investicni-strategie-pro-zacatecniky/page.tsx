@@ -277,27 +277,27 @@ export default function InvesticniStrategiePage() {
             <p>Při zahájení investování se vyvarujte těchto běžných chyb:</p>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                <strong>Načasování trhu</strong> – Snaha o předpověď, kdy trh dosáhne vrcholu nebo dna, je téměř nemožná
+                <strong>Načasování trhu</strong> - Snaha o předpověď, kdy trh dosáhne vrcholu nebo dna, je téměř nemožná
                 i pro profesionály. Místo toho investujte pravidelně bez ohledu na aktuální stav trhu.
               </li>
               <li>
-                <strong>Přílišné obchodování</strong> – Časté nákupy a prodeje vedou k vyšším poplatkům a často k horším
+                <strong>Přílišné obchodování</strong> - Časté nákupy a prodeje vedou k vyšším poplatkům a často k horším
                 výsledkům. Držte se svého plánu a obchodujte minimálně.
               </li>
               <li>
-                <strong>Sledování krátkodobých výkyvů</strong> – Denní sledování hodnoty vašeho portfolia může vést k
+                <strong>Sledování krátkodobých výkyvů</strong> - Denní sledování hodnoty vašeho portfolia může vést k
                 emocionálním rozhodnutím. Zaměřte se na dlouhodobý cíl.
               </li>
               <li>
-                <strong>Nedostatečná diverzifikace</strong> – Investování příliš mnoho do jedné společnosti, sektoru
+                <strong>Nedostatečná diverzifikace</strong> - Investování příliš mnoho do jedné společnosti, sektoru
                 nebo třídy aktiv zvyšuje riziko.
               </li>
               <li>
-                <strong>Ignorování poplatků</strong> – I malé rozdíly v poplatcích mohou mít v dlouhodobém horizontu
+                <strong>Ignorování poplatků</strong> - I malé rozdíly v poplatcích mohou mít v dlouhodobém horizontu
                 velký dopad na vaše výnosy.
               </li>
               <li>
-                <strong>Investování bez plánu</strong> – Náhodné investování bez jasného cíle a strategie obvykle nevede
+                <strong>Investování bez plánu</strong> - Náhodné investování bez jasného cíle a strategie obvykle nevede
                 k optimálním výsledkům.
               </li>
             </ul>

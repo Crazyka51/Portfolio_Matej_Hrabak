@@ -61,7 +61,7 @@ export default function EcommerceArticle() {
 
           <div className="prose prose-invert prose-lg max-w-none">
             <p className="text-xl text-gray-300 leading-relaxed mb-8">
-             Navrhuji a realizuji plně funkční e-shopy – od kompaktních rodinných řešení po rozsáhlé projekty s komplexní strukturou. Každý projekt přinesl nové výzvy a zkušenosti, díky nimž jsem si osvojil osvědčené principy, které skutečně fungují. Pojďme se podívat, jak k tvorbě e-shopů přistupuji a na čem podle mě záleží nejvíc.
+             Navrhuji a realizuji plně funkční e-shopy - od kompaktních rodinných řešení po rozsáhlé projekty s komplexní strukturou. Každý projekt přinesl nové výzvy a zkušenosti, díky nimž jsem si osvojil osvědčené principy, které skutečně fungují. Pojďme se podívat, jak k tvorbě e-shopů přistupuji a na čem podle mě záleží nejvíc.
             </p>
 
             <h2 className="text-3xl font-bold mt-12 mb-6 text-white">1. Začínám vždy konzultací: Co vlastně potřebujete?</h2>

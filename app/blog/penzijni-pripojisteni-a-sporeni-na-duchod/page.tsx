@@ -62,7 +62,7 @@ export default function PenzijniPripojisteniPage() {
           <div className="prose prose-lg prose-invert max-w-none">
             <h2 className="text-3xl font-semibold mt-8 mb-4">Proč myslet na důchod už dnes?</h2>
             <p>
-              Demografické trendy jsou neúprosné – populace stárne, porodnost klesá a podíl ekonomicky aktivních lidí se
+              Demografické trendy jsou neúprosné - populace stárne, porodnost klesá a podíl ekonomicky aktivních lidí se
               snižuje. To vše vytváří tlak na důchodový systém, který v současné podobě nebude schopen v budoucnu
               zajistit důstojné stáří pro všechny. Státní důchod bude pravděpodobně stačit pouze na pokrytí základních
               životních potřeb, a to ještě za předpokladu, že se věk odchodu do důchodu bude dále zvyšovat.
@@ -77,19 +77,19 @@ export default function PenzijniPripojisteniPage() {
             <p>Český důchodový systém je založen na třech pilířích:</p>
             <ol className="list-decimal pl-6 space-y-2">
               <li>
-                <strong>První pilíř</strong> – Státní důchodové pojištění, do kterého povinně přispívají všichni
+                <strong>První pilíř</strong> - Státní důchodové pojištění, do kterého povinně přispívají všichni
                 zaměstnanci a OSVČ. Z tohoto pilíře jsou vypláceny současné důchody.
               </li>
               <li>
-                <strong>Druhý pilíř</strong> – V České republice byl zrušen v roce 2016.
+                <strong>Druhý pilíř</strong> - V České republice byl zrušen v roce 2016.
               </li>
               <li>
-                <strong>Třetí pilíř</strong> – Dobrovolné doplňkové penzijní spoření (dříve penzijní připojištění),
+                <strong>Třetí pilíř</strong> - Dobrovolné doplňkové penzijní spoření (dříve penzijní připojištění),
                 které je podporováno státem formou státních příspěvků a daňových úlev.
               </li>
             </ol>
             <p>
-              Kromě těchto pilířů je samozřejmě možné spořit na důchod i jinými způsoby – investicemi do akcií,
+              Kromě těchto pilířů je samozřejmě možné spořit na důchod i jinými způsoby - investicemi do akcií,
               dluhopisů, nemovitostí, podílových fondů nebo životního pojištění.
             </p>
 
@@ -137,7 +137,7 @@ export default function PenzijniPripojisteniPage() {
               příspěvek daňově uznatelným nákladem bez omezení výše.
             </p>
             <p>
-              Pokud váš zaměstnavatel nabízí tento benefit, určitě ho využijte – jde o velmi výhodnou formu spoření na
+              Pokud váš zaměstnavatel nabízí tento benefit, určitě ho využijte - jde o velmi výhodnou formu spoření na
               důchod.
             </p>
 
@@ -148,15 +148,15 @@ export default function PenzijniPripojisteniPage() {
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                <strong>Konzervativní strategie</strong> – Nízké riziko, nízký potenciální výnos. Vhodná pro
+                <strong>Konzervativní strategie</strong> - Nízké riziko, nízký potenciální výnos. Vhodná pro
                 konzervativní investory nebo pro osoby blízko důchodového věku.
               </li>
               <li>
-                <strong>Vyvážená strategie</strong> – Střední riziko, střední potenciální výnos. Vhodná pro většinu
+                <strong>Vyvážená strategie</strong> - Střední riziko, střední potenciální výnos. Vhodná pro většinu
                 účastníků.
               </li>
               <li>
-                <strong>Dynamická strategie</strong> – Vyšší riziko, vyšší potenciální výnos. Vhodná pro mladší
+                <strong>Dynamická strategie</strong> - Vyšší riziko, vyšší potenciální výnos. Vhodná pro mladší
                 účastníky s dlouhým investičním horizontem.
               </li>
             </ul>
@@ -173,7 +173,7 @@ export default function PenzijniPripojisteniPage() {
             <p>Kromě DPS existuje řada dalších způsobů, jak se finančně zajistit na stáří:</p>
             <h3 className="text-2xl font-semibold mt-6 mb-3">Investice do podílových fondů</h3>
             <p>
-              Podílové fondy nabízejí vyšší potenciální výnos než DPS, ale bez státní podpory. Jsou flexibilnější –
+              Podílové fondy nabízejí vyšší potenciální výnos než DPS, ale bez státní podpory. Jsou flexibilnější -
               peníze můžete vybrat kdykoliv bez sankcí. Vhodné jsou zejména akciové a smíšené fondy s dlouhodobým
               investičním horizontem.
             </p>
@@ -187,7 +187,7 @@ export default function PenzijniPripojisteniPage() {
 
             <h3 className="text-2xl font-semibold mt-6 mb-3">Investiční životní pojištění</h3>
             <p>
-              Kombinuje pojistnou ochranu a investiční složku. Z daňového hlediska je podobné DPS – můžete si odečíst od
+              Kombinuje pojistnou ochranu a investiční složku. Z daňového hlediska je podobné DPS - můžete si odečíst od
               základu daně až 24 000 Kč ročně. Nevýhodou jsou vyšší poplatky než u přímých investic.
             </p>
 
@@ -217,27 +217,27 @@ export default function PenzijniPripojisteniPage() {
             <h2 className="text-3xl font-semibold mt-8 mb-4">Praktické tipy pro spoření na důchod</h2>
             <ol className="list-decimal pl-6 space-y-2">
               <li>
-                <strong>Začněte co nejdříve</strong> – Díky složenému úročení je každý rok, o který začnete dříve, velmi
+                <strong>Začněte co nejdříve</strong> - Díky složenému úročení je každý rok, o který začnete dříve, velmi
                 cenný.
               </li>
               <li>
-                <strong>Buďte konzistentní</strong> – Pravidelné měsíční investice jsou efektivnější než nepravidelné
+                <strong>Buďte konzistentní</strong> - Pravidelné měsíční investice jsou efektivnější než nepravidelné
                 větší vklady.
               </li>
               <li>
-                <strong>Diverzifikujte</strong> – Nespoléhejte pouze na jeden způsob spoření. Kombinujte DPS s dalšími
+                <strong>Diverzifikujte</strong> - Nespoléhejte pouze na jeden způsob spoření. Kombinujte DPS s dalšími
                 investicemi.
               </li>
               <li>
-                <strong>Využijte všechny dostupné podpory</strong> – Státní příspěvky, daňové úlevy, příspěvky
+                <strong>Využijte všechny dostupné podpory</strong> - Státní příspěvky, daňové úlevy, příspěvky
                 zaměstnavatele.
               </li>
               <li>
-                <strong>Přizpůsobte investiční strategii svému věku</strong> – S blížícím se důchodem snižujte riziko
+                <strong>Přizpůsobte investiční strategii svému věku</strong> - S blížícím se důchodem snižujte riziko
                 svého portfolia.
               </li>
               <li>
-                <strong>Pravidelně revidujte svůj plán</strong> – Alespoň jednou ročně zkontrolujte, zda jste na dobré
+                <strong>Pravidelně revidujte svůj plán</strong> - Alespoň jednou ročně zkontrolujte, zda jste na dobré
                 cestě k dosažení svých cílů.
               </li>
             </ol>
@@ -250,7 +250,7 @@ export default function PenzijniPripojisteniPage() {
             </p>
             <p>
               Investujte pravidelně, diverzifikujte své portfolio a přizpůsobujte svou investiční strategii měnícím se
-              životním okolnostem. A pamatujte – nejhorší strategií je nemít žádnou strategii a spoléhat se pouze na
+              životním okolnostem. A pamatujte - nejhorší strategií je nemít žádnou strategii a spoléhat se pouze na
               státní důchod.
             </p>
           </div>

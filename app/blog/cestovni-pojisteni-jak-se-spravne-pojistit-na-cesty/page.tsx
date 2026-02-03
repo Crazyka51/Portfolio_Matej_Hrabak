@@ -73,7 +73,7 @@ export default function CestovniPojisteniPage() {
             <h2 className="text-3xl font-semibold mt-8 mb-4">Proč je cestovní pojištění nezbytné?</h2>
             <p>
               Cestování přináší nezapomenutelné zážitky, ale také rizika. Ať už jde o ztrátu zavazadel, zrušení letu,
-              nebo – což je nejzávažnější – zdravotní komplikace v zahraničí, cestovní pojištění vám může ušetřit nejen
+              nebo - což je nejzávažnější - zdravotní komplikace v zahraničí, cestovní pojištění vám může ušetřit nejen
               starosti, ale i značné finanční výdaje. V některých zemích mohou náklady na lékařskou péči dosáhnout
               astronomických částek, které by mohly zruinovat váš rodinný rozpočet.
             </p>
@@ -90,7 +90,7 @@ export default function CestovniPojisteniPage() {
             <p>
               Toto je nejdůležitější složka cestovního pojištění. Kryje náklady na lékařské ošetření, hospitalizaci,
               léky, a v případě potřeby i převoz do jiného zdravotnického zařízení nebo repatriaci zpět do ČR. Limit
-              pojistného plnění by měl být dostatečně vysoký – pro cesty do USA, Kanady nebo Japonska doporučuji
+              pojistného plnění by měl být dostatečně vysoký - pro cesty do USA, Kanady nebo Japonska doporučuji
               minimálně 5-10 milionů Kč, pro Evropu alespoň 3-5 milionů Kč.
             </p>
 
@@ -102,7 +102,7 @@ export default function CestovniPojisteniPage() {
 
             <h3 className="text-2xl font-semibold mt-6 mb-3">3. Pojištění odpovědnosti za škodu</h3>
             <p>
-              Kryje škody, které způsobíte třetím osobám – ať už jde o škody na zdraví nebo na majetku. Představte si,
+              Kryje škody, které způsobíte třetím osobám - ať už jde o škody na zdraví nebo na majetku. Představte si,
               že při lyžování srazíte jiného lyžaře, který utrpí vážné zranění. Náklady na jeho léčbu a odškodnění by
               mohly být velmi vysoké.
             </p>
@@ -160,30 +160,30 @@ export default function CestovniPojisteniPage() {
 
             <h3 className="text-2xl font-semibold mt-6 mb-3">Limity pojistného plnění</h3>
             <p>
-              Nešetřete na limitech, zejména u léčebných výloh. Náklady na léčbu v zahraničí mohou být velmi vysoké –
+              Nešetřete na limitech, zejména u léčebných výloh. Náklady na léčbu v zahraničí mohou být velmi vysoké -
               například hospitalizace v USA může stát desítky tisíc dolarů denně.
             </p>
 
             <h2 className="text-3xl font-semibold mt-8 mb-4">Časté chyby při sjednávání cestovního pojištění</h2>
             <ol className="list-decimal pl-6 space-y-2">
               <li>
-                <strong>Nedostatečné limity pojistného plnění</strong> – Zejména u léčebných výloh může být nízký limit
+                <strong>Nedostatečné limity pojistného plnění</strong> - Zejména u léčebných výloh může být nízký limit
                 fatální. Nešetřete na pojistném na úkor limitů.
               </li>
               <li>
-                <strong>Nesprávně uvedené informace</strong> – Zatajení chronického onemocnění nebo plánovaných
+                <strong>Nesprávně uvedené informace</strong> - Zatajení chronického onemocnění nebo plánovaných
                 rizikových aktivit může vést k odmítnutí plnění.
               </li>
               <li>
-                <strong>Pozdní sjednání pojištění storna</strong> – Pojištění storna je třeba sjednat co nejdříve po
+                <strong>Pozdní sjednání pojištění storna</strong> - Pojištění storna je třeba sjednat co nejdříve po
                 zaplacení zájezdu nebo letenky, ne až těsně před odjezdem.
               </li>
               <li>
-                <strong>Spoléhání se pouze na pojištění k platební kartě</strong> – Pojištění k platebním kartám často
+                <strong>Spoléhání se pouze na pojištění k platební kartě</strong> - Pojištění k platebním kartám často
                 nabízí nižší limity a omezenější krytí. Vždy si ověřte, co přesně kryje.
               </li>
               <li>
-                <strong>Neseznámení se s výlukami</strong> – Každá pojistka má výluky, tedy situace, na které se
+                <strong>Neseznámení se s výlukami</strong> - Každá pojistka má výluky, tedy situace, na které se
                 pojištění nevztahuje. Je důležité je znát, abyste nebyli nepříjemně překvapeni.
               </li>
             </ol>
@@ -200,24 +200,24 @@ export default function CestovniPojisteniPage() {
             <h2 className="text-3xl font-semibold mt-8 mb-4">Co dělat v případě pojistné události v zahraničí?</h2>
             <ol className="list-decimal pl-6 space-y-2">
               <li>
-                <strong>Kontaktujte asistenční službu pojišťovny</strong> – Telefonní číslo najdete na kartičce
+                <strong>Kontaktujte asistenční službu pojišťovny</strong> - Telefonní číslo najdete na kartičce
                 pojištěnce nebo v pojistné smlouvě. Asistenční služba vám poradí, jak postupovat, a případně vám
                 doporučí vhodné zdravotnické zařízení.
               </li>
               <li>
-                <strong>Uschovejte všechny doklady</strong> – Účty za léčbu, léky, dopravu, policejní protokoly v
+                <strong>Uschovejte všechny doklady</strong> - Účty za léčbu, léky, dopravu, policejní protokoly v
                 případě krádeže apod. Budete je potřebovat při uplatnění nároku na pojistné plnění.
               </li>
               <li>
-                <strong>Pořiďte fotodokumentaci</strong> – V případě škody na zavazadlech, úrazu nebo škody způsobené
+                <strong>Pořiďte fotodokumentaci</strong> - V případě škody na zavazadlech, úrazu nebo škody způsobené
                 třetí osobě pořiďte fotografie jako důkaz.
               </li>
               <li>
-                <strong>Nahlaste událost co nejdříve</strong> – Většina pojišťoven vyžaduje nahlášení pojistné události
+                <strong>Nahlaste událost co nejdříve</strong> - Většina pojišťoven vyžaduje nahlášení pojistné události
                 do určité doby po návratu (obvykle 30 dní).
               </li>
               <li>
-                <strong>Vyplňte formulář pojistné události</strong> – Po návratu vyplňte formulář pojistné události
+                <strong>Vyplňte formulář pojistné události</strong> - Po návratu vyplňte formulář pojistné události
                 (najdete ho na webu pojišťovny) a přiložte všechny relevantní doklady.
               </li>
             </ol>

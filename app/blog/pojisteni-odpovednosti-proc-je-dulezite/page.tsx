@@ -76,7 +76,7 @@ export default function PojisteniOdpovednostiPage() {
             <p>
               Pojištění odpovědnosti patří mezi nejdůležitější, ale často přehlížené typy pojištění. Na rozdíl od
               pojištění majetku, které chrání vaše vlastní věci, pojištění odpovědnosti vás chrání před finančními
-              následky škod, které způsobíte někomu jinému – ať už na zdraví, majetku nebo finančních zájmech.
+              následky škod, které způsobíte někomu jinému - ať už na zdraví, majetku nebo finančních zájmech.
             </p>
             <p>
               V dnešním světě, kde soudní spory a náhrady škod mohou dosahovat milionových částek, může být absence
@@ -89,7 +89,7 @@ export default function PojisteniOdpovednostiPage() {
             <h3 className="text-2xl font-semibold mt-6 mb-3">1. Pojištění odpovědnosti z běžného občanského života</h3>
             <p>
               Toto pojištění, někdy nazývané také "pojištění odpovědnosti v běžném životě" nebo "občanka", kryje škody,
-              které způsobíte v běžném životě – například když nechtěně rozbijete sousedovo okno míčem, váš pes pokouše
+              které způsobíte v běžném životě - například když nechtěně rozbijete sousedovo okno míčem, váš pes pokouše
               kolemjdoucího, nebo způsobíte nehodu na kole.
             </p>
             <p>
@@ -100,7 +100,7 @@ export default function PojisteniOdpovednostiPage() {
             <h3 className="text-2xl font-semibold mt-6 mb-3">2. Pojištění odpovědnosti z vlastnictví nemovitosti</h3>
             <p>
               Pokud vlastníte nemovitost, toto pojištění vás chrání před škodami, které mohou vzniknout v souvislosti s
-              vaší nemovitostí – například když ze střechy spadne sníh a poškodí zaparkované auto, nebo když někdo
+              vaší nemovitostí - například když ze střechy spadne sníh a poškodí zaparkované auto, nebo když někdo
               uklouzne na neuklizeném chodníku před vaším domem.
             </p>
             <p>
@@ -110,7 +110,7 @@ export default function PojisteniOdpovednostiPage() {
 
             <h3 className="text-2xl font-semibold mt-6 mb-3">3. Pojištění profesní odpovědnosti</h3>
             <p>
-              Toto pojištění je určeno pro profesionály, kteří poskytují odborné služby – lékaře, právníky, účetní,
+              Toto pojištění je určeno pro profesionály, kteří poskytují odborné služby - lékaře, právníky, účetní,
               architekty, IT specialisty a další. Kryje škody, které mohou vzniknout v důsledku chyby nebo opomenutí při
               výkonu profese.
             </p>
@@ -123,7 +123,7 @@ export default function PojisteniOdpovednostiPage() {
               4. Pojištění odpovědnosti zaměstnance za škodu způsobenou zaměstnavateli
             </h3>
             <p>
-              Toto pojištění kryje škody, které způsobíte svému zaměstnavateli při výkonu práce – například když
+              Toto pojištění kryje škody, které způsobíte svému zaměstnavateli při výkonu práce - například když
               rozbijete firemní notebook, způsobíte dopravní nehodu služebním autem, nebo uděláte chybu, která vede k
               finanční ztrátě.
             </p>
@@ -164,7 +164,7 @@ export default function PojisteniOdpovednostiPage() {
             <h3 className="text-2xl font-semibold mt-6 mb-3">3. Finanční škody</h3>
             <p>
               Některá pojištění odpovědnosti kryjí i čistě finanční škody, které vzniknou bez souvislosti se škodou na
-              zdraví nebo majetku – například ušlý zisk, náklady na právní zastoupení nebo soudní výlohy.
+              zdraví nebo majetku - například ušlý zisk, náklady na právní zastoupení nebo soudní výlohy.
             </p>
             <p>
               Toto krytí je obzvláště důležité u profesního pojištění odpovědnosti, kde chyba může vést k významným
@@ -227,7 +227,7 @@ export default function PojisteniOdpovednostiPage() {
               závada, a můžete čelit nárokům na náhradu škody.
             </p>
             <p>
-              Pojištění odpovědnosti není jen pro neopatrné lidi – je to finanční ochrana pro všechny pro případ, že se
+              Pojištění odpovědnosti není jen pro neopatrné lidi - je to finanční ochrana pro všechny pro případ, že se
               něco pokazí.
             </p>
 
@@ -282,7 +282,7 @@ export default function PojisteniOdpovednostiPage() {
               klid a jistotu, že v případě nehody nebudete čelit finančním problémům.
             </p>
             <p>
-              Nezapomeňte, že pojištění odpovědnosti není jen o ochraně vašeho majetku – je to také o odpovědnosti vůči
+              Nezapomeňte, že pojištění odpovědnosti není jen o ochraně vašeho majetku - je to také o odpovědnosti vůči
               ostatním a zajištění, že v případě, že způsobíte škodu, bude poškozený adekvátně odškodněn.
             </p>
 

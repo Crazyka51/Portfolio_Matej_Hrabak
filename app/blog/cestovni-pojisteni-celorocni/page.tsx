@@ -114,17 +114,17 @@ export default function BlogPost() {
             <h2 className="text-3xl font-semibold mt-8 mb-4">Výhody Chytrého cestovního pojištění</h2>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                <strong>Pojištění platné na celý rok</strong> – bez nutnosti sjednávat nové pojištění před každou
+                <strong>Pojištění platné na celý rok</strong> - bez nutnosti sjednávat nové pojištění před každou
                 cestou.
               </li>
               <li>
-                <strong>Krytí léčebných výloh až do 100 milionů Kč</strong> – zahrnuje i zásah horské služby.
+                <strong>Krytí léčebných výloh až do 100 milionů Kč</strong> - zahrnuje i zásah horské služby.
               </li>
               <li>
-                <strong>Pojištění nevydařeného počasí</strong> – kompenzace za dva a více deštivých dnů.
+                <strong>Pojištění nevydařeného počasí</strong> - kompenzace za dva a více deštivých dnů.
               </li>
               <li>
-                <strong>Pojištění zavazadel</strong> – krytí škod způsobených krádeží nebo poškozením.
+                <strong>Pojištění zavazadel</strong> - krytí škod způsobených krádeží nebo poškozením.
               </li>
             </ul>
 
@@ -140,7 +140,7 @@ export default function BlogPost() {
               omezovat a hledají maximální ochranu na každé cestě. Ať již jste vášnivým cestovatelem, profesionálem
               často vyjíždějícím do zahraničí, nebo sportovcem zapojeným do mezinárodních soutěží, tento produkt vám
               umožní vyrazit s klidnou myslí. Jedna pojistná smlouva pokrývá celý rok a nabízí flexibilitu, která
-              odpovídá dnešnímu rychlému životnímu stylu. Nechte starosti za sebou a užijte si cestování naplno – s
+              odpovídá dnešnímu rychlému životnímu stylu. Nechte starosti za sebou a užijte si cestování naplno - s
               vědomím, že jste kryti ve všech situacích, které by vám mohly zkomplikovat zážitky z vašich cest.
             </p>
 
@@ -149,15 +149,15 @@ export default function BlogPost() {
               Při výběru cestovního pojištění je vždy dobré nejprve zvážit své vlastní potřeby a typ cestování, který
               běžně podnikáte. Některé příplatky či dodatečná krytí mohou být pro určité situace klíčové. Proto se
               doporučuje věnovat chvíli studiu pojistných podmínek nebo kontaktovat poradce z Generali. Tato investice
-              do informovanosti vám může ušetřit nepřeberné množství starostí – a důvěra v kvalitní pojistné krytí se
+              do informovanosti vám může ušetřit nepřeberné množství starostí - a důvěra v kvalitní pojistné krytí se
               vám vrátí v podobě bezstarostných zážitků z cest.
             </p>
 
             <h2 className="text-3xl font-semibold mt-8 mb-4">Celoroční ochrana pro každého cestovatele</h2>
             <p>
               Cestování je dnes synonymem pro dobrodružství, poznávání nových kultur a nečekané zážitky. Nicméně, i ta
-              nejpečlivěji naplánovaná cesta může být zasažena nečekanými událostmi – od náhlých zdravotních komplikací
-              až po nepříznivé počasí či poškození zavazadel. Generali proto přichází s inovativním řešením – chytrým
+              nejpečlivěji naplánovaná cesta může být zasažena nečekanými událostmi - od náhlých zdravotních komplikací
+              až po nepříznivé počasí či poškození zavazadel. Generali proto přichází s inovativním řešením - chytrým
               cestovním pojištěním, které vám poskytne celoroční ochranu a umožní vyrazit s klidnou myslí.
             </p>
 
@@ -173,7 +173,7 @@ export default function BlogPost() {
                 <tr>
                   <td className="border border-gray-600 px-4 py-2">Celoroční krytí</td>
                   <td className="border border-gray-600 px-4 py-2">
-                    Jediná pojistná smlouva platí po celý rok – nemusíte řešit nové sjednání při každé cestě.
+                    Jediná pojistná smlouva platí po celý rok - nemusíte řešit nové sjednání při každé cestě.
                   </td>
                 </tr>
                 <tr>
@@ -185,7 +185,7 @@ export default function BlogPost() {
                 <tr>
                   <td className="border border-gray-600 px-4 py-2">Komplexní pojištění</td>
                   <td className="border border-gray-600 px-4 py-2">
-                    Kryje široké spektrum rizik – od léčebných výloh po pojištění zavazadel a kompenzaci za počasí.
+                    Kryje široké spektrum rizik - od léčebných výloh po pojištění zavazadel a kompenzaci za počasí.
                   </td>
                 </tr>
                 <tr>

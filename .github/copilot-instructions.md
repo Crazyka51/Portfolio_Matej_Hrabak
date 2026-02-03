@@ -5,7 +5,7 @@ Tyto instrukce definují obecné standardy pro code review v tomto repozitáři.
 ## Základní pokyny před zahájením review
 
 - Před psaním komentářů se vždy seznam s existujícím kódem a architekturou projektu.
-- Nikdy neodhaduj účel souboru nebo funkce – vycházej pouze z reálného obsahu kódu a kontextu v repozitáři.
+- Nikdy neodhaduj účel souboru nebo funkce - vycházej pouze z reálného obsahu kódu a kontextu v repozitáři.
 - Pokud je to možné, projdi všechny relevantní soubory, které se změny dotýkají, a hledej souvislosti (např. sdílené typy, helpery, hooky, API klienty).
 - V komentářích vždy jasně uveď, z jakého kontextu vycházíš (např. „v souboru X je podobná funkce implementovaná jinak“).
 

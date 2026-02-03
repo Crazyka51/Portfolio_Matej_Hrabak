@@ -72,11 +72,11 @@ export default function PojisteniMajetkuPage() {
             <h2 className="text-3xl font-semibold mt-8 mb-4">Rozdíl mezi pojištěním nemovitosti a domácnosti</h2>
             <p>
               Mnoho lidí si plete pojištění nemovitosti a pojištění domácnosti nebo si myslí, že jde o totéž. Pojištění
-              nemovitosti se vztahuje na samotnou stavbu – dům, byt, chatu, garáž a další stavby na pozemku. Kryje škody
+              nemovitosti se vztahuje na samotnou stavbu - dům, byt, chatu, garáž a další stavby na pozemku. Kryje škody
               způsobené například požárem, výbuchem, úderem blesku, vichřicí, krupobitím, povodní nebo zemětřesením.
             </p>
             <p>
-              Pojištění domácnosti naproti tomu chrání vybavení a věci uvnitř nemovitosti – nábytek, elektroniku, oblečení,
+              Pojištění domácnosti naproti tomu chrání vybavení a věci uvnitř nemovitosti - nábytek, elektroniku, oblečení,
               sportovní vybavení, šperky a další cennosti. Vztahuje se na škody způsobené stejnými živly jako u pojištění
               nemovitosti, ale také na krádeže, vandalismus nebo rozbití skla.
             </p>
@@ -89,7 +89,7 @@ export default function PojisteniMajetkuPage() {
           <section>
             <h2 className="text-3xl font-semibold mt-8 mb-4">Jak správně stanovit pojistnou částku</h2>
             <p>
-              Jedním z nejčastějších problémů při pojištění majetku je podpojištění – situace, kdy je pojistná částka nižší
+              Jedním z nejčastějších problémů při pojištění majetku je podpojištění - situace, kdy je pojistná částka nižší
               než skutečná hodnota pojištěného majetku. V takovém případě pojišťovna při likvidaci škody vyplatí pouze
               poměrnou část škody odpovídající poměru pojistné částky k skutečné hodnotě.
             </p>
@@ -110,20 +110,20 @@ export default function PojisteniMajetkuPage() {
             <h2 className="text-3xl font-semibold mt-8 mb-4">Na co si dát pozor při sjednávání pojištění</h2>
             <ul className="list-disc pl-6 space-y-2">
               <li>
-                <strong>Limity plnění</strong> – Pojišťovny často stanovují limity plnění pro určité typy škod nebo věcí
+                <strong>Limity plnění</strong> - Pojišťovny často stanovují limity plnění pro určité typy škod nebo věcí
                 (např. elektronika, cennosti, umělecká díla). Ujistěte se, že tyto limity odpovídají hodnotě vašeho majetku.
               </li>
               <li>
-                <strong>Výluky z pojištění</strong> – Každá pojistka má výluky, tedy situace, na které se pojištění
+                <strong>Výluky z pojištění</strong> - Každá pojistka má výluky, tedy situace, na které se pojištění
                 nevztahuje. Typickými výlukami jsou škody způsobené úmyslně, hrubou nedbalostí nebo v souvislosti s trestným
                 činem.
               </li>
               <li>
-                <strong>Spoluúčast</strong> – Část škody, kterou hradíte sami. Vyšší spoluúčast obvykle znamená nižší
+                <strong>Spoluúčast</strong> - Část škody, kterou hradíte sami. Vyšší spoluúčast obvykle znamená nižší
                 pojistné, ale v případě škody zaplatíte více ze svého.
               </li>
               <li>
-                <strong>Indexace</strong> – Mechanismus, který automaticky upravuje pojistnou částku podle inflace a růstu
+                <strong>Indexace</strong> - Mechanismus, který automaticky upravuje pojistnou částku podle inflace a růstu
                 cen stavebních prací a materiálů. Pomáhá předcházet podpojištění.
               </li>
             </ul>
@@ -141,7 +141,7 @@ export default function PojisteniMajetkuPage() {
               které obvykle sjednává SVJ nebo bytové družstvo).
             </p>
             <p>
-              U rodinného domu je třeba myslet i na vedlejší stavby na pozemku – garáž, kůlnu, bazén, skleník, plot apod.
+              U rodinného domu je třeba myslet i na vedlejší stavby na pozemku - garáž, kůlnu, bazén, skleník, plot apod.
               Některé pojišťovny je zahrnují automaticky do pojištění hlavní stavby (do určitého procenta její hodnoty),
               jinde je třeba je pojistit zvlášť.
             </p>
@@ -155,23 +155,23 @@ export default function PojisteniMajetkuPage() {
             </p>
             <ol className="list-decimal pl-6 space-y-2">
               <li>
-                <strong>Zdokumentujte škodu</strong> – Pořiďte fotografie nebo video poškozených věcí a místa škody před
+                <strong>Zdokumentujte škodu</strong> - Pořiďte fotografie nebo video poškozených věcí a místa škody před
                 zahájením úklidu nebo oprav.
               </li>
               <li>
-                <strong>Nahlaste škodu pojišťovně</strong> – Co nejdříve kontaktujte svou pojišťovnu a nahlaste škodu.
+                <strong>Nahlaste škodu pojišťovně</strong> - Co nejdříve kontaktujte svou pojišťovnu a nahlaste škodu.
                 Většina pojišťoven umožňuje nahlášení online, telefonicky nebo osobně na pobočce.
               </li>
               <li>
-                <strong>Omezte rozsah škody</strong> – Pokud je to možné, proveďte opatření k omezení rozsahu škody (např.
+                <strong>Omezte rozsah škody</strong> - Pokud je to možné, proveďte opatření k omezení rozsahu škody (např.
                 zakrytí střechy po vichřici, odčerpání vody po povodni).
               </li>
               <li>
-                <strong>Uschovejte poškozené věci</strong> – Nevyhazujte poškozené věci, dokud je neprohlédne likvidátor
+                <strong>Uschovejte poškozené věci</strong> - Nevyhazujte poškozené věci, dokud je neprohlédne likvidátor
                 pojišťovny nebo dokud vám pojišťovna nedá souhlas k jejich likvidaci.
               </li>
               <li>
-                <strong>Připravte doklady</strong> – Shromážděte doklady o pořízení poškozených věcí (faktury, účtenky,
+                <strong>Připravte doklady</strong> - Shromážděte doklady o pořízení poškozených věcí (faktury, účtenky,
                 záruční listy) a případně i fotografie věcí před poškozením.
               </li>
             </ol>
