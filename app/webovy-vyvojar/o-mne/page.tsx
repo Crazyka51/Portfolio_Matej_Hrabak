@@ -224,7 +224,7 @@ export default function AboutPage() {
 
                 <div className="space-y-6">
                   <p className="text-gray-300">
-                    Za posledních 8 let jsem vytvořil desítky webových stránek a aplikací pro klienty z různých
+                    Za posledních 3 roky jsem vytvořil desítky webových stránek a aplikací pro klienty z různých
                     odvětví. Mezi mé nedávné projekty patří:
                   </p>
 
