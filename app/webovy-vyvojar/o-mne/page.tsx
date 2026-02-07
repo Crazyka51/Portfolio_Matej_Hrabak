@@ -95,9 +95,7 @@ export default function AboutPage() {
                     efektivní a udržitelný kód.
                   </p>
                   <p>
-                    Kromě vývoje webových stránek mám zkušenosti jako pojišťovací poradce, což mi dává jedinečnou perspektivu
-                    na potřeby klientů a firem v oblasti online prezentace. Tato kombinace mi umožňuje vytvářet webové
-                    stránky, které nejen skvěle vypadají, ale také efektivně plní svůj obchodní účel.
+                    Kromě tvorby webových stránek mám bohaté zkušenosti v pojišťovnictví a obchodu, což mi poskytuje jedinečný pohled na potřeby klientů a firem v oblasti online prezentace. Díky této kombinaci umím vytvářet weby, které nejen skvěle vypadají, ale také efektivně plní svůj obchodní cíl.
                   </p>
                 </div>
               </section>
